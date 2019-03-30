@@ -67,7 +67,7 @@
                             <div >
                                     <a href="#" class="product-card">
 
-                                     <img src="https://save2homw.com/storage/media/p1.png" style="width: 100%;">
+                                     <img src="https://save2home.com/storage/media/p1.png" style="width: 100%;">
 
                                     </a>
                                  </div>
@@ -76,7 +76,7 @@
                             <div >
                                 <a href="#" class="product-card">
 
-                                    <img src="https://save2homw.com/storage/media/p2.png" style="width: 100%;">
+                                    <img src="https://save2home.com/storage/media/p2.png" style="width: 100%;">
 
                                 </a>
                             </div>

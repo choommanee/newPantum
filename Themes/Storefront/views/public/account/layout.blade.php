@@ -22,7 +22,7 @@
                     <ul class="list-inline">
                         <li style="text-align: center;">
                             <a href="{{ route('account.dashboard.index') }}" style="height: 100px;" >
-                                <img src="https://save2homw.com/storage/media/Person.png" style="width: 100px;"/>
+                                <img src="https://save2home.com/storage/media/Person.png" style="width: 100px;"/>
                                 <br/>
                                 {{trans('storefront::account.dashboard.hello')}} : {{$my->first_name}} {{$my->last_name}}
                             </a>
