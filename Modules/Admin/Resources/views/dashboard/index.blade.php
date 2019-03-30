@@ -10,8 +10,8 @@
     <div class="grid clearfix">
         <div class="row">
             @hasAccess('admin.orders.index')
-                @include('admin::dashboard.grids.total_sales')
-                @include('admin::dashboard.grids.total_orders')
+               {{--@include('admin::dashboard.grids.total_sales')
+                @include('admin::dashboard.grids.total_orders')--}}
             @endHasAccess
 
             @hasAccess('admin.products.index')
@@ -27,20 +27,20 @@
     <div class="row">
         <div class="col-md-7">
             @hasAccess('admin.orders.index')
-                @include('admin::dashboard.panels.sales_analytics')
-            @endHasAccess
+    {{-- @include('admin::dashboard.panels.sales_analytics')--}}
+ @endHasAccess
 
-            @hasAccess('admin.orders.index')
-                @include('admin::dashboard.panels.latest_orders')
-            @endHasAccess
-        </div>
+ @hasAccess('admin.orders.index')
+    {{-- @include('admin::dashboard.panels.latest_orders') --}}
+ @endHasAccess
+</div>
 
-        <div class="col-md-5">
-            @include('admin::dashboard.panels.latest_search_terms')
+<div class="col-md-5">
+ @include('admin::dashboard.panels.latest_search_terms')
 
-            @hasAccess('admin.reviews.index')
-                @include('admin::dashboard.panels.latest_reviews')
-            @endHasAccess
-        </div>
-    </div>
+ @hasAccess('admin.reviews.index')
+    {{-- @include('admin::dashboard.panels.latest_reviews') --}}
+ @endHasAccess
+</div>
+</div>
 @endsection
