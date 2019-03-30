@@ -72,6 +72,7 @@ class InstallController extends Controller
     public function clearRoute()
     {
         echo "Route Clear";
+        die();
         \Artisan::call('route:clear');
     }
 }
