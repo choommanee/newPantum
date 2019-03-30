@@ -1,0 +1,194 @@
+*{
+  font-weight: 400;
+}
+p{
+  font-size: 1.2rem;
+  margin-bottom: 0rem;
+}
+header{
+  background-color: #060709;
+  padding-top: 1rem;
+}
+.braner-pantum{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.right-div-braner{
+  
+}
+.btn-lang{
+  background-color: transparent;
+  width: 60px;
+  padding: 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.btn-lang img{
+  max-width: 100%;
+}
+.bg-1c1c1c {
+  background-color: #1c1c1c;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+  content: "";
+}
+.nav-tabs{
+  border-bottom: none;
+}
+.nav-tabs .nav-item .nav-link, .nav-tabs .nav-link{
+  color: #495057;
+  font-weight: 400;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  border-color: transparent transparent #495057;
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)!important;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)!important;
+  font-weight: 400;
+
+}
+.container-video{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.btn-player{
+  cursor: pointer;
+}
+.icon-banner{
+  margin-top: 1rem;
+  width: 50%;
+  max-width: 100%;
+}
+.ul-nonstyle {
+  list-style-type: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.ul-nonstyle li {
+  margin-bottom: 0.5rem;
+}
+.ul-nonstyle li .icon-feature {
+  width: 50px;
+  display: inline;
+}
+.c-6e6e6e{
+  color: #6e6e6e;
+}
+@media (max-width: 740px) {
+  .full-page-intro {
+    height: 1000px;
+  }
+}
+
+/* Half Page Carousel itself*/
+.carousel {
+  height: 50%;
+}
+
+.carousel .carousel-inner {
+  height: 100%;
+}
+
+.carousel .carousel-inner .carousel-item,
+.carousel .carousel-inner .active {
+  height: 100%;
+}
+@media only screen and (max-width: 575px) {
+  .ul-nonstyle {
+    list-style-type: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    text-align: left;
+    padding-left: 1.2rem;
+  }
+  .ul-nonstyle li {
+    margin-bottom: 0rem;
+  }
+  .ul-nonstyle li .icon-feature {
+    width: 35px;
+    display: inline;
+  }
+  .full-page-intro {
+    height: 850px;
+  }
+  .icon-banner{
+    width: 100%;
+    max-width: 100%;
+  }
+  .braner-pantum{
+    flex-direction: column;
+  }
+}
+/* Adjustment for mobile devices*/
+@media (max-width: 776px) {
+  .carousel {
+    height: 100%;
+  }
+}
+
+/* Navbar animation */
+.navbar {
+  background-color: #1c1c1c;
+}
+
+.top-nav-collapse {
+  background-color: #1c1c1c;
+}
+
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #1c1c1c;
+  }
+  .icon-banner{
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .ul-nonstyle{
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 1000px){
+  .bg-side-printer{
+    background-image: url('../img/printer.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: left bottom;
+  }
+  .upper-margin-top{
+    margin-top: -8rem;
+  }
+}
+@media only screen and (min-width: 1200px){
+  .bg-side-printer{
+    background-image: url('../img/printer.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: left bottom;
+  }
+}
+@media only screen and (min-width: 1650px){
+  .bg-side-printer{
+    background-image: url('../img/printer.png');
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position: left bottom;
+  }
+}
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #b21f25;
+}
+footer.page-footer .footer-copyright{
+  background-color: #060709;
+}
