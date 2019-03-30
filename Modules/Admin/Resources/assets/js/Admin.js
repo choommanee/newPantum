@@ -150,9 +150,7 @@ export default class {
     }
 
     shortcuts() {
-        Mousetrap.bind('f1', () => {
-            window.open(`http://envaysoft.com/fleetcart/docs/${FleetCart.version}`, '_blank');
-        });
+       
 
         Mousetrap.bind('?', () => {
             $('#keyboard-shortcuts-modal').modal();

@@ -16,6 +16,9 @@ class SerialTable extends AdminTable
         return $this->newTable()
             ->addColumn('product_name', function ($serials) {
                 return $serials->product->name;
+            })
+            ->editColumn('datevarunty_start',function($serials){
+                return $serials->datevarunty_start->format('d/m/Y');
             });
     }
 }

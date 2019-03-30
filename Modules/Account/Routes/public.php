@@ -13,4 +13,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('account/wishlist/{productId}', 'AccountWishlistController@destroy')->name('account.wishlist.destroy');
 
     Route::get('account/reviews', 'AccountReviewController@index')->name('account.reviews.index');
+    Route::get('account/warranty', 'AccountWarrantyController@index')->name('account.warranty.index');
+    Route::get('account/warranty/add', 'AccountWarrantyController@addwarranty')->name('account.warranty.addwarranty');
+    Route::put('account/warranty/add', 'AccountWarrantyController@managewarranty')->name('account.warranty.addwarranty');
 });

@@ -9,10 +9,12 @@ use Modules\Meta\Eloquent\HasMetaData;
 use Modules\Support\Eloquent\Sluggable;
 use Modules\Support\Eloquent\Translatable;
 use Modules\Serials\admin\SerialTable;
+use Modules\Support\Search\Searchable;
+use Modules\Serials\Entities\SerialTranslation;
 
 class Serial extends Model
 {
-    use Translatable, Sluggable, HasMetaData;
+    use Translatable, Sluggable,Searchable, HasMetaData;
 
     /**
      * The relations to eager load on every query.
@@ -26,14 +28,14 @@ class Serial extends Model
      *
      * @var array
      */
-    protected $fillable = ['slug', 'is_active','pro_id','varunty_time','datevarunty_start'];
+    protected $fillable = ['id','slug', 'is_active','pro_id','varunty_time','datevarunty_start','ResellerName','ResellerAddress','ResellerPhone','PurchaseDate','sla','user_id','cus_use'];
 
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = ['is_active' => 'boolean',];
+    protected $casts = [];
 
     /**
      * The attributes that are translatable.
@@ -49,6 +51,11 @@ class Serial extends Model
      *
      * @return void
      */
+    protected $dates = [
+        'datevarunty_start',
+        'PurchaseDate',
+    ];
+
     protected static function boot()
     {
         parent::boot();
@@ -59,6 +66,13 @@ class Serial extends Model
     public static function urlForPage($id)
     {
         return static::select('slug')->firstOrNew(['id' => $id])->url();
+    }
+
+    public function scopeProductGroup($query)
+    {
+        return $query->selectRaw('pro_id')
+            ->groupBy('pro_id')
+            ->orderBy('pro_id');
     }
 
     public function url()
@@ -84,5 +98,48 @@ class Serial extends Model
     public function product()
     {
         return $this->belongsTo(Product::class,'pro_id','id');
+    }
+
+    public function translation1()
+    {
+        return $this->belongsTo(SerialTranslation::class,'id','serial_id');
+    }
+    public function dateExp(){
+
+        $dateString =  $this->datevarunty_start;
+        $t = strtotime($dateString);
+        $t2 = strtotime($this->varunty_time.' years', $t);
+
+        return date("d/m/Y", $t2) . PHP_EOL;
+
+    }
+
+    public function toSearchableArray()
+    {
+        // MySQL Full-Text search handles indexing automatically.
+        if (config('scout.driver') === 'mysql') {
+            return [];
+        }
+
+        $translations = $this->translations()
+            ->withoutGlobalScope('locale')
+            ->get(['name', 'body']);
+
+        return ['id' => $this->id, 'translations' => $translations];
+    }
+
+    public function searchTable()
+    {
+        return 'serial_translations';
+    }
+
+    public function searchKey()
+    {
+        return 'serial_id';
+    }
+
+    public function searchColumns()
+    {
+        return ['name','body'];
     }
 }

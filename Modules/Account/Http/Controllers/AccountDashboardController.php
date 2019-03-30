@@ -3,6 +3,7 @@
 namespace Modules\Account\Http\Controllers;
 
 use Illuminate\Routing\Controller;
+use Modules\Serials\Entities\Serial;
 
 class AccountDashboardController extends Controller
 {
@@ -14,8 +15,11 @@ class AccountDashboardController extends Controller
     public function index()
     {
         $my = auth()->user();
-        $recentOrders = auth()->user()->recentOrders(5);
-
+        //dd($my);
+       // $recentOrders = auth()->user()->recentOrders(5);
+       // echo $my->id;
+        $recentOrders = Serial::where('user_id',$my->id)->get();
+       // dd($recentOrders);
         return view('public.account.dashboard.index', compact('my', 'recentOrders'));
     }
 }

@@ -1,4 +1,9 @@
-<ul class="dropdown-menu" @if($menu->menu_id() ==7) style="width: 640px;min-height:232px;left: 230px;" id="menu_specail" @else id="menu_normal" @endif>
+<ul class="dropdown-menu" @if($menu->menu_id() ==7) style="width: 640px;min-height:232px;left: 209px;background-color: #000;" id="menu_specail"
+                        @elseif($menu->menu_id() ==3)
+                        style="left: 100px; background-color: #000000; top: 50px;"   id="menu_normal"
+    @else
+                        style="background-color: #000000; top: 50px;"
+                        id="menu_normal" @endif>
     <li>
         <div class="fluid-menu-content">
             <div class="row">

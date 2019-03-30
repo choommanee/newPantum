@@ -43,7 +43,7 @@ class SocialLoginServiceProvider extends ServiceProvider
         $this->app['config']->set('services.facebook', [
             'client_id' => setting('facebook_login_app_id'),
             'client_secret' => setting('facebook_login_app_secret'),
-            'redirect' => url('login/facebook/callback'),
+            'redirect' => 'https://pt.socail-easy.com/public/login/facebook/callback',
         ]);
     }
 
@@ -52,7 +52,7 @@ class SocialLoginServiceProvider extends ServiceProvider
         $this->app['config']->set('services.google', [
             'client_id' => setting('google_login_client_id'),
             'client_secret' => setting('google_login_client_secret'),
-            'redirect' => url('login/google/callback'),
+            'redirect' => 'https://pt.socail-easy.com/public/login/google/callback',
         ]);
     }
 }

@@ -95,7 +95,7 @@
                 <h3>News  >></h3>
             </div>
 
-            <div class="{{--product-slider slick-arrow --}}separator clearfix">
+            <div class="{{--product-slider slick-arrow --}}separator clearfix" style="background-color: #070707;">
                 @foreach ($news as $new)
 
                     <div class="col-md-4">

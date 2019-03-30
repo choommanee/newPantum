@@ -10,22 +10,26 @@
                 <div class="login form-inner clearfix" style="">
                     <div class="">
                         <div class="top-image" >
-                            <img src="http://pt.socail-easy.com/public/storage/media/Fn3hSOh9qobGbU4MCksRNIxe0yoi54A5lyMvi3e1.png" alt="" style="width: 300px;margin: auto auto; display: block;">
+                            <img src="http://pt.socail-easy.com/public/storage/media/logo.png" alt="" style="width: 300px;margin: auto auto; display: block;">
                         </div>
                         <h1 class="page-title">Become an PANTUM Member</h1>
 
-                        <div class="signup-btn" style="color:#0a0a0a;">
-                            <a style="color: #0a6aa1;" class="ar-bh" href="{{url('register')}}" >
-                                <span id="ctl00_ContentPlaceHolder1_lbJoin">Sign Up</span>
-                            </a>
-
-                        </div>
                         <div id="" class="">
                             In addition to PANTUM intermittently offering the hottest discounts, news on sales promotions, and the newest information on PANTUM, you will also enjoy having excellent technological support services to promote your experience as a user of our products.
                         </div>
                         <ul class="service-list">
-                            <li class="service-item">
-                                <img class="service-icon" src="http://pt.socail-easy.com/public/storage/media/sub_button.png">
+                            <li class="service-item" style="list-style: none;">
+                                <img class="service-icon" src="http://pt.socail-easy.com/public/storage/media/sub_button.png" style="
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+">
+                                <div class="signup-btn" style="color:#0a0a0a;">
+                                    <a style="color: #0a6aa1;" class="ar-bh" href="{{url('register')}}" >
+                                        <span id="ctl00_ContentPlaceHolder1_lbJoin">Sign Up</span>
+                                    </a>
+
+                                </div>
                                 <div class="service-des">
                                     <h2>Personalized Service</h2>
                                     <p>Enjoy the most complete personalized information center, after-sales service, and customer service.</p>

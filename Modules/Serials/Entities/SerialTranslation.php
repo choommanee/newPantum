@@ -11,5 +11,5 @@ class SerialTranslation extends TranslationModel
      *
      * @var array
      */
-    protected $fillable = ['name'];
+    protected $fillable = ['name','body'];
 }

@@ -62,12 +62,15 @@ class AuthController extends BaseAuthController
      */
     public function handleProviderCallback($provider)
     {
+       
+        //die('handleProviderCallback');
         if (! in_array($provider, app('enabled_social_login_providers'))) {
             abort(404);
         }
-
         try {
             $user = Socialite::driver($provider)->user();
+			//dd($user);
+           // var_dump($user);
         } catch (Exception $e) {
             return redirect()->route('login');
         }
@@ -76,8 +79,9 @@ class AuthController extends BaseAuthController
             auth()->login(
                 User::findByEmail($user->getEmail())
             );
-
+ 
             return redirect($this->redirectTo());
+			//return route('account.dashboard.index');
         }
 
         [$firstName, $lastName] = $this->extractName($user->getName());
@@ -89,11 +93,13 @@ class AuthController extends BaseAuthController
             'password' => str_random(),
         ]);
 
+        
         $this->assignCustomerRole($registeredUser);
 
         auth()->login($registeredUser);
 
         return redirect($this->redirectTo());
+		//return route('account.dashboard.index');
     }
 
     private function extractName($name)

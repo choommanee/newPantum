@@ -33,7 +33,7 @@
                     '        </a>\n' +
                     '            <span class="product-name" style="color: #0e0e0e;font-size: 28px;text-align: center;text-shadow: 1px 1px #ffedf0;">M6600NW</span><br>\n' +
                     '            <span class="product-name" style="color: #060606;font-size: 16px;text-align: center;/* text-shadow: 1px 1px #2b2829; */">MONOCHROME LASER MULTFUNCTION\n</span>\n' +
-                    '            </a><br/><a  href="http://pt.socail-easy.com/public/en/products/m6600nw">\n' +
+                    '            </a><br/><a  href="http://pt.socail-easy.com/public/en/products/m6600nw" style=\'color:#555\'>\n' +
                     '                more\n' +
                     '            </a>\n' +
                     '        </div>\n' +
@@ -64,7 +64,7 @@
                     '            \n' +
                     '            <span class="product-name" style="color: #0e0e0e;font-size: 28px;text-align: center;text-shadow: 1px 1px #ffedf0;">CP2500DN</span><br>\n' +
                     '            <span class="product-name" style="color: #060606;font-size: 16px;text-align: center;/* text-shadow: 1px 1px #2b2829; */">COLOR  LASER PRINTER</span>\n' +
-                    '            </a><br/><a href="https://pt.socail-easy.com/en/products/cp2500dn" >\n' +
+                    '            </a><br/><a href="https://pt.socail-easy.com/en/products/cp2500dn" style=\'color:#555\'>\n' +
                     '                more\n' +
                     '            </a>\n' +
                     '        </div>\n' +
@@ -98,7 +98,7 @@
                     '            \n' +
                     '            <span class="product-name" style="color: #0e0e0e;font-size: 28px;text-align: center;text-shadow: 1px 1px #ffedf0;">CM7105DN</span><br>\n' +
                     '            <span class="product-name" style="color: #060606;font-size: 16px;text-align: center;/* text-shadow: 1px 1px #2b2829; */">COLOR MULTI FUNCTION LASER PRINTER</span>\n' +
-                    '            </a><br/><a href="https://pt.socail-easy.com/en/products/cm7105dn-z5RwEzz1" >\n' +
+                    '            </a><br/><a href="https://pt.socail-easy.com/en/products/cm7105dn-z5RwEzz1" style=\'color:#555\'>\n' +
                     '                more\n' +
                     '            </a>\n' +
                     '        </div>\n' +
@@ -132,7 +132,7 @@
                     '            \n' +
                     '            <span class="product-name" style="color: #0e0e0e;font-size: 28px;text-align: center;text-shadow: 1px 1px #ffedf0;">P2500W</span><br>\n' +
                     '            <span class="product-name" style="color: #060606;font-size: 16px;text-align: center;/* text-shadow: 1px 1px #2b2829; */">Monochrome Laser Printer</span>\n' +
-                    '            </a><br/><a href="http://pt.socail-easy.com/public/en/products/p2500w">\n' +
+                    '            </a><br/><a href="http://pt.socail-easy.com/public/en/products/p2500w" style=\'color:#555\'>\n' +
                     '                more\n' +
                     '            </a>\n' +
                     '        </div>\n' +
@@ -165,7 +165,7 @@
                     "            \n" +
                     "            <span class=\"product-name\" style=\"color: #0e0e0e;font-size: 28px;text-align: center;text-shadow: 1px 1px #ffedf0;\">M6600NW</span><br>\n" +
                     "            <span class=\"product-name\" style=\"color: #060606;font-size: 16px;text-align: center;/* text-shadow: 1px 1px #2b2829; */\">MONOCHROME LASER MULTFUNCTION\n</span>\n" +
-                    "            </a><br/><a  href=\"http://pt.socail-easy.com/public/en/products/m6600nw\" >\n" +
+                    "            </a><br/><a  href=\"http://pt.socail-easy.com/public/en/products/m6600nw\"  style='color:#555'>\n" +
                     "                more\n" +
                     "            </a>\n" +
                     "        </div>\n" +
@@ -197,7 +197,7 @@
                     '            \n' +
                     '            <span class="product-name" style="color: #0e0e0e;font-size: 28px;text-align: center;text-shadow: 1px 1px #ffedf0;">P3500DN</span><br>\n' +
                     '            <span class="product-name" style="color: #060606;font-size: 16px;text-align: center;/* text-shadow: 1px 1px #2b2829; */">Monochrome Laser Printer</span>\n' +
-                    '            </a><br/><a  href="http://pt.socail-easy.com/public/en/products/p3500dn" >\n' +
+                    '            </a><br/><a  href="http://pt.socail-easy.com/public/en/products/p3500dn" style=\'color:#555\'>\n' +
                     '                more\n' +
                     '            </a>\n' +
                     '        </div>\n' +
@@ -230,7 +230,7 @@
 
                     '            <span class="product-name" style="color: #0e0e0e;font-size: 28px;text-align: center;text-shadow: 1px 1px #ffedf0;">PC-211RB</span><br>\n' +
                     '            <span class="product-name" style="color: #060606;font-size: 16px;text-align: center;/* text-shadow: 1px 1px #2b2829; */">High quality assurance, reliable prints</span>\n' +
-                    '            </a><br/><a  href="https://pt.socail-easy.com/en/products/pc-211rb" >\n' +
+                    '            </a><br/><a  href="https://pt.socail-easy.com/en/products/pc-211rb" style=\'color:#555\' >\n' +
                     '                more\n' +
                     '            </a>\n' +
                     '        </div>\n' +
@@ -263,7 +263,7 @@
                     '            \n' +
                     '            <span class="product-name" style="color: #0e0e0e;font-size: 28px;text-align: center;text-shadow: 1px 1px #ffedf0;">DL-500H</span><br>\n' +
                     '            <span class="product-name" style="color: #060606;font-size: 16px;text-align: center;/* text-shadow: 1px 1px #2b2829; */">High quality assurance</span>\n' +
-                    '            </a><br/><a  href="https://pt.socail-easy.com/en/products/dl-500">\n' +
+                    '            </a><br/><a  href="https://pt.socail-easy.com/en/products/dl-500" style=\'color:#555\'>\n' +
                     '                more\n' +
                     '            </a>\n' +
                     '        </div>\n' +

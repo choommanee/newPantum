@@ -116,6 +116,7 @@ abstract class BaseAuthController extends Controller
             'last_name',
             'email',
             'password',
+            'tel',
         ]));
 
         $this->assignCustomerRole($user);

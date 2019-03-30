@@ -4,7 +4,6 @@ namespace Modules\Drivers\Providers;
 
 
 use Modules\Drivers\admin\DriverTabs;
-use Modules\Drivers\Entities\Driver;
 use Modules\Support\Traits\AddsAsset;
 use Illuminate\Support\ServiceProvider;
 use Modules\Support\Traits\LoadsConfig;

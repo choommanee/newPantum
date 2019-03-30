@@ -41,6 +41,12 @@
 
                                     {!! $errors->first('email','<span class="error-message">:message</span>') !!}
                                 </div>
+                                <div class="form-group {{ $errors->has('tel') ? 'has-error': '' }}">
+                                    <label for="email">{{ trans('user::auth.tel') }}<span>*</span></label>
+
+                                    <input type="text" name="tel" value="{{ old('tel') }}" class="form-control" id="tel">
+                                    {!! $errors->first('email','<span class="error-message">:message</span>') !!}
+                                </div>
 
                                 <div class="form-group {{ $errors->has('password') ? 'has-error': '' }}">
                                     <label for="password">{{ trans('user::auth.password') }}<span>*</span></label>

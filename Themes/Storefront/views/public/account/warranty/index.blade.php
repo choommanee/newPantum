@@ -1,26 +1,9 @@
 @extends('public.account.layout')
 
-@section('title', trans('storefront::account.links.dashboard'))
+@section('title', trans('storefront::account.links.warranty_list'))
 
 @section('content_right')
     <div class="my-dashboard">
-        <div class="account-information clearfix">
-            <h4>{{ trans('storefront::account.dashboard.account_information') }}</h4>
-
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="contact-information">
-                        <span>{{ $my->full_name }}</span>
-                        <span>{{ $my->email }}</span>
-
-                        <a href="{{ route('account.profile.edit') }}">
-                            {{ trans('storefront::account.dashboard.edit') }}
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
         <div class="recent-orders index-table">
             <h4 class="section-header">
                 {{ trans('storefront::account.warranty.warranty_list') }}
@@ -46,28 +29,29 @@
                             <th>{{ trans('storefront::account.warranty.purchase_date') }}</th>
                             <th>{{ trans('storefront::account.warranty.datevarunty_start') }}</th>
                             <th>{{ trans('storefront::account.warranty.status') }}</th>
+
                         </tr>
                         </thead>
                         <tbody>
                         <?php
-                        $i=1;
+                            $i=1;
                         ?>
                         @foreach ($recentOrders as $order)
                             <tr>
                                 <td>#{{$i}}</td>
                                 <td style="text-align: center;">
                                     {{ $order->product->name }}<br/>
-                                    <img src="{{ $order->product->base_image->path }}" style="width: 100px;">
-                                </td>
+                                     <img src="{{ $order->product->base_image->path }}" style="width: 100px;">
+                                    </td>
                                 <td>{{ $order->name }}</td>
-                                <td>{{ $order->varunty_time }} {{ trans('storefront::account.warranty.year') }}  ({{ $order->dateExp() }})</td>
+                                <td style="color: #1a237e">{{ $order->varunty_time }} {{ trans('storefront::account.warranty.year') }} EXP: {{ $order->dateExp() }}</td>
                                 <td>{{ $order->PurchaseDate->format('d/m/Y') }}</td>
                                 <td>{{ $order->datevarunty_start->format('d/m/Y') }}</td>
                                 <td>
                                     @if($order->cus_use==2)
-                                        <span style="color: green;font-weight: 600;">
+                                       <span style="color: green;font-weight: 600;">
                                            {{ trans('storefront::account.warranty.activate') }}</span>
-                                    @else
+                                        @else
                                         <span style="color: red;font-weight: 400;">
                                             {{ trans('storefront::account.warranty.nonactivate') }}</span>
                                     @endif
@@ -82,6 +66,8 @@
                 </div>
             @endif
         </div>
+
+        <div class="clearfix"></div>
 
 
     </div>

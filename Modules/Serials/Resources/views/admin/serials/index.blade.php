@@ -15,11 +15,12 @@
         @slot('thead')
             <tr>
                 @include('admin::partials.table.select_all')
-                <th>ชื่อสินค้า</th>
-                <th>SN</th>
-                <th>วันที่เริ่มต้น</th>
-                <th>จำนวนปีรับประกัน</th>
-                <th>สถานะ</th>
+                <th>{{ trans('serials::serials.product_name') }}</th>
+                <th>{{ trans('serials::serials.serials_number') }}</th>
+                <th>{{ trans('serials::serials.date_start') }}</th>
+                <th>{{ trans('serials::serials.year_warranty') }}</th>
+                <th>{{ trans('serials::serials.status') }}</th>
+                <th>Activate</th>
             </tr>
         @endslot
     @endcomponent
@@ -36,7 +37,21 @@
                 { data: 'datevarunty_start', name: 'datevarunty_start' },
                 { data: 'varunty_time', name: 'varunty_time' },
                 { data: 'status', name: 'is_active' },
+                { data: 'cus_use', name: 'cus_use',
+                    "render": function ( data, type, row, meta ) {
+                            if(row['cus_use']=='0'){
+                                return '<span style="color: red;">Not use</span>';
+                            }else if(row['cus_use']=='1'){
+                                return '<span style="color: orange;">Variable</span>';
+                            }else if(row['cus_use']=='2'){
+                                return '<span style="color: green;"><b>Activate</b></span>';
+                            }else if(row['cus_use']=='3'){
+                                return '<span style="color: gray;">Not Activate</span>';
+                            }
+
+                    } },
             ],
         });
     </script>
+
 @endpush

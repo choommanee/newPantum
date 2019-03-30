@@ -17,7 +17,7 @@ class HomeController extends Controller
     {
         //echo "test";
         $logo = File::findOrNew(setting('storefront_header_logo'))->path;
-        $pages = News::orderBy('id', 'DESC')->get();
+        $pages = News::orderBy('id', 'ASC')->get();
 
         return view('public.news.show',compact('pages','logo'));
     }
