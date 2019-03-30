@@ -249,6 +249,25 @@
 .tab-pane .col-md-3{
     width: 32%;
 }
+
+.image-holder1 {
+    height: 275px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.image-holder1 img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
 @media screen and (max-width:2560px){
     .slide .slider-content{height:746px}
     .namedetail{
@@ -389,6 +408,7 @@
     .slide .caption-md{font-size:17px;margin-bottom:4px;margin-right: 292px;line-height: 1.6;}
     .slide .caption-sm{font-size:20px;margin-top:65px;margin-right: 368px;}
     .image-holder img{max-height: 85%;}
+    .image-holder1 img{max-height: 85%;}
     .slide .btn-slider{margin-top:-116px;opacity: 0;}
 
     .detail-login{display: none;}
@@ -442,7 +462,9 @@
 
     .compare .table .image-holder{height: 165px; width: 123px;}
     .image-holder {width: 100%}
-    .image-holder img {max-height: 68%;}
+    .image-holder img {max-height: 100%;}
+    .image-holder1 img {max-height: 68%;}
+
     .hot-news ul {
         padding: 0;
         margin: 8px;
@@ -464,6 +486,7 @@
 
     .bg_product{height: 300px;}
     .product-card .image-holder, .product-card .image-placeholder {height: 200px;}
+    .product-card .image-holder1 {height: 200px;}
 }
 
 @media screen and (min-width:480px) and (max-width:767px){

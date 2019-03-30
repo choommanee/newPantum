@@ -17,7 +17,7 @@
                     <i class="fa fa-picture-o" aria-hidden="true"></i>
                 </div>
             @else
-                <div class="image-holder">
+                <div class="image-holder1">
                     <img src="{{ $product->base_image->path }}">
                 </div>
             @endif
