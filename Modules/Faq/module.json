@@ -1,0 +1,12 @@
+{
+    "name": "Faq",
+    "alias": "faq",
+    "description": "The FleetCart Faq Module.",
+    "version": "1.0.0",
+    "active": 1,
+    "order": 100,
+    "providers": [
+        "Modules\\Faq\\Providers\\FaqServiceProvider",
+        "Modules\\Faq\\Providers\\RouteServiceProvider"
+    ]
+}

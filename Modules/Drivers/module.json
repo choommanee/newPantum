@@ -1,0 +1,12 @@
+{
+    "name": "Drivers",
+    "alias": "drivers",
+    "description": "The FleetCart Drivers Module.",
+    "version": "1.0.0",
+    "active": 1,
+    "order": 100,
+    "providers": [
+        "Modules\\Drivers\\Providers\\DriversServiceProvider",
+        "Modules\\Drivers\\Providers\\RouteServiceProvider"
+    ]
+}

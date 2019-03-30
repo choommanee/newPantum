@@ -1,0 +1,12 @@
+{
+    "name": "News",
+    "alias": "news",
+    "description": "Managing news.",
+    "version": "1.0.0",
+    "active": 1,
+    "order": 9999,
+    "providers": [
+        "Modules\\News\\Providers\\NewsServiceProvider",
+        "Modules\\News\\Providers\\RouteServiceProvider"
+    ]
+}

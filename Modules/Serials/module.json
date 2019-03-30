@@ -1,0 +1,12 @@
+{
+    "name": "Serials",
+    "alias": "serials",
+    "description": "The FleetCart Serials Module.",
+    "version": "1.0.0",
+    "active": 1,
+    "order": 9999,
+    "providers": [
+        "Modules\\Serials\\Providers\\SerialsServiceProvider",
+        "Modules\\Serials\\Providers\\RouteServiceProvider"
+    ]
+}
