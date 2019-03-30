@@ -10,7 +10,7 @@
                 <div class="login form-inner clearfix" style="">
                     <div class="">
                         <div class="top-image" >
-                            <img src="http://pt.socail-easy.com/public/storage/media/logo.png" alt="" style="width: 300px;margin: auto auto; display: block;">
+                            <img src="https://save2homw.compublic/storage/media/logo.png" alt="" style="width: 300px;margin: auto auto; display: block;">
                         </div>
                         <h1 class="page-title">Become an PANTUM Member</h1>
 
@@ -19,7 +19,7 @@
                         </div>
                         <ul class="service-list">
                             <li class="service-item" style="list-style: none;">
-                                <img class="service-icon" src="http://pt.socail-easy.com/public/storage/media/sub_button.png" style="
+                                <img class="service-icon" src="https://save2homw.compublic/storage/media/sub_button.png" style="
     float: left;
     margin-top: 5px;
     margin-right: 10px;
