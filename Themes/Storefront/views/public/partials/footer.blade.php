@@ -92,11 +92,10 @@
                         <ul class="list-inline">
                             <li>
                                 <i class="fa fa-phone-square" aria-hidden="true"></i>02-101-3144
-                                <i class="fas fa-fax"  aria-hidden="true" style="margin-left: 20px;"></i>02-101-3143
 
                             </li>
                             <li >
-                                <i class="fa fa-phone-square" aria-hidden="true"></i>Main +6695 923 9685
+                                <i class="fas fa-fax"  aria-hidden="true"></i>02-101-3143
                             </li>
                             <li >
                                 <i class="fas fa-envelope-square"  aria-hidden="true"></i>info@pantum.co.th
