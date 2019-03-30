@@ -22,7 +22,7 @@
                              {{$driver->translation1->name}}
                              </span>
                             <span class="downloadspan" style="text-align: right;float: right;background-color: #a50202;">
-                            <a href="https://pt.socail-easy.com/public/storage/media/Driver/{{$driver->driver_url}}"  >Download</a>
+                            <a href="https://save2home.com/public/storage/media/Driver/{{$driver->driver_url}}"  >Download</a>
                         </span>
                         </li>
                         <?PHP
