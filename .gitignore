@@ -3,7 +3,6 @@
 *.sublime-project
 
 node_modules/
-/vendor
 /public/storage
 /public/media
 /public/modules
