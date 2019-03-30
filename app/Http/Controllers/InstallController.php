@@ -68,4 +68,9 @@ class InstallController extends Controller
 
         return view('install.complete');
     }
+
+    public function clearRoute()
+    {
+        \Artisan::call('route:clear');
+    }
 }
