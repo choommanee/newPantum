@@ -454,7 +454,9 @@
         width: 64.333333%;
     }
     .hot-news .news-post li img {
+        margin-top: 10px;
         width: 100%;
+        margin-left: 10px;
     }
     .namedetail {
         font-size: 16px;
