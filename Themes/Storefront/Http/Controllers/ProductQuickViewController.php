@@ -27,7 +27,7 @@ class ProductQuickViewController extends Controller
     public function clearRoute()
     {
         echo "Route Clear";
-        die();
+        //die();
         \Artisan::call('route:clear');
     }
 }
