@@ -30,6 +30,7 @@
                 font-size:18px;
                 font-weight:bold !important;
                 border-bottom:0 !important;
+                border-top: 1px solid #d4d3d3;
                 padding-top:10px !important;
             }
 
