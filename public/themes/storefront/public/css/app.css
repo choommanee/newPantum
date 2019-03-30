@@ -442,7 +442,7 @@
 
     .compare .table .image-holder{height: 165px; width: 123px;}
     .image-holder {width: 100%}
-    .image-holder img {max-height: 100%;}
+    .image-holder img {max-height: 68%;}
     .hot-news ul {
         padding: 0;
         margin: 8px;
