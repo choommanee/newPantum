@@ -23,4 +23,11 @@ class ProductQuickViewController extends Controller
 
         return view('public.products.quick_view.show', compact('product'));
     }
+
+    public function clearRoute()
+    {
+        echo "Route Clear";
+        die();
+        \Artisan::call('route:clear');
+    }
 }
