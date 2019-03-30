@@ -25,15 +25,15 @@
     </div>
 
     <div class="row">
-        <div class="col-md-7">
-            @hasAccess('admin.orders.index')
-    {{-- @include('admin::dashboard.panels.sales_analytics')--}}
+        {{-- <div class="col-md-7">
+             @hasAccess('admin.orders.index')
+      @include('admin::dashboard.panels.sales_analytics')
  @endHasAccess
 
  @hasAccess('admin.orders.index')
-    {{-- @include('admin::dashboard.panels.latest_orders') --}}
+     @include('admin::dashboard.panels.latest_orders')
  @endHasAccess
-</div>
+</div>--}}
 
 <div class="col-md-5">
  @include('admin::dashboard.panels.latest_search_terms')
