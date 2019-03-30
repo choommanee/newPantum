@@ -74,7 +74,7 @@
 .compare-heading form{position: relative;float: right;margin-right: 15px;margin-top: 1px;z-index: 999;}
 /*ใช่่ตัวนี้*/
 
-.login{min-height: 629px;margin-bottom: 50px;padding:50px;}
+.login{min-height: 629px;margin-bottom: 0px;padding:50px;}
 .form-wrapper{display:table;width:1080px;min-width: 980px;margin:30px auto 0}
 .menushowdetail{display: none}
 
@@ -323,7 +323,7 @@
 
 }
 @media screen and (max-width:991px){
-    .login{min-height: 980px;margin-bottom: 50px;padding:50px;}
+    .login{min-height: 980px;margin-bottom: 0px;padding:50px;}
     .home-slider{margin-left:0}
     .slide .slider-content{height:300px}
     .namedetail{
