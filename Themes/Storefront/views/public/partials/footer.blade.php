@@ -69,7 +69,7 @@
                     <div class="contact">
                         <ul class="list-inline">
                             <li style="font-size: 20px;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
-                                Pantum Thailand co.,Ltd<br>
+                                PANTUM (THAILAND) CO.,LTD<br>
 
                             </li>
                         </ul>
@@ -99,10 +99,10 @@
                                 <i class="fa fa-phone-square" aria-hidden="true"></i>Main +6695 923 9685
                             </li>
                             <li >
-                                <i class="fas fa-envelope-square"  aria-hidden="true"></i>phu-it@pantum.co.th
+                                <i class="fas fa-envelope-square"  aria-hidden="true"></i>info@pantum.co.th
                             </li>
                             <li >
-                                <i class="fas fa-globe" aria-hidden="true"></i>www.pantum.com
+                                <i class="fas fa-globe" aria-hidden="true"></i>www.pantum.co.th
                             </li>
                         </ul>
                     </div>
