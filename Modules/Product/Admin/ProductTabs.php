@@ -21,8 +21,8 @@ class ProductTabs extends Tabs
 
         $this->group('advanced_information', trans('product::products.tabs.group.advanced_information'))
             ->add($this->relatedProducts())
-           // ->add($this->upSells())
-           // ->add($this->crossSells())
+            ->add($this->upSells())
+            ->add($this->crossSells())
             ->add($this->additionals());
     }
 
