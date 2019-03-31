@@ -28,6 +28,8 @@ class UpdateSerialsRequest extends Request
             'w_serial_no' => 'required',
             'reseller_name' => 'required',
             'purchase_date' => 'required',
+            'img_product' => 'required',
+            'img_product.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ];
     }
 }

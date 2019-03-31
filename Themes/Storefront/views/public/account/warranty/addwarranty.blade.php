@@ -7,7 +7,7 @@
 @endsection
 
 @section('content_right')
-    <form method="POST" action="{{ route('account.warranty.addwarranty') }}">
+    <form method="POST" action="{{ route('account.warranty.addwarranty') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
         {{ method_field('put') }}
 
@@ -46,7 +46,7 @@
                         </div>
                         <div class="form-group  {{ $errors->has('reseller_name') ? 'has-error': '' }}">
                             <label for="">
-                                {{ trans('storefront::account.warranty.reseller_name') }}
+                                {{ trans('storefront::account.warranty.reseller_name') }}<span>*</span>
                             </label>
 
                             <input type="text" name="reseller_name" id="reseller_name" class="form-control" value="">
@@ -77,6 +77,11 @@
                             <input type="date" name="purchase_date" value="" class="form-control datetime-picker flatpickr-input" id="purchase_date" >
                             {!! $errors->first('reseller_phone_number', '<span class="error-message">:message</span>') !!}
                         </div>
+
+                        <div class="form-group {{ $errors->has('img_product') ? 'has-error': '' }}" >
+                            <input type="file" name="img_product" class="form-control">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,4 +92,5 @@
             {{ trans('storefront::account.warranty.save_changes') }}
         </button>
     </form>
+
 @endsection

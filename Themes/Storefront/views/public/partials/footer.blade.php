@@ -68,12 +68,12 @@
                             color: #FFFFFF;">{{-- setting('store_tagline') --}}ADDRESS</p>
                     <div class="contact">
                         <ul class="list-inline">
-                            <li style="font-size: 20px;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                            <li style="font-size: 20px;margin-left: 1px;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
                                 PANTUM (THAILAND) CO.,LTD<br>
 
                             </li>
                         </ul>
-                        <div class="footaddress" >104/3 M.9 Bangkruai - Sainoi Rd, Tambon Bangkruai Amphur Bangkruai Nonthaburi 11130</div>
+                        <div class="footaddress" style="padding-left:0px;">104/3 M.9 Bangkruai - Sainoi Rd, Tambon Bangkruai Amphur Bangkruai Nonthaburi 11130</div>
                     </div>
 
                 </div>
@@ -95,7 +95,7 @@
 
                             </li>
                             <li >
-                                <i class="fas fa-fax"  aria-hidden="true"></i>02-101-3143
+                                <i class="fas fa-fax"  aria-hidden="true" style="font-size: 13px;"></i>02-101-3143
                             </li>
                             <li >
                                 <i class="fas fa-envelope-square"  aria-hidden="true"></i>info@pantum.co.th

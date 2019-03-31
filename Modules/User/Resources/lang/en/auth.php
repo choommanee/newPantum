@@ -14,7 +14,7 @@ return [
     'reset_password' => 'Reset password',
     'enter_email' => 'Enter your account email to receive a link allowing you to reset your password.',
     'i_remembered_my_password' => 'I remembered my password',
-    'register' => 'Register',
+    'register' => 'Sign Up',
     'first_name' => 'First Name',
     'last_name' => 'Last Name',
     'password_confirmation' => 'Confirm Password',

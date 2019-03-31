@@ -1,10 +1,8 @@
-@extends('public.layout')
+<?php $__env->startSection('title', trans('user::auth.login')); ?>
 
-@section('title', trans('user::auth.login'))
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="form-wrapper">
-        @include('public.partials.notification')
+        <?php echo $__env->make('public.partials.notification', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <div class="col-md-6 detail-login" style="padding-left: 0px;padding-right: 0px;">
             <div class="form form-page" style="padding: 0px;">
                 <div class="login form-inner clearfix" style="">
@@ -34,54 +32,58 @@
         </div>
         <div class="col-md-6" style="padding-left: 0px;padding-right: 0px;">
         <div class="form form-page"  style="padding: 0px;">
-            <form method="POST" action="{{ route('login.post') }}" class="login-form clearfix">
-                {{ csrf_field() }}
+            <form method="POST" action="<?php echo e(route('login.post')); ?>" class="login-form clearfix">
+                <?php echo e(csrf_field()); ?>
+
 
                 <div class="bg-blue">
                     <div class="reflection"></div>
                 </div>
 
                 <div class="login form-inner clearfix">
-                    <a href="{{ route('register') }}" class="register" data-toggle="tooltip" data-placement="top" title="{{ trans('user::auth.register') }}" rel="tooltip">
+                    <a href="<?php echo e(route('register')); ?>" class="register" data-toggle="tooltip" data-placement="top" title="<?php echo e(trans('user::auth.register')); ?>" rel="tooltip">
                         <i class="fa fa-user-plus" aria-hidden="true"></i>
                     </a>
 
-                    <h3>{{ trans('user::auth.login') }}</h3>
+                    <h3><?php echo e(trans('user::auth.login')); ?></h3>
 
-                    <div class="form-group {{ $errors->has('email') ? 'has-error': '' }}">
-                        <label for="email">{{ trans('user::auth.email') }}<span>*</span></label>
+                    <div class="form-group <?php echo e($errors->has('email') ? 'has-error': ''); ?>">
+                        <label for="email"><?php echo e(trans('user::auth.email')); ?><span>*</span></label>
 
-                        <input type="text" name="email" value="{{ old('email') }}" class="form-control" id="email" placeholder="{{ trans('user::attributes.users.email') }}" autofocus>
+                        <input type="text" name="email" value="<?php echo e(old('email')); ?>" class="form-control" id="email" placeholder="<?php echo e(trans('user::attributes.users.email')); ?>" autofocus>
 
                         <div class="input-icon">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </div>
 
-                        {!! $errors->first('email','<span class="error-message">:message</span>') !!}
+                        <?php echo $errors->first('email','<span class="error-message">:message</span>'); ?>
+
                     </div>
 
-                    <div class="form-group {{ $errors->has('password') ? 'has-error': '' }}">
-                        <label for="password">{{ trans('user::auth.password') }}<span>*</span></label>
+                    <div class="form-group <?php echo e($errors->has('password') ? 'has-error': ''); ?>">
+                        <label for="password"><?php echo e(trans('user::auth.password')); ?><span>*</span></label>
 
-                        <input type="password" name="password" class="form-control" id="password" placeholder="{{ trans('user::attributes.users.password') }}">
+                        <input type="password" name="password" class="form-control" id="password" placeholder="<?php echo e(trans('user::attributes.users.password')); ?>">
 
                         <div class="input-icon">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </div>
 
-                        {!! $errors->first('password','<span class="error-message">:message</span>') !!}
+                        <?php echo $errors->first('password','<span class="error-message">:message</span>'); ?>
+
                     </div>
 
                     <div class="clearfix"></div>
 
 
                     <button type="submit" class="btn btn-primary btn-center btn-login" data-loading style="width: 275px;">
-                        {{ trans('user::auth.login') }}
+                        <?php echo e(trans('user::auth.login')); ?>
+
                     </button>
 
                     <div class="btn btn-primary btn-center btn-login" style="width: 275px;">
-                        <a class="ar-bh" href="{{url('register')}}" >
-                            <span id="ctl00_ContentPlaceHolder1_lbJoin">{{ trans('user::auth.register') }}</span>
+                        <a class="ar-bh" href="<?php echo e(url('register')); ?>" >
+                            <span id="ctl00_ContentPlaceHolder1_lbJoin"><?php echo e(trans('user::auth.register')); ?></span>
                         </a>
 
                     </div>
@@ -91,12 +93,13 @@
                         <input type="hidden" value="0">
                         <input type="checkbox" value="1" id="remember">
 
-                        <label for="remember">{{ trans('user::auth.remember_me') }}</label>
+                        <label for="remember"><?php echo e(trans('user::auth.remember_me')); ?></label>
                     </div>
 
 
-                    <a href="{{ route('reset') }}" class="forgot-password pull-right">
-                        {{ trans('user::auth.forgot_password') }}
+                    <a href="<?php echo e(route('reset')); ?>" class="forgot-password pull-right">
+                        <?php echo e(trans('user::auth.forgot_password')); ?>
+
                     </a>
 
 
@@ -106,25 +109,26 @@
                         <div class="social-btn-group" style="display: block;margin-top: 54px;">
                             <hr/>
                             <label>You can use the account and password below to log in directly as an PANTUM Member.</label>
-                           {{-- @if (count(app('enabled_social_login_providers')) !== 0)
-                                <span>{{ trans('user::auth.or') }}</span>
-                            @endif
-                            --}}
-                            @if (setting('facebook_login_enabled'))
-                                <a href="{{ route('login.redirect', ['provider' => 'facebook']) }}" class="btn btn-facebook " >
-                                    {{ Theme::image('public/images/facebook.png') }}
-                                    {{ trans('user::auth.log_in_with_facebook') }}
+                           
+                            <?php if(setting('facebook_login_enabled')): ?>
+                                <a href="<?php echo e(route('login.redirect', ['provider' => 'facebook'])); ?>" class="btn btn-facebook " >
+                                    <?php echo e(Theme::image('public/images/facebook.png')); ?>
+
+                                    <?php echo e(trans('user::auth.log_in_with_facebook')); ?>
+
                                 </a>
 
-                                {{--<div class="fb-login-button" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="true"></div>--}}
-                            @endif
+                                
+                            <?php endif; ?>
 
-                            @if (setting('google_login_enabled'))
-                                <a href="{{ route('login.redirect', ['provider' => 'google']) }}" class="btn btn-google " style="width: 275px;">
-                                    {{ Theme::image('public/images/google.png') }}
-                                    {{ trans('user::auth.log_in_with_google') }}
+                            <?php if(setting('google_login_enabled')): ?>
+                                <a href="<?php echo e(route('login.redirect', ['provider' => 'google'])); ?>" class="btn btn-google " style="width: 275px;">
+                                    <?php echo e(Theme::image('public/images/google.png')); ?>
+
+                                    <?php echo e(trans('user::auth.log_in_with_google')); ?>
+
                                 </a>
-                            @endif
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -136,4 +140,6 @@
 
     </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('public.layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

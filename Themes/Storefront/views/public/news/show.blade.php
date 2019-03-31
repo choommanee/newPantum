@@ -14,7 +14,9 @@
     <div class="container">
         <section class="compare" style="background: #fffcfc;margin-top: 30px;min-height: 600px;margin-bottom: 30px;">
             <div>
+                <div class="row">
                 <div class="blogNewsTitle"><h1>{{trans('news::news.news')}}</h1></div>
+                </div>
                 <?PHP
                     $i=1;
                 ?>
