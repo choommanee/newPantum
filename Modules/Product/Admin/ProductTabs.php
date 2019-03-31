@@ -14,15 +14,15 @@ class ProductTabs extends Tabs
         $this->group('basic_information', trans('product::products.tabs.group.basic_information'))
             ->active()
             ->add($this->general())
-            ->add($this->price())
+          //  ->add($this->price())
             ->add($this->inventory())
             ->add($this->images())
             ->add($this->seo());
 
         $this->group('advanced_information', trans('product::products.tabs.group.advanced_information'))
             ->add($this->relatedProducts())
-            ->add($this->upSells())
-            ->add($this->crossSells())
+           // ->add($this->upSells())
+           // ->add($this->crossSells())
             ->add($this->additionals());
     }
 
