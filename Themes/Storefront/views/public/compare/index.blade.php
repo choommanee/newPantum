@@ -150,6 +150,7 @@
                 }
                 .comparison td, .comparison th {
                     border:1px solid #CCC;
+                    text-align: left;
                 }
                 .price-info {
                     border-top:0 !important;
