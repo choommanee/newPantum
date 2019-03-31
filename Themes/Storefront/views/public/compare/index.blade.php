@@ -136,7 +136,7 @@
             }
 
             table {border-collapse:collapse; table-layout:fixed; width:310px;}
-            table td {border:solid 1px #fab; width:100px; word-wrap:break-word;}
+            table td {border:1px solid #CCC; width:100px; word-wrap:break-word;}
             @media (max-width: 767px) {
                 .comparison td:first-child, .comparison th:first-child {
                     display: none;
