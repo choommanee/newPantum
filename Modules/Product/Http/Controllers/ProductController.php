@@ -41,7 +41,7 @@ class ProductController extends Controller
         $query = $model->filter($productFilter);
 
         if (request()->has('category')) {
-            $productIds = (clone $query)->select('id')->pluck('id');
+            $productIds = (clone $query)->select('products.id')->pluck('id');
         }
 
 
