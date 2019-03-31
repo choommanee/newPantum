@@ -9,8 +9,8 @@ class ProductTabsExtender
 {
     public function extend(Tabs $tabs)
     {
-        $tabs->group('advanced_information')
-            ->add($this->reviews());
+       // $tabs->group('advanced_information')
+       //     ->add($this->reviews());
     }
 
     private function reviews()
