@@ -23,7 +23,6 @@
                 { data: 'checkbox', orderable: false, searchable: false, width: '3%' },
                 { data: 'thumbnail', orderable: false, searchable: false, width: '10%' },
                 { data: 'name', name: 'translations.name', orderable: false, defaultContent: '' },
-                { data: 'price', searchable: false },
                 { data: 'status', name: 'is_active', searchable: false },
                 { data: 'created', name: 'created_at' },
             ],

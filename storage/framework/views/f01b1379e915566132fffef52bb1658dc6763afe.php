@@ -1,6 +1,6 @@
 <aside class="main-sidebar">
     <header class="main-header clearfix">
-        <a class="logo" href="{{ route('admin.dashboard.index') }}">
+        <a class="logo" href="<?php echo e(route('admin.dashboard.index')); ?>">
             <span class="logo-lg">Pantum Admin</span>
         </a>
 
@@ -10,6 +10,7 @@
     </header>
 
     <section class="sidebar">
-        {!! $sidebar !!}
+        <?php echo $sidebar; ?>
+
     </section>
 </aside>

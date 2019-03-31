@@ -28,13 +28,6 @@ class SaveProductRequest extends Request
             'description' => 'required',
             'tax_class_id' => ['nullable', Rule::exists('tax_classes', 'id')],
             'is_active' => 'required|boolean',
-            'price' => 'required|numeric|min:0|max:99999999999999',
-            'special_price' => 'nullable|numeric|min:0|max:99999999999999',
-            'special_price_start' => 'nullable|date',
-            'special_price_end' => 'nullable|date',
-            'manage_stock' => 'required|boolean',
-            'qty' => 'required_if:manage_stock,1',
-            'in_stock' => 'required|boolean',
             'new_from' => 'nullable|date',
             'new_to' => 'nullable|date',
         ];

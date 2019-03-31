@@ -41,6 +41,8 @@ trait HasCrudActions
      */
     public function create()
     {
+
+
         $data = array_merge([
             'tabs' => TabManager::get($this->getModel()->getTable()),
             $this->getResourceName() => $this->getModel(),

@@ -73,7 +73,7 @@ export default class {
             url: route('admin.categories.show', id),
             success: (category) => {
                 this.update(category);
-
+                console.log(category);
                 this.loading(false);
             },
             error: (xhr) => {

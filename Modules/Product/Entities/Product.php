@@ -517,9 +517,9 @@ class Product extends Model
     public function saveRelations($attributes = [])
     {
         $this->categories()->sync(array_get($attributes, 'categories', []));
-        $this->upSellProducts()->sync(array_get($attributes, 'up_sells', []));
-        $this->crossSellProducts()->sync(array_get($attributes, 'cross_sells', []));
-        $this->relatedProducts()->sync(array_get($attributes, 'related_products', []));
+      //  $this->upSellProducts()->sync(array_get($attributes, 'up_sells', []));
+      //  $this->crossSellProducts()->sync(array_get($attributes, 'cross_sells', []));
+      //  $this->relatedProducts()->sync(array_get($attributes, 'related_products', []));
     }
 
     /**

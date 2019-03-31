@@ -20,6 +20,11 @@
 @include('product::admin.products.partials.shortcuts')
 @push('scripts')
     <script type="text/javascript">
+
+        $('.cross_sells').hide();
+        $('.up_sells').hide();
+        $('.related_products').hide();
+
         bkLib.onDomLoaded(function (){
             new nicEditor({fullPanel : true}).panelInstance('description');
         });
