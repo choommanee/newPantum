@@ -116,7 +116,7 @@
                             @endif
 
                             @if (setting('google_login_enabled'))
-                                <a href="{{ route('login.redirect', ['provider' => 'google']) }}" class="btn btn-google ">
+                                <a href="{{ route('login.redirect', ['provider' => 'google']) }}" class="btn btn-google " style="width: 275px;">
                                     {{ Theme::image('public/images/google.png') }}
                                     {{ trans('user::auth.log_in_with_google') }}
                                 </a>
