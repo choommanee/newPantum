@@ -28,6 +28,7 @@
                             <th><?php echo e(trans('storefront::account.warranty.year_warranty')); ?></th>
                             <th><?php echo e(trans('storefront::account.warranty.purchase_date')); ?></th>
                             <th><?php echo e(trans('storefront::account.warranty.datevarunty_start')); ?></th>
+                            <th>image s/n</th>
                             <th><?php echo e(trans('storefront::account.warranty.status')); ?></th>
 
                         </tr>
@@ -47,6 +48,7 @@
                                 <td style="color: #1a237e"><?php echo e($order->varunty_time); ?> <?php echo e(trans('storefront::account.warranty.year')); ?> EXP: <?php echo e($order->dateExp()); ?></td>
                                 <td><?php echo e($order->PurchaseDate->format('d/m/Y')); ?></td>
                                 <td><?php echo e($order->datevarunty_start->format('d/m/Y')); ?></td>
+                                <td><?php if($order->img_product): ?><img src="<?php echo e(url('/storage/media/warranty/')); ?>/<?php echo e($order->img_product); ?>" style="width: 100px;"><?php endif; ?></td>
                                 <td>
                                     <?php if($order->cus_use==2): ?>
                                        <span style="color: green;font-weight: 600;">
