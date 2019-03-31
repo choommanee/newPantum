@@ -59,8 +59,8 @@
         </div>
     </div>
 
-    <link href="https://pt.socail-easy.com/themes/storefront/public/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://pt.socail-easy.com/themes/storefront/public/css/mdb.min.css" rel="stylesheet" />
+    <link href="https://save2home.com/themes/storefront/public/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://save2home.com/themes/storefront/public/css/mdb.min.css" rel="stylesheet" />
 
     @include('public.products.partials.landscape_products', [
         'title' => trans('storefront::product.related_products'),
