@@ -2,6 +2,6 @@
 .phpintel/
 *.sublime-project
 
-node_modules/
-public/
+!public/
+!storage/
 .env
