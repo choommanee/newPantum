@@ -235,6 +235,7 @@
 
            // slitems_check = JSON.parse(localStorage.getItem('qaitems'));
             //slitems_check.length;
+            $( "#comparison" ).removeClass('close');
             if(count==4){
                 alert('รายการเปรียบเทียบของคุณเต็มแล้ว');
                 return ;
