@@ -476,6 +476,14 @@
             -ms-transform: translateY(0);
             transform: translateY(0);
         }
+
+        @media screen and (max-width:1366px){
+            #comparison .go-to-compare {
+                
+                right: 22px;
+                top: 50%;
+            }
+        }
         @media (max-width: 1200px){
 
             #comparison .comparison-wrapper {
