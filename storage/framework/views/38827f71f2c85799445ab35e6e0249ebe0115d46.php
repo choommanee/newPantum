@@ -38,8 +38,9 @@
 
 
                     <input type="hidden" name="product_id" value="<?php echo e($product->id); ?>">
+                    <input type="hidden" name="product_img" value="<?php echo e($product->base_image->path); ?>">
 
-                    <button type="submit" class="btn btn-compare" data-toggle="tooltip" data-placement="left" title="<?php echo e(trans('storefront::product_card.add_to_compare')); ?>">
+                    <button onclick="addCompare(this,'<?php echo e($product->id); ?>','<?php echo e($product->slug); ?>','');return ;" type="button" id="compare" data-value="<?php echo e($product->id); ?>" class="btn btn-compare" data-toggle="tooltip" data-placement="left" title="<?php echo e(trans('storefront::product_card.add_to_compare')); ?>">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i> <?php echo e(trans('storefront::compare.compare')); ?>
 
                     </button>

@@ -15,6 +15,9 @@ class CompareController extends Controller
      */
     public function index(Compare $compare)
     {
+
+
+        //
         return view('public.compare.index', compact('compare'));
     }
 
@@ -26,9 +29,14 @@ class CompareController extends Controller
      */
     public function store(Compare $compare)
     {
-        $compare->store(request('product_id'));
+        //dd(request());
+        $compare->clear();
+        foreach (request('produc_com') as $product_id){
+            $compare->store($product_id);
+        }
 
-        return back()->withSuccess(trans('compare::messages.added'));
+        return redirect()->route('compare.index');
+        //return back()->withSuccess(trans('compare::messages.added'));
     }
 
     /**
