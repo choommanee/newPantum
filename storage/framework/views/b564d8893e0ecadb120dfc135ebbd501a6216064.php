@@ -170,14 +170,16 @@
             pro_id  = data.find('input[name=product_id]');
             pro_img  = data.find('input[name=product_img]');
             _token  = data.find('input[name=_token]');
+            product_name  = data.find('input[name=product_name]');
             console.log(pro_img.val());
             const person = {
                 pro_id: pro_id.val(),
                 pro_img: pro_img.val(),
                 slug: slug,
+                product_name: product_name.val()
             }
 
-            add_item(person)
+            add_item(person);
 
         }
         function loadItems(action=1) {
@@ -196,6 +198,7 @@
                     var product_id = item.pro_id;
                     var product_img = item.pro_img;
                     var slug = item.slug;
+                    var product_name = item.product_name;
 
 
                     html +='<li class="item" >\n' +
@@ -207,7 +210,7 @@
                         '                            </a>\n' +
                         '                            <h4 class="product-title" >\n' +
                         '                                <span > </span>\n' +
-                        '                                <span style=" text-transform: uppercase;">'+slug+'</span>\n' +
+                        '                                <span style=" text-transform: uppercase;">'+product_name+'</span>\n' +
                         '                            </h4>\n' +
                         '                        </div>\n' +
                         '                    </li>';
