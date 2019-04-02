@@ -38,6 +38,7 @@
 
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
                     <input type="hidden" name="product_img" value="{{ $product->base_image->path }}">
+                    <input type="hidden" name="product_name" value="{{ $product->name }}">
 
                     <button onclick="addCompare(this,'{{ $product->id }}','{{ $product->slug }}','');return ;" type="button" id="compare" data-value="{{ $product->id }}" class="btn btn-compare" data-toggle="tooltip" data-placement="left" title="{{ trans('storefront::product_card.add_to_compare') }}">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i> {{ trans('storefront::compare.compare') }}
