@@ -170,10 +170,10 @@
                 pro_id: pro_id.val(),
                 pro_img: pro_img.val(),
                 slug: slug,
-                product_name: product_name,
+                product_name: product_name
             }
 
-            add_item(person)
+            add_item(person);
 
         }
         function loadItems(action=1) {
