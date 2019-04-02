@@ -1,4 +1,4 @@
-<ul class="dropdown-menu" @if($menu->menu_id() ==7) style="width: 640px;min-height:232px;left: 209px;background-color: #000;" id="menu_specail"
+<ul class="dropdown-menu" @if($menu->menu_id() ==7) style="width: 822px;min-height: 253px;left: 209px;background-color: #000;" id="menu_specail"
                         @elseif($menu->menu_id() ==3)
                         style="left: 100px; background-color: #000000; top: 50px;"   id="menu_normal"
     @else
@@ -62,10 +62,10 @@
                     @endif
                 @else
 
-                    <div class="col-sm-12" id="specailmenu" style="width: 650px;">
+                    <div class="col-sm-12" id="specailmenu" style="width: 838px;">
                         <div class="col-sm-6">
                             <div >
-                                    <a href="https://save2home.com/public/en/products/p5500dn-ILQaXY0k" class="product-card">
+                                    <a href="https://save2home.com/public/en/products/p5500dn-ILQaXY0k" class="product-card" style="border: #ffffff 1px solid;">
 
                                      <img src="https://save2home.com/storage/media/boojYDwqpsfMDQK9Uc5c4xDUX7KkiHcGDj6JySA8.png" style="width: 100%;">
 
@@ -74,7 +74,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div >
-                                <a href="https://save2home.com/public/en/products/p3500dn-EHg3vQEj" class="product-card">
+                                <a href="https://save2home.com/public/en/products/p3500dn-EHg3vQEj" class="product-card" style="border: #ffffff 1px solid;">
 
                                     <img src="https://save2home.com/storage/media/3DDV251UH8WzVsfVF86ABIbt6f2GB9eH0b6Zc8Qi.png" style="width: 100%;">
 
