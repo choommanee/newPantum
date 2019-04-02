@@ -64,7 +64,8 @@
 
                     <div class="col-sm-12" id="specailmenu" style="width: 838px;">
                         <div class="col-sm-6">
-                            <div >
+                            <div>
+
                                 <h3 style="color: #FFFFFF;">P5500DN</h3>
                                     <a href="https://save2home.com/public/en/products/p5500dn-ILQaXY0k" class="product-card" style="border: #ffffff 1px solid;">
                                      <img src="https://save2home.com/storage/media/boojYDwqpsfMDQK9Uc5c4xDUX7KkiHcGDj6JySA8.png" style="width: 100%;">
