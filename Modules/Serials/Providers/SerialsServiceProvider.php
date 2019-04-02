@@ -3,6 +3,7 @@
 namespace Modules\Serials\Providers;
 
 use Modules\Admin\Ui\Tab;
+use Modules\Serials\admin\ImportTabs;
 use Modules\Support\Traits\AddsAsset;
 use Illuminate\Support\ServiceProvider;
 use Modules\Support\Traits\LoadsConfig;
@@ -22,6 +23,7 @@ class SerialsServiceProvider extends ServiceProvider
     {
         //
         TabManager::register('serials', SerialTabs::class);
+        TabManager::register('imports', ImportTabs::class);
 
         //$this->addAssets('admin.(serials).(create|edit)');
     }

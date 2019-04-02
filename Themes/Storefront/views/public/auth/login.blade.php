@@ -22,7 +22,7 @@
 
                                 <div class="service-des" style="text-align: left;">
                                     <h2>Personalized Service</h2>
-                                    <p>Enjoy the most complete personalized information center, after-sales service, and customer service.</p>
+                                    <p style="text-align: left;">Enjoy the most complete personalized information center, after-sales service, and customer service.</p>
                                 </div>
 
                             </li>

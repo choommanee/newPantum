@@ -1,16 +1,14 @@
-@extends('public.layout')
+<?php $__env->startSection('title', trans('faq::faqs.faqs')); ?>
 
-@section('title', trans('faq::faqs.faqs'))
-
-@push('meta')
+<?php $__env->startPush('meta'); ?>
     <meta name="title" content="news from pantum">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
-@endpush
+<?php $__env->stopPush(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <style>
     .uk-container {
         box-sizing: content-box;
@@ -196,43 +194,44 @@
         <section class="compare" style="background: #ffffff;margin-top: 30px;min-height: 600px;margin-bottom: 30px;">
             <div>
                 <div class="blogNewsTitle">
-                    <h1 style="float: left;background: #ffffff;">{{trans('faq::faqs.faqs')}}</h1>
-                    <form method="GET" action="{{ route('faqs.index') }}" id="product-filter-form" class="form-faq">
+                    <h1 style="float: left;background: #ffffff;"><?php echo e(trans('faq::faqs.faqs')); ?></h1>
+                    <form method="GET" action="<?php echo e(route('faqs.index')); ?>" id="product-filter-form" class="form-faq">
                         <input type="text" class="FaqtxtSearch"   name="Search" id="Search" placeholder="Search for names.." title="Type in a name">
                     </form>
                 </div>
                 <div class="row">
-                    @foreach($productGroup as $product)
-                        @if ($product->hasAnyFaq())
+                    <?php $__currentLoopData = $productGroup; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php if($product->hasAnyFaq()): ?>
                             <div class="col-md-2">
                                 <div class="product-card-list clearfix">
-                                    <a class="product-image pull-left" href="{{ route('faqs.getbycat', $product->id) }}" style="width: 100%;cursor: pointer;">
+                                    <a class="product-image pull-left" href="<?php echo e(route('faqs.getbycat', $product->id)); ?>" style="width: 100%;cursor: pointer;">
 
-                                        @if (! $product->base_image->exists)
+                                        <?php if(! $product->base_image->exists): ?>
                                             <div class="image-placeholder">
                                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                                             </div>
-                                        @else
+                                        <?php else: ?>
                                             <div class="image-holder">
-                                                <img src="{{ $product->base_image->path }}">
+                                                <img src="<?php echo e($product->base_image->path); ?>">
                                             </div>
-                                        @endif
+                                        <?php endif; ?>
                                     </a>
                                     <div class="product-content-inner" style="width: 100%;margin: 0 auto;text-align: center;">
-                                        <a href="{{ route('faqs.getbycat', $product->id) }}" class="product-name">
-                                            <h5>{{ $product->name }}</h5>
+                                        <a href="<?php echo e(route('faqs.getbycat', $product->id)); ?>" class="product-name">
+                                            <h5><?php echo e($product->name); ?></h5>
                                         </a>
-                                        <p>{{ $product->short_description }}</p>
+                                        <p><?php echo e($product->short_description); ?></p>
                                     </div>
                                 </div>
                             </div>
-                        @endif
-                    @endforeach
+                        <?php endif; ?>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
                 <div class="uk-container">
                 <h1 class="uk-margin-small-top uk-heading-hero uk-scrollspy-inview uk-animation-slide-bottom-medium"
                      data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; delay: 40" style="margin: 0 auto;text-align: center;">
-                    {{trans('faq::faqs.How_can_we_help')}}
+                    <?php echo e(trans('faq::faqs.How_can_we_help')); ?>
+
                 </h1>
                 <div class="col-md-12" style="margin: 0 auto; color: #0a0a0a;margin-bottom: 20px;" >
                 <ul class="uk-list uk-list-large uk-margin-medium-top">
@@ -240,50 +239,54 @@
                         $i=1;
                         $Product="";
                     ?>
-                    @foreach($pages as $new)
+                    <?php $__currentLoopData = $pages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $new): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-                            @if($Product!=$new->product->name)
-                            <h1 style="margin-top: 35px;">{{$new->product->name}}</h1>
+                            <?php if($Product!=$new->product->name): ?>
+                            <h1 style="margin-top: 35px;"><?php echo e($new->product->name); ?></h1>
 
-                            @endif
+                            <?php endif; ?>
 
                         <li>
                             <a href="#article-<?=$i?>" >
                                 <span data-uk-icon="icon: arrow-right" class="uk-icon">
                                     <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ratio="1">
                                         <polyline fill="none" stroke="#000" points="10 5 15 9.5 10 14"></polyline> <line fill="none" stroke="#000" x1="4" y1="9.5" x2="15" y2="9.5"></line></svg></span>
-                                {{$new->name}}</a></li>
-                            @php
+                                <?php echo e($new->name); ?></a></li>
+                            <?php
                             $i++;
                              $Product=$new->product->name;
-                            @endphp
-                    @endforeach
+                            ?>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </ul>
                     <?PHP
                     $i=1;
                     $Product="";
                     ?>
-                    @foreach($pages as $new)
+                    <?php $__currentLoopData = $pages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $new): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div id="article-<?=$i?>"></div>
                     <article class="uk-article uk-margin-xlarge-top">
-                        <h2  class="uk-article-title uk-margin-medium-bottom">{{$new->product->name}} : {{$new->name}} ?<a href="#" data-uk-totop="" data-uk-scroll="duration: 400" class="tm-totop uk-float-right uk-margin-small-top uk-totop uk-icon"><svg width="18" height="10" viewBox="0 0 18 10" xmlns="http://www.w3.org/2000/svg" ratio="1"><polyline fill="none" stroke="#000" stroke-width="1.2" points="1 9 9 1 17 9 "></polyline></svg></a></h2>
+                        <h2  class="uk-article-title uk-margin-medium-bottom"><?php echo e($new->product->name); ?> : <?php echo e($new->name); ?> ?<a href="#" data-uk-totop="" data-uk-scroll="duration: 400" class="tm-totop uk-float-right uk-margin-small-top uk-totop uk-icon"><svg width="18" height="10" viewBox="0 0 18 10" xmlns="http://www.w3.org/2000/svg" ratio="1"><polyline fill="none" stroke="#000" stroke-width="1.2" points="1 9 9 1 17 9 "></polyline></svg></a></h2>
                         <p>
 
-                            {!! $new->translation1->body !!}
+                            <?php echo $new->translation1->body; ?>
+
                         </p>
                     </article>
                         <?PHP
                         $i++;?>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
 
 
 
                 </div>
-                {{ $pages->links() }}
+                <?php echo e($pages->links()); ?>
+
                 </div>
                 </div>
             <div style="clear: both;"></div>
         </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('public.layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

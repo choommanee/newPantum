@@ -26,7 +26,29 @@ class SidebarExtender extends BaseSidebarExtender
                     $this->auth->hasAccess('admin.serials.index')
                 );
 
+                $item->item(trans('serials::serials.customer_register'), function (Item $item) {
+                    $item->weight(5);
+                    $item->route('admin.serials.customer');
+                    $item->authorize(
+                        $this->auth->hasAccess('admin.serials.index')
+                    );
+                });
 
+                $item->item(trans('serials::serials.serials'), function (Item $item) {
+                    $item->weight(5);
+                    $item->route('admin.serials.index');
+                    $item->authorize(
+                        $this->auth->hasAccess('admin.serials.index')
+                    );
+                });
+
+                $item->item(trans('serials::serials.import'), function (Item $item) {
+                    $item->weight(5);
+                    $item->route('admin.serials.import');
+                    $item->authorize(
+                        $this->auth->hasAccess('admin.serials.index')
+                    );
+                });
 
             });
         });

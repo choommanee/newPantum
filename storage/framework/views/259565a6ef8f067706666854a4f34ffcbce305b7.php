@@ -10,14 +10,15 @@
         <?php echo e(Form::text('varunty_time', 'warranty (year)', $errors, $serial, ['required' => true])); ?>
 
         <input type="hidden" name="body" id="body" value="1"/>
+        <input type="hidden" name="is_active" id="is_active" value="1"/>
         <div class="form-group ">
             <label for="to" class="col-md-3 control-label text-left">Status</label>
             <div class="col-md-9">
-                <select name="is_active" id="is_active">
-                    <option value="0" <?php if($serial->is_active): ?> selected <?php endif; ?>>Not use</option>
-                    <option value="1"  <?php if($serial->is_active==1): ?> selected <?php endif; ?>>Variable</option>
-                    <option value="2" <?php if($serial->is_active==2): ?> selected <?php endif; ?>>Activate</option>
-                    <option value="3" <?php if($serial->is_active==3): ?> selected <?php endif; ?>>Not Activate</option>
+                <select name="cus_use" id="cus_use">
+                    <option value="0" <?php if($serial->cus_use): ?> selected <?php endif; ?>>Not use</option>
+                    <option value="1"  <?php if($serial->cus_use==1): ?> selected <?php endif; ?>>Variable</option>
+                    <option value="2" <?php if($serial->cus_use==2): ?> selected <?php endif; ?>>Activate</option>
+                    <option value="3" <?php if($serial->cus_use==3): ?> selected <?php endif; ?>>Not Activate</option>
                 </select>
             </div>
         </div>

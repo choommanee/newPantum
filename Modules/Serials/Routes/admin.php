@@ -12,6 +12,19 @@ Route::get('serials/create', [
     'middleware' => 'can:admin.serials.create',
 ]);
 
+Route::get('serials/import', [
+    'as' => 'admin.serials.import',
+    'uses' => 'SerialController@import',
+    'middleware' => 'can:admin.serials.create',
+]);
+
+Route::get('serials/customer', [
+    'as' => 'admin.serials.customer',
+    'uses' => 'SerialController@create',
+    'middleware' => 'can:admin.serials.create',
+]);
+
+
 Route::post('serials', [
     'as' => 'admin.serials.store',
     'uses' => 'SerialController@store',
