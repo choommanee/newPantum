@@ -603,7 +603,7 @@
 }
 
 @media screen and (max-width:460px){
-    .theme-black .btn-primary{display: none;}
+    .theme-black .btn-primary{display: block;}
 }
 @media screen and (max-width:320px){
     .form-wrapper{display:table;width:90%;min-width: 90%;margin:30px auto 0}
@@ -623,7 +623,7 @@
     .product-list .pagination{margin-top:15px}
 
     .image-holder img { /* max-height: 90%;*/ }
-    .theme-black .btn-primary{display: none;}
+    .theme-black .btn-primary{display: block;}
 
     .product-card .image-holder, .product-card .image-placeholder {
         height: 180px;

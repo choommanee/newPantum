@@ -2,7 +2,7 @@
     <!--โปรดักคอเซล-->
     <section class="product-slider-wrapper clearfix">
         <div class="section-header boxtittle">
-            <h3><?php echo e($title); ?></h3>
+            <h3><a href="<?php echo e(route('products.index')); ?>" ><?php echo e($title); ?></a></h3>
         </div>
 
 

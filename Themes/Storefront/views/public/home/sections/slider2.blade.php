@@ -1,6 +1,6 @@
 <div class="section-header boxtittle" >
 
-    <h3>{{ $slider2->name }}</h3>
+    <h3><a href="{{route('products.index')}}" >{{ $slider2->name }}</a></h3>
 </div>
 
 <div class="home-slider"

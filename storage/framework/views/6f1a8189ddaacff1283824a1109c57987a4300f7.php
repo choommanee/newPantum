@@ -85,7 +85,7 @@
         <!--โปรดักคอเซล-->
         <section class="product-slider-wrapper clearfix" >
             <div class="section-header boxtittle">
-                <h3>News  >></h3>
+                <h3><a href="<?php echo e(route('news.index')); ?>" >News  >></a></h3>
             </div>
 
             <div class="separator clearfix" style="background-color: #070707;">

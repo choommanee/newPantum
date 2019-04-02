@@ -11,7 +11,7 @@
                     <p class="footer-brief" style="border-bottom: 1px solid;
     font-size: 18px;
     font-weight: 800;
-    color: #FFFFFF;">SERVICE CENTER</p>
+    color: #FFFFFF;">SERVICE HOTLINE</p>
 
                     <?php if(setting('store_phone') || setting('store_email') || setting('storefront_footer_address')): ?>
                         <div class="contact">
@@ -19,7 +19,7 @@
                                 <?php if(setting('store_phone')): ?>
                                     <li>
                                         <i class="fa fa-phone-square" aria-hidden="true"></i>
-                                        <?php echo e(setting('store_phone')); ?></li>
+                                        <a href="tel:<?php echo e(setting('store_phone')); ?>"><?php echo e(setting('store_phone')); ?></a></li>
                                 <?php endif; ?>
                                 <?php if($socialLinks['facebook-official']!=''): ?>
                                     <li><i class="fab fa-facebook" aria-hidden="true" ></i>
@@ -83,17 +83,17 @@
                     <div class="contact">
                         <ul class="list-inline">
                             <li>
-                                <i class="fa fa-phone-square" aria-hidden="true"></i>02-101-3144
+                                <i class="fa fa-phone-square" aria-hidden="true"></i><a href="tel:02-101-3144">02-101-3144</a>
 
                             </li>
                             <li >
-                                <i class="fas fa-fax"  aria-hidden="true" style="font-size: 13px;"></i>02-101-3143
+                                <i class="fas fa-fax"  aria-hidden="true" style="font-size: 13px;"></i><a href="tel:02-101-3143">02-101-3143</a>
                             </li>
                             <li >
-                                <i class="fas fa-envelope-square"  aria-hidden="true"></i>info@pantum.co.th
+                                <i class="fas fa-envelope-square"  aria-hidden="true"></i><a href="mailto:info@pantum.co.th">info@pantum.co.th</a>
                             </li>
                             <li >
-                                <i class="fas fa-globe" aria-hidden="true"></i>www.pantum.co.th
+                                <i class="fas fa-globe" aria-hidden="true"></i><a href="https://www.pantum.co.th">www.pantum.co.th</a>
                             </li>
                         </ul>
                     </div>

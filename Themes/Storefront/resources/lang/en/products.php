@@ -19,4 +19,5 @@ return [
     'from' => 'From',
     'to' => 'To',
     'filter' => 'Filter',
+    'clear' => 'Clear',
 ];

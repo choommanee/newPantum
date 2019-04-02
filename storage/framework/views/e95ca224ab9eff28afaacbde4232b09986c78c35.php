@@ -1,6 +1,6 @@
 <div class="section-header boxtittle" >
 
-    <h3><?php echo e($slider2->name); ?></h3>
+    <h3><a href="<?php echo e(route('products.index')); ?>" ><?php echo e($slider2->name); ?></a></h3>
 </div>
 
 <div class="home-slider"

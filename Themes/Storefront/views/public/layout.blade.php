@@ -85,7 +85,7 @@
 
                 @include('public.partials.footer')
 
-              
+
             </div>
         </div>
 

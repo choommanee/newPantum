@@ -2,7 +2,7 @@
     <!--โปรดักคอเซล-->
     <section class="product-slider-wrapper clearfix">
         <div class="section-header boxtittle">
-            <h3>{{ $title }}</h3>
+            <h3><a href="{{route('products.index')}}" >{{ $title }}</a></h3>
         </div>
 
 

@@ -13,7 +13,7 @@
                     <td width="20px"> </td>
                     <td style="">
                         @foreach ($attributes as $attribute)
-                            <div class="information-data clearfix" style="border-bottom: 1px solid #d6d3d35c;" >
+                            <div class="information-data clearfix" style="border-bottom: 1px solid #d6d3d35c;width: 90%;margin-left: 12px;" >
                                 <label class="pull-left">{{ $attribute->name }}</label>
                                 <span>
                                         {{ $attribute->values->implode('value', ', ') }}
