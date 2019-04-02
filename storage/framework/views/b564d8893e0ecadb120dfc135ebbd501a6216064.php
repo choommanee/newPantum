@@ -241,8 +241,9 @@
 
            // slitems_check = JSON.parse(localStorage.getItem('qaitems'));
             //slitems_check.length;
+            $( "#comparison" ).removeClass('close');
             if(count==4){
-                alert('รายการเปรียบเทียบของคุณเจ็มแล้ว');
+                alert('รายการเปรียบเทียบของคุณเต็มแล้ว');
                 return ;
             }
             if (count == 1) {
@@ -480,6 +481,14 @@
             -webkit-transform: translateY(0);
             -ms-transform: translateY(0);
             transform: translateY(0);
+        }
+
+        @media  screen and (max-width:1366px){
+            #comparison .go-to-compare {
+
+                right: 22px;
+                top: 50%;
+            }
         }
         @media (max-width: 1200px){
 

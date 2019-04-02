@@ -71,7 +71,8 @@ class AccountWarrantyController extends Controller
            // dd(request());
             //$form= new Form();
             //$form->filename=json_encode($data);
-
+            echo request()->get('purchase_date');
+            die();
             $SerialUpdate = Serial::find($pagesq);
 
             $SerialUpdate->ResellerName = request()->get('reseller_name');
@@ -87,5 +88,23 @@ class AccountWarrantyController extends Controller
 
             return redirect()->route('account.warranty.index');
         }
+    }
+
+    public function ConvertDateThaiToDb($date){
+        // thai date format mush be dd/mm/yyyy
+        $date = trim($date);
+        if($date==''){
+            return ;
+        }
+        $pos = strpos($date, "-");
+        if($pos !=false){
+            return $date;
+        }
+        list($dd , $mm, $yy) = explode('/', $date);
+        if ($yy > date('Y')) {
+            $yy -= 543;
+        }
+
+        return "{$yy}-{$mm}-{$dd}";
     }
 }

@@ -479,7 +479,7 @@
 
         @media screen and (max-width:1366px){
             #comparison .go-to-compare {
-                
+
                 right: 22px;
                 top: 50%;
             }

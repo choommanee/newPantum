@@ -24,7 +24,7 @@ class OptionServiceProvider extends ServiceProvider
         TabManager::register('options', OptionTabs::class);
         TabManager::extend('products', ProductTabsExtender::class);
 
-        $this->addAdminAssets('admin.(options|products).(create|edit)', ['admin.option.css', 'admin.option.js']);
+        $this->addAdminAssets('admin.(options|products).(create|edit)');
     }
 
     /**
