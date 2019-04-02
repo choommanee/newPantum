@@ -21,6 +21,8 @@
 @push('scripts')
     <script type="text/javascript">
 
+        $('.price').hide();
+        $('.inventory').hide();
         $('.cross_sells').hide();
         $('.up_sells').hide();
         $('.related_products').hide();

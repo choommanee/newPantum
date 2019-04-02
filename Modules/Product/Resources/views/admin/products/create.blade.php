@@ -21,9 +21,11 @@
 
     <script type="text/javascript">
 
-        $('#cross_sells').hide();
-        $('#up_sells').hide();
-        $('#related_products').hide();
+        $('.price').hide();
+        $('.inventory').hide();
+        $('.cross_sells').hide();
+        $('.up_sells').hide();
+        $('.related_products').hide();
 
         bkLib.onDomLoaded(function (){
             new nicEditor({fullPanel : true}).panelInstance('description');

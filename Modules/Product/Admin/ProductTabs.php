@@ -14,8 +14,8 @@ class ProductTabs extends Tabs
         $this->group('basic_information', trans('product::products.tabs.group.basic_information'))
             ->active()
             ->add($this->general())
-            //->add($this->price())
-           // ->add($this->inventory())
+            ->add($this->price())
+            ->add($this->inventory())
             ->add($this->images())
             ->add($this->seo());
 
