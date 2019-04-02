@@ -85,9 +85,7 @@
 
                 @include('public.partials.footer')
 
-                <a class="scroll-top" href="#">
-                    <i class="fa fa-angle-up" aria-hidden="true"></i>
-                </a>
+              
             </div>
         </div>
 

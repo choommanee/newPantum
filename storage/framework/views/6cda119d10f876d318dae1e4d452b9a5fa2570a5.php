@@ -88,9 +88,7 @@
 
                 <?php echo $__env->make('public.partials.footer', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-                <a class="scroll-top" href="#">
-                    <i class="fa fa-angle-up" aria-hidden="true"></i>
-                </a>
+              
             </div>
         </div>
 
