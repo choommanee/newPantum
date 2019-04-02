@@ -13,7 +13,7 @@
                     <td width="20px"> </td>
                     <td style="">
                         <?php $__currentLoopData = $attributes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $attribute): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <div class="information-data clearfix" style="border-bottom: 1px solid #d6d3d35c;width: 90%;margin-left: 12px;" >
+                            <div class="information-data clearfix">
                                 <label class="pull-left"><?php echo e($attribute->name); ?></label>
                                 <span>
                                         <?php echo e($attribute->values->implode('value', ', ')); ?>

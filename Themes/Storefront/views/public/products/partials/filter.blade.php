@@ -56,8 +56,8 @@
                 </div>
             </div>
 
-                <button type="reset" class="btn btn-primary btn-filter pull-right" style="margin-right: 10px;">{{ trans('storefront::products.clear') }}</button>
-                <button type="submit" class="btn btn-primary btn-filter pull-right" data-loading style="margin-right: 10px;">{{ trans('storefront::products.filter') }}</button>
+                <a  class="btn btn-primary btn-filter pull-right" style="margin-right: 10px;width: 100px;" href="{{route('products.index')}}?sort=latest&category=product">{{ trans('storefront::products.clear') }}</a>
+                <button type="submit" class="btn btn-primary btn-filter pull-right" data-loading style="margin-right: 10px;width: 100px;">{{ trans('storefront::products.filter') }}</button>
             <div style="clear: both;"></div>
         </form>
     </div>

@@ -71,15 +71,16 @@ class AccountWarrantyController extends Controller
            // dd(request());
             //$form= new Form();
             //$form->filename=json_encode($data);
-            echo request()->get('purchase_date');
-            die();
+            request()->get('purchase_date');
+            $purchase_date = $this->ConvertDateThaiToDb(request()->get('purchase_date'));
+           // die();
             $SerialUpdate = Serial::find($pagesq);
 
             $SerialUpdate->ResellerName = request()->get('reseller_name');
             $SerialUpdate->ResellerAddress = request()->get('reseller_address');
             $SerialUpdate->ResellerPhone = request()->get('reseller_phone_number');
-            $SerialUpdate->PurchaseDate = request()->get('purchase_date');
-            $SerialUpdate->datevarunty_start = request()->get('purchase_date');
+            $SerialUpdate->PurchaseDate = $purchase_date;
+            $SerialUpdate->datevarunty_start = $purchase_date;
             $SerialUpdate->user_id = $my->id;
             $SerialUpdate->cus_use = 2;
             $SerialUpdate->img_product = $img_product;
@@ -96,11 +97,8 @@ class AccountWarrantyController extends Controller
         if($date==''){
             return ;
         }
-        $pos = strpos($date, "-");
-        if($pos !=false){
-            return $date;
-        }
-        list($dd , $mm, $yy) = explode('/', $date);
+
+        list( $yy, $mm,$dd ) = explode('-', $date);
         if ($yy > date('Y')) {
             $yy -= 543;
         }
