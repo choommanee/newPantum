@@ -65,16 +65,16 @@
                     <div class="col-sm-12" id="specailmenu" style="width: 650px;">
                         <div class="col-sm-6">
                             <div >
-                                    <a href="#" class="product-card">
+                                    <a href="https://save2home.com/public/en/products/p5500dn-ILQaXY0k" class="product-card">
 
-                                     <img src="https://save2home.com/storage/media/p1.png" style="width: 100%;">
+                                     <img src="https://save2home.com/storage/media/boojYDwqpsfMDQK9Uc5c4xDUX7KkiHcGDj6JySA8.png" style="width: 100%;">
 
                                     </a>
                                  </div>
                         </div>
                         <div class="col-sm-6">
                             <div >
-                                <a href="#" class="product-card">
+                                <a href="https://save2home.com/public/en/products/p3500dn-EHg3vQEj" class="product-card">
 
                                     <img src="https://save2home.com/storage/media/3DDV251UH8WzVsfVF86ABIbt6f2GB9eH0b6Zc8Qi.png" style="width: 100%;">
 
