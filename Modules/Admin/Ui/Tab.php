@@ -119,7 +119,7 @@ class Tab
      */
     public function getNav()
     {
-        return "<li class='{$this->activeClass()} {$this->errorClass()} {$this->name}' >
+        return "<li id='{$this->name}' class='{$this->name} {$this->activeClass()} {$this->errorClass()}' >
             <a href='#{$this->name}' data-toggle='tab'>{$this->label}</a>
         </li>";
     }
