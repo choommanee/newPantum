@@ -65,19 +65,17 @@
                     <div class="col-sm-12" id="specailmenu" style="width: 838px;">
                         <div class="col-sm-6">
                             <div >
+                                <h3 style="color: #FFFFFF;">P5500DN</h3>
                                     <a href="https://save2home.com/public/en/products/p5500dn-ILQaXY0k" class="product-card" style="border: #ffffff 1px solid;">
-
                                      <img src="https://save2home.com/storage/media/boojYDwqpsfMDQK9Uc5c4xDUX7KkiHcGDj6JySA8.png" style="width: 100%;">
-
                                     </a>
                                  </div>
                         </div>
                         <div class="col-sm-6">
                             <div >
+                                <h3 style="color: #FFFFFF;">P3500DN</h3>
                                 <a href="https://save2home.com/public/en/products/p3500dn-EHg3vQEj" class="product-card" style="border: #ffffff 1px solid;">
-
                                     <img src="https://save2home.com/storage/media/3DDV251UH8WzVsfVF86ABIbt6f2GB9eH0b6Zc8Qi.png" style="width: 100%;">
-
                                 </a>
                             </div>
                         </div>
