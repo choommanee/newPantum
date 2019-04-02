@@ -57,9 +57,8 @@
             </div>
 
                 <button type="reset" class="btn btn-primary btn-filter pull-right" style="margin-right: 10px;">{{ trans('storefront::products.clear') }}</button>
-
                 <button type="submit" class="btn btn-primary btn-filter pull-right" data-loading style="margin-right: 10px;">{{ trans('storefront::products.filter') }}</button>
-
+            <div style="clear: both;"></div>
         </form>
     </div>
 </div>
