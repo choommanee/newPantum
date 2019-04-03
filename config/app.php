@@ -172,6 +172,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Illuminate\Notifications\NotificationServiceProvider::class,
 
+
+
         /*
          * Package Service Providers...
          */

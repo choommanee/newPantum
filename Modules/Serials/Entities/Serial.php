@@ -11,6 +11,7 @@ use Modules\Support\Eloquent\Translatable;
 use Modules\Serials\admin\SerialTable;
 use Modules\Support\Search\Searchable;
 use Modules\Serials\Entities\SerialTranslation;
+use Modules\User\Entities\User;
 
 class Serial extends Model
 {
@@ -100,6 +101,10 @@ class Serial extends Model
         return $this->belongsTo(Product::class,'pro_id','id');
     }
 
+    public function cusotmer()
+    {
+        return $this->belongsTo(User::class,'user_id','id');
+    }
     public function translation1()
     {
         return $this->belongsTo(SerialTranslation::class,'id','serial_id');

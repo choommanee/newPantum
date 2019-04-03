@@ -17,13 +17,23 @@ Route::get('serials/import', [
     'uses' => 'SerialController@import',
     'middleware' => 'can:admin.serials.create',
 ]);
-
-Route::get('serials/customer', [
-    'as' => 'admin.serials.customer',
-    'uses' => 'SerialController@create',
+Route::get('serials/export/{type}', [
+    'as' => 'admin.serials.export',
+    'uses' => 'SerialImportController@downloadExcel',
     'middleware' => 'can:admin.serials.create',
 ]);
 
+Route::get('serials/customer', [
+    'as' => 'admin.serials.customer',
+    'uses' => 'SerialImportController@index1',
+    'middleware' => 'can:admin.serials.create',
+]);
+
+Route::post('serials/import', [
+    'as' => 'admin.serials.import',
+    'uses' => 'SerialImportController@addimport',
+    'middleware' => 'can:admin.serials.create',
+]);
 
 Route::post('serials', [
     'as' => 'admin.serials.store',

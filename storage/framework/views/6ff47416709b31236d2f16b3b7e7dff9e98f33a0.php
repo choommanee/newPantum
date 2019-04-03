@@ -6,7 +6,8 @@
 <?php echo $__env->renderComponent(); ?>
 
 <?php $__env->startSection('content'); ?>
-    <form method="POST" action="<?php echo e(route('admin.serials.store')); ?>" class="form-horizontal" id="serial-create-form" novalidate>
+    <a href="<?php echo e(url('admin/serials/export/xlsx')); ?>"><button class="btn btn-success">Download Excel xlsx</button></a>
+    <form method="POST" action="<?php echo e(route('admin.serials.import')); ?>" class="form-horizontal" id="serial-create-form" novalidate enctype="multipart/form-data">
         <?php echo e(csrf_field()); ?>
 
 

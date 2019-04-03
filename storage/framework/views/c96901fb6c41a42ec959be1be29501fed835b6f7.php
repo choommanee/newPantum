@@ -1,5 +1,6 @@
 <div class="row">
     <div class="col-md-8">
+
         <?php echo e(Form::select('pro_id', 'Product', $errors, $productdata, $serial, ['required' => true])); ?>
 
 

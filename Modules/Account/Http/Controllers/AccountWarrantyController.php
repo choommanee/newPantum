@@ -55,15 +55,13 @@ class AccountWarrantyController extends Controller
                 return  back()->withErrors(trans('storefront::account.warranty.haveregister'));
             }
 
-
-
             $img_product ='';
             if(request()->hasfile('img_product'))
             {
                // echo storage_path('app/media/warranty');
                // echo "<br/>";
 
-                    echo $name= date('mdYHis') . uniqid() .request()->file('img_product')->getClientOriginalName();
+                    $name= date('mdYHis') . uniqid() .request()->file('img_product')->getClientOriginalName();
                     request()->file('img_product')->move(storage_path('app/public/media/warranty'), $name);
                     $img_product = $name;
             }
@@ -71,7 +69,7 @@ class AccountWarrantyController extends Controller
            // dd(request());
             //$form= new Form();
             //$form->filename=json_encode($data);
-            request()->get('purchase_date');
+           // request()->get('purchase_date');
             $purchase_date = $this->ConvertDateThaiToDb(request()->get('purchase_date'));
            // die();
             $SerialUpdate = Serial::find($pagesq);
@@ -80,7 +78,7 @@ class AccountWarrantyController extends Controller
             $SerialUpdate->ResellerAddress = request()->get('reseller_address');
             $SerialUpdate->ResellerPhone = request()->get('reseller_phone_number');
             $SerialUpdate->PurchaseDate = $purchase_date;
-            $SerialUpdate->datevarunty_start = $purchase_date;
+           // $SerialUpdate->datevarunty_start = $purchase_date;
             $SerialUpdate->user_id = $my->id;
             $SerialUpdate->cus_use = 2;
             $SerialUpdate->img_product = $img_product;

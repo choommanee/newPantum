@@ -21,7 +21,7 @@ class Serial_translations extends Model
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = ['serial_id','name','locale'];
 
     /**
      * The attributes that should be cast to native types.

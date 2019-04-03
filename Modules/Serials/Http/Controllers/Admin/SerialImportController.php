@@ -4,19 +4,19 @@ namespace Modules\Serials\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 use Modules\Admin\Traits\HasCrudActions;
 use Modules\Admin\Ui\Facades\TabManager;
 use Modules\Serials\admin\Export;
 use Modules\Serials\Entities\Serial;
 use Modules\Serials\Http\Requests\SaveSerialRequest;
-use Maatwebsite\Excel\Concerns\FromQuery;
-use Maatwebsite\Excel\Concerns\Exportable;
+use Modules\Serials\admin\Import;
 
-class SerialController extends Controller
+class SerialImportController extends Controller
 {
-    use HasCrudActions;
+    //use HasCrudActions;
 
-
+    //use Exportable;
     /**
      * Model for the resource.
      *
@@ -50,8 +50,9 @@ class SerialController extends Controller
     {
         return Serial::query();
     }
-    public function index(Request $request)
+    public function index1(Request $request)
     {
+        //echo "test";
 
         if ($request->has('query')) {
             return $this->getModel()
@@ -62,10 +63,11 @@ class SerialController extends Controller
         }
 
         if ($request->has('table')) {
+
             return $this->getModel()->table($request);
         }
-
-        return view("{$this->viewPath}.index");
+        //echo 'test';
+        return view("{$this->viewPath}.customer");
     }
 
     public function import()
@@ -79,16 +81,24 @@ class SerialController extends Controller
         return view("{$this->viewPath}.import", $data);
     }
 
+    public  function addimport(Request $request){
+        if($request->hasFile('fileserial')){
+            Excel::import(new Import($request), $request->file('fileserial'));
+           // dd();
+        }
+
+
+
+        return redirect(route('admin.serials.index'))->with('success', 'All good!');
+
+    }
+
     public function downloadExcel($type)
     {
-       /* $data = Serial::get()->toArray();
 
-        return Excel::create('itsolutionstuff_example', function($excel) use ($data) {
-            $excel->sheet('mySheet', function($sheet) use ($data)
-            {
-                $sheet->fromArray($data);
-            });
-        })->download($type);*/
-        return Excel::download(new Export(), 'Serials.xlsx');
+        return (new Export)->download('serial.xlsx');
+      // return (new Export())->download('serial.xlsx');
+       // return Excel::download(new Export(), 'export.xlsx');
+       // Excel::
     }
 }
