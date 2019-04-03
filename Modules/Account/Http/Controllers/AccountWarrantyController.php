@@ -96,6 +96,15 @@ class AccountWarrantyController extends Controller
             return ;
         }
 
+        $pos = strpos($date, "/");
+        if($pos !=false){
+            list( $dd , $mm,$yy) = explode('/', $date);
+            if ($yy > date('Y')) {
+                $yy -= 543;
+            }
+            return "{$yy}-{$mm}-{$dd}";
+        }
+
         list( $yy, $mm,$dd ) = explode('-', $date);
         if ($yy > date('Y')) {
             $yy -= 543;
