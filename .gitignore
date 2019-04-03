@@ -2,6 +2,7 @@
 .phpintel/
 *.sublime-project
 
+/vendor
 /public/storage
 /public/media
 /public/modules
