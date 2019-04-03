@@ -58,5 +58,12 @@
                 <input type="text" name="PurchaseDate" class="form-control datetime-picker" id="PurchaseDate" data-default-date="{{$serial->PurchaseDate}}">
             </div>
         </div>
+
+        <div class="form-group ">
+            <label for="to" class="col-md-3 control-label text-left">Images SN</label>
+            <div class="col-md-9">
+                @if($serial->img_product)<img src="{{url('/storage/media/warranty/')}}/{{ $serial->img_product }}" style="width: 100px;">@endif
+            </div>
+        </div>
     </div>
 </div>
