@@ -22,15 +22,8 @@ class ReportController extends Controller
      * @var array
      */
     private $reports = [
-        'coupons_report' => CouponsReport::class,
-        'customers_order_report' => CustomersOrderReport::class,
-        'products_purchase_report' => ProductsPurchaseReport::class,
-        'products_stock_report' => ProductsStockReport::class,
         'products_view_report' => ProductsViewReport::class,
-        'sales_report' => SalesReport::class,
         'search_report' => SearchReport::class,
-        'shipping_report' => ShippingReport::class,
-        'tax_report' => TaxReport::class,
     ];
 
     /**
