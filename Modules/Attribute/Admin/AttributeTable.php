@@ -21,6 +21,10 @@ class AttributeTable extends AdminTable
                 return $attribute->is_filterable
                     ? trans('attribute::admin.table.yes')
                     : trans('attribute::admin.table.no');
+            })->addColumn('is_properties', function ($attribute) {
+                return $attribute->is_properties
+                    ? trans('attribute::admin.table.yes')
+                    : trans('attribute::admin.table.no');
             });
     }
 }

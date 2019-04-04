@@ -23,7 +23,7 @@ class Attribute extends Model
      *
      * @var array
      */
-    protected $fillable = ['attribute_set_id', 'is_filterable'];
+    protected $fillable = ['attribute_set_id', 'is_filterable','is_properties'];
 
     /**
      * The attributes that should be cast to native types.

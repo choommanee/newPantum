@@ -19,6 +19,7 @@
                 <th>{{ trans('attribute::admin.table.name') }}</th>
                 <th>{{ trans('attribute::admin.table.attribute_set') }}</th>
                 <th>{{ trans('attribute::admin.table.filterable') }}</th>
+                <th>Is Properties</th>
                 <th data-sort>{{ trans('admin::admin.table.created') }}</th>
             </tr>
         @endslot
@@ -33,6 +34,7 @@
                 { data: 'name', name: 'translations.name', orderable: false, defaultContent: '' },
                 { data: 'attribute_set', name: 'attributeSet.name', searchable: false, orderable: false, defaultContent: '' },
                 { data: 'is_filterable', name: 'is_filterable' },
+                { data: 'is_properties', name: 'is_properties' },
                 { data: 'created', name: 'created_at' },
             ],
         });
