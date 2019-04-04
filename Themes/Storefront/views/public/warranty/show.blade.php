@@ -332,7 +332,7 @@
 </script>
         <section class="compare" style="background: #ffffff;margin-top: 30px;min-height: 600px;margin-bottom: 30px;">
             <div>
-               
+
 
                 <div class="uk-container">
 
@@ -380,13 +380,10 @@
                                     <td class="text-center">{{ $page->PurchaseDate }}</td>
                                     <td class="text-center">{{ $page->datevarunty_start}}</td>
                                     <td class="text-center">{{ $page->dataExp}}</td>
-                                    <td class="text-center"> @if($page->cus_use==2)
-                                            <span style="color: green;font-weight: 600;">
-                                               {{ trans('storefront::account.warranty.activate') }}</span>
-                                        @else
-                                            <span style="color: red;font-weight: 400;">
-                                                {{ trans('storefront::account.warranty.nonactivate') }}</span>
-                                        @endif</td>
+                                    <td class="text-center"  @if($page->cus_use==2)style="color: green;font-weight: 600;" @else style="color: red;font-weight: 400;" @endif>
+
+                                               {{ trans('storefront::account.warranty.activate') }}
+                                        </td>
                                 </tr>
                             @endforeach
 
