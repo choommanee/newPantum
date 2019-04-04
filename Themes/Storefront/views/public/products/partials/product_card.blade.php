@@ -22,11 +22,7 @@
                 </div>
             @endif
 
-            <div class="quick-view-wrapper" data-toggle="tooltip" data-placement="top" title="{{ trans('storefront::product_card.quick_view') }}">
-                <button type="button" class="btn btn-quick-view" data-slug="{{ $product->slug }}">
-                    <i class="fa fa-eye" aria-hidden="true"></i>
-                </button>
-            </div>
+            
         </div>
 
         <div class="clearfix col-md-5 carddetail">

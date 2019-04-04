@@ -34,26 +34,11 @@
                             </a>
                         </li>
 
-                        <li class="{{ request()->routeIs('account.warranty.index') ? 'active' : '' }}">
-                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >
-                                <i class="fas fa-laptop"></i>
-                                {{ trans('storefront::account.warranty.warranty') }}
+                        <li class="{{ request()->routeIs('account.warranty.addwarranty') ? 'active' : '' }}">
+                            <a href="{{ route('account.warranty.addwarranty') }}">
+                                <i class="fas fa-plus-square"></i>
+                                {{ trans('storefront::account.warranty.warranty_add') }}
                             </a>
-                            <ul class="collapse list-unstyled" id="pageSubmenu" style="    padding-left: 20px;">
-                                <li>
-                                    <a href="{{ route('account.warranty.index') }}">
-                                    <i class="fas fa-laptop"></i>
-                                    {{ trans('storefront::account.warranty.warranty_list') }}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('account.warranty.addwarranty') }}">
-                                        <i class="fas fa-plus-square"></i>
-                                    {{ trans('storefront::account.warranty.warranty_add') }}
-                                    </a>
-                                </li>
-                            </ul>
-
                         </li>
 
 

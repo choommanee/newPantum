@@ -3,6 +3,8 @@
         @include('public.products.partials.category_filter')
 
         <form method="GET" action="{{ route('products.index') }}" id="product-filter-form">
+            <a  class="btn btn-primary btn-filter pull-right" style="margin-right: 10px;width: 100px;" href="{{route('products.index')}}?sort=latest&category=product&page=1">{{ trans('storefront::products.clear') }}</a>
+            <button type="submit" class="btn btn-primary btn-filter pull-right" data-loading style="margin-right: 10px;width: 100px;">{{ trans('storefront::products.filter') }}</button>
             @foreach (request()->except(['attribute', 'fromPrice', 'toPrice']) as $query => $value)
                 @if (! is_array($value))
                     <input type="hidden" name="{{ $query }}" value="{{ $value }}">
@@ -56,8 +58,7 @@
                 </div>
             </div>
 
-                <a  class="btn btn-primary btn-filter pull-right" style="margin-right: 10px;width: 100px;" href="{{route('products.index')}}?sort=latest&category=product&page=1">{{ trans('storefront::products.clear') }}</a>
-                <button type="submit" class="btn btn-primary btn-filter pull-right" data-loading style="margin-right: 10px;width: 100px;">{{ trans('storefront::products.filter') }}</button>
+
             <div style="clear: both;"></div>
         </form>
     </div>

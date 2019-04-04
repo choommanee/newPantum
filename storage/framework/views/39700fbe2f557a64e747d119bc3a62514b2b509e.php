@@ -34,28 +34,13 @@
                             </a>
                         </li>
 
-                        <li class="<?php echo e(request()->routeIs('account.warranty.index') ? 'active' : ''); ?>">
-                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >
-                                <i class="fas fa-laptop"></i>
-                                <?php echo e(trans('storefront::account.warranty.warranty')); ?>
+                        <li class="<?php echo e(request()->routeIs('account.warranty.addwarranty') ? 'active' : ''); ?>">
+                            <a href="<?php echo e(route('account.warranty.addwarranty')); ?>">
+                                <i class="fas fa-plus-square"></i>
+                                <?php echo e(trans('storefront::account.warranty.warranty_add')); ?>
 
                             </a>
-                            <ul class="collapse list-unstyled" id="pageSubmenu" style="    padding-left: 20px;">
-                                <li>
-                                    <a href="<?php echo e(route('account.warranty.index')); ?>">
-                                    <i class="fas fa-laptop"></i>
-                                    <?php echo e(trans('storefront::account.warranty.warranty_list')); ?>
-
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('account.warranty.addwarranty')); ?>">
-                                        <i class="fas fa-plus-square"></i>
-                                    <?php echo e(trans('storefront::account.warranty.warranty_add')); ?>
-
-                                    </a>
-                                </li>
-                            </ul>
+                           
 
                         </li>
 

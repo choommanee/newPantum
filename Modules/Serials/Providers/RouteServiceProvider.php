@@ -13,6 +13,12 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected $namespace = 'Modules\Serials\Http\Controllers';
 
+
+    protected function public()
+    {
+        return __DIR__ . '/../Routes/public.php';
+    }
+
     /**
      * Get admin routes.
      *

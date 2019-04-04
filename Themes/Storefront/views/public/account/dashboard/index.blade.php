@@ -45,6 +45,8 @@
                             <th>{{ trans('storefront::account.warranty.year_warranty') }}</th>
                             <th>{{ trans('storefront::account.warranty.purchase_date') }}</th>
                             <th>{{ trans('storefront::account.warranty.datevarunty_start') }}</th>
+                            <th>{{ trans('storefront::account.warranty.datevarunty_start') }}</th>
+                            <th>image s/n</th>
                             <th>{{ trans('storefront::account.warranty.status') }}</th>
                         </tr>
                         </thead>
@@ -63,6 +65,7 @@
                                 <td>{{ $order->varunty_time }} {{ trans('storefront::account.warranty.year') }}  ({{ $order->dateExp() }})</td>
                                 <td>{{ $order->PurchaseDate->format('d/m/Y') }}</td>
                                 <td>{{ $order->datevarunty_start->format('d/m/Y') }}</td>
+                                <td>@if($order->img_product)<img src="{{url('/storage/media/warranty/')}}/{{ $order->img_product }}" style="width: 100px;">@endif</td>
                                 <td>
                                     @if($order->cus_use==2)
                                         <span style="color: green;font-weight: 600;">

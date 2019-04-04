@@ -76,6 +76,15 @@ class Serial extends Model
             ->orderBy('pro_id');
     }
 
+    public function searchWaranty($txtSearch){
+        $query = \DB::table('serials')
+            ->join('serial_translations', 'serials.id', '=', 'serial_translations.serial_id')
+            ->where('serial_translations.name', '=', $txtSearch)
+            ->select('serials.*', 'serial_translations.name')
+            ->get();
+
+        return $query;
+    }
     public function url()
     {
         if (is_null($this->slug)) {

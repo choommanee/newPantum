@@ -3,6 +3,8 @@
         <?php echo $__env->make('public.products.partials.category_filter', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
         <form method="GET" action="<?php echo e(route('products.index')); ?>" id="product-filter-form">
+            <a  class="btn btn-primary btn-filter pull-right" style="margin-right: 10px;width: 100px;" href="<?php echo e(route('products.index')); ?>?sort=latest&category=product&page=1"><?php echo e(trans('storefront::products.clear')); ?></a>
+            <button type="submit" class="btn btn-primary btn-filter pull-right" data-loading style="margin-right: 10px;width: 100px;"><?php echo e(trans('storefront::products.filter')); ?></button>
             <?php $__currentLoopData = request()->except(['attribute', 'fromPrice', 'toPrice']); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $query => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php if(! is_array($value)): ?>
                     <input type="hidden" name="<?php echo e($query); ?>" value="<?php echo e($value); ?>">
@@ -57,8 +59,7 @@
                 </div>
             </div>
 
-                <a  class="btn btn-primary btn-filter pull-right" style="margin-right: 10px;width: 100px;" href="<?php echo e(route('products.index')); ?>?sort=latest&category=product&page=1"><?php echo e(trans('storefront::products.clear')); ?></a>
-                <button type="submit" class="btn btn-primary btn-filter pull-right" data-loading style="margin-right: 10px;width: 100px;"><?php echo e(trans('storefront::products.filter')); ?></button>
+
             <div style="clear: both;"></div>
         </form>
     </div>
