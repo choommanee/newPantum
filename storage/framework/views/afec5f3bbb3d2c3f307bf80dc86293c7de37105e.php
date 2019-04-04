@@ -359,46 +359,47 @@
                              </div><!-- End row -->
                          </form>
                          </div>
-
-                    <div class="table-responsive">
-                        <table class="table compare">
-                        <thead>
-                        <tr >
-                            <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.serials_number')); ?></th>
-                            <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.product_name')); ?></th>
-                            <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.sale_date')); ?></th>
-                            <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.date_start')); ?></th>
-                            <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.end_warranty')); ?></th>
-                            <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.warranty_status')); ?></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php $__currentLoopData = $pages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $page): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <tr>
-                                <td class="text-center"><?php echo e($page->name); ?></td>
-                                <td class="text-center"><?php echo e($productGroup[0]->name); ?><br/>
-                                    <img src="<?php echo e($productGroup[0]->base_image->path); ?>" style="width: 100px;"></td>
-                                <td class="text-center"><?php echo e($page->PurchaseDate); ?></td>
-                                <td class="text-center"><?php echo e($page->datevarunty_start); ?></td>
-                                <td class="text-center"><?php echo e($page->dataExp); ?></td>
-                                <td class="text-center"> <?php if($page->cus_use==2): ?>
-                                        <span style="color: green;font-weight: 600;">
-                                           <?php echo e(trans('storefront::account.warranty.activate')); ?></span>
-                                    <?php else: ?>
-                                        <span style="color: red;font-weight: 400;">
-                                            <?php echo e(trans('storefront::account.warranty.nonactivate')); ?></span>
-                                    <?php endif; ?></td>
+                        <?php if($pages!=""): ?>
+                        <div class="table-responsive">
+                            <table class="table compare">
+                            <thead>
+                            <tr >
+                                <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.serials_number')); ?></th>
+                                <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.product_name')); ?></th>
+                                <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.sale_date')); ?></th>
+                                <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.date_start')); ?></th>
+                                <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.end_warranty')); ?></th>
+                                <th style="color:#FFFFFF;" class="text-center"><?php echo e(trans('serials::serials.warranty_status')); ?></th>
                             </tr>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            </thead>
+                            <tbody>
+                            <?php $__currentLoopData = $pages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $page): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr>
+                                    <td class="text-center"><?php echo e($page->name); ?></td>
+                                    <td class="text-center"><?php echo e($productGroup[0]->name); ?><br/>
+                                        <img src="<?php echo e($productGroup[0]->base_image->path); ?>" style="width: 100px;"></td>
+                                    <td class="text-center"><?php echo e($page->PurchaseDate); ?></td>
+                                    <td class="text-center"><?php echo e($page->datevarunty_start); ?></td>
+                                    <td class="text-center"><?php echo e($page->dataExp); ?></td>
+                                    <td class="text-center"> <?php if($page->cus_use==2): ?>
+                                            <span style="color: green;font-weight: 600;">
+                                               <?php echo e(trans('storefront::account.warranty.activate')); ?></span>
+                                        <?php else: ?>
+                                            <span style="color: red;font-weight: 400;">
+                                                <?php echo e(trans('storefront::account.warranty.nonactivate')); ?></span>
+                                        <?php endif; ?></td>
+                                </tr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-                        </tbody>
-                    </table>
-                    </div>
-               </div>
-                </div>
-            <div style="clear: both;"></div>
-            </div>
-        </section>
+                            </tbody>
+                        </table>
+                        </div>
+                            <?php endif; ?>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</section>
 
 <?php $__env->stopSection(); ?>
 

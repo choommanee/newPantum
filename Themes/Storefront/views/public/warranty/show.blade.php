@@ -361,45 +361,46 @@
                              </div><!-- End row -->
                          </form>
                          </div>
-
-                    <div class="table-responsive">
-                        <table class="table compare">
-                        <thead>
-                        <tr >
-                            <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.serials_number')}}</th>
-                            <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.product_name')}}</th>
-                            <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.sale_date')}}</th>
-                            <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.date_start')}}</th>
-                            <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.end_warranty')}}</th>
-                            <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.warranty_status')}}</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($pages as $page)
-                            <tr>
-                                <td class="text-center">{{$page->name}}</td>
-                                <td class="text-center">{{ $productGroup[0]->name }}<br/>
-                                    <img src="{{ $productGroup[0]->base_image->path }}" style="width: 100px;"></td>
-                                <td class="text-center">{{ $page->PurchaseDate }}</td>
-                                <td class="text-center">{{ $page->datevarunty_start}}</td>
-                                <td class="text-center">{{ $page->dataExp}}</td>
-                                <td class="text-center"> @if($page->cus_use==2)
-                                        <span style="color: green;font-weight: 600;">
-                                           {{ trans('storefront::account.warranty.activate') }}</span>
-                                    @else
-                                        <span style="color: red;font-weight: 400;">
-                                            {{ trans('storefront::account.warranty.nonactivate') }}</span>
-                                    @endif</td>
+                        @if ($pages!="")
+                        <div class="table-responsive">
+                            <table class="table compare">
+                            <thead>
+                            <tr >
+                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.serials_number')}}</th>
+                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.product_name')}}</th>
+                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.sale_date')}}</th>
+                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.date_start')}}</th>
+                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.end_warranty')}}</th>
+                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.warranty_status')}}</th>
                             </tr>
-                        @endforeach
+                            </thead>
+                            <tbody>
+                            @foreach($pages as $page)
+                                <tr>
+                                    <td class="text-center">{{$page->name}}</td>
+                                    <td class="text-center">{{ $productGroup[0]->name }}<br/>
+                                        <img src="{{ $productGroup[0]->base_image->path }}" style="width: 100px;"></td>
+                                    <td class="text-center">{{ $page->PurchaseDate }}</td>
+                                    <td class="text-center">{{ $page->datevarunty_start}}</td>
+                                    <td class="text-center">{{ $page->dataExp}}</td>
+                                    <td class="text-center"> @if($page->cus_use==2)
+                                            <span style="color: green;font-weight: 600;">
+                                               {{ trans('storefront::account.warranty.activate') }}</span>
+                                        @else
+                                            <span style="color: red;font-weight: 400;">
+                                                {{ trans('storefront::account.warranty.nonactivate') }}</span>
+                                        @endif</td>
+                                </tr>
+                            @endforeach
 
-                        </tbody>
-                    </table>
-                    </div>
-               </div>
-                </div>
-            <div style="clear: both;"></div>
-            </div>
-        </section>
+                            </tbody>
+                        </table>
+                        </div>
+                            @endif
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</section>
 
 @endsection

@@ -22,7 +22,7 @@
                 </div>
             @endif
 
-            
+
         </div>
 
         <div class="clearfix col-md-5 carddetail">

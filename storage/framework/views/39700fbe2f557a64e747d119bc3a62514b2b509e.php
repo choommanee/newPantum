@@ -40,8 +40,6 @@
                                 <?php echo e(trans('storefront::account.warranty.warranty_add')); ?>
 
                             </a>
-                           
-
                         </li>
 
 

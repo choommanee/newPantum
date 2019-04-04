@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function index(Serial $model)
     {
-        $pagesd='';
+        $pages='';
         $productGroup='';
         $logo = File::findOrNew(setting('storefront_header_logo'))->path;
         //if (request()->has('Search')) {
