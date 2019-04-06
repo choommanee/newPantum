@@ -378,11 +378,7 @@
                                     <td class="text-center"><?php echo e($page->PurchaseDate); ?></td>
                                     <td class="text-center"><?php echo e($page->datevarunty_start); ?></td>
                                     <td class="text-center"><?php echo e($page->dataExp); ?></td>
-                                    <td class="text-center"  <?php if($page->cus_use==2): ?>style="color: green;font-weight: 600;" <?php else: ?> style="color: red;font-weight: 400;" <?php endif; ?>>
-
-                                               <?php echo e(trans('storefront::account.warranty.activate')); ?>
-
-                                        </td>
+                                    <td class="text-center"  <?php if($page->cus_use==2): ?>style="color: green;font-weight: 600;" <?php else: ?> style="color: red;font-weight: 400;" <?php endif; ?>><?php echo e(trans('storefront::account.warranty.activate')); ?></td>
                                 </tr>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 

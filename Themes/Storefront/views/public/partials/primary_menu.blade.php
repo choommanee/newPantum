@@ -76,40 +76,6 @@
                  $('.menushowdetail').html(html);
                  $('.menushowdetail').show();
             }
-            if(slug=='multifunction-Ftm1kJl1'){
-                html='<div class="product-image1 clearfix col-md-12" style="text-align: center;border-left: 1px solid #ded8d8;">\n' +
-                    '<a href="https://save2home.com/en/products/cm7105dn-z5RwEzz1" class="product-card">\n' +
-                    '    </a><div class="product-card-inner"><a href="https://save2home.com/en/products/cm7105dn-z5RwEzz1" class="product-card">\n' +
-                    '        <div class="product-image clearfix col-md-12">\n' +
-                    '            <ul class="product-ribbon list-inline">\n' +
-                    '                \n' +
-                    '                            </ul>\n' +
-                    '\n' +
-                    '            \n' +
-                    '                <div class="image-holder" style="height: 150px">\n' +
-                    '                    <img src="https://save2home.com/storage/media/o97WtnBjXdm0J2eXwkfcWKjdINkQ5YWilxOTi32k.png">\n' +
-                    '                </div>\n' +
-                    '            \n' +
-
-                    '        </div>\n' +
-                    '</a>' +
-                    '        <div class="clearfix col-md-12" style="text-align: center"><a href="https://save2home.com/en/products/cm7105dn-z5RwEzz1" class="product-card">\n' +
-
-                    '            \n' +
-                    '            <span class="product-name" style="color: #0e0e0e;font-size: 28px;text-align: center;text-shadow: 1px 1px #ffedf0;">CM7105DN</span><br>\n' +
-                    '            <span class="product-name" style="color: #060606;font-size: 16px;text-align: center;/* text-shadow: 1px 1px #2b2829; */">COLOR MULTI FUNCTION LASER PRINTER</span>\n' +
-                    '            </a><br/><a href="https://save2home.com/en/products/cm7105dn-z5RwEzz1" style=\'color:#555\'>\n' +
-                    '                more\n' +
-                    '            </a>\n' +
-                    '        </div>\n' +
-                    '\n' +
-                    '    </div>\n' +
-                    '\n' +
-                    '</div>';
-
-                $('.menushowdetail').html(html);
-                $('.menushowdetail').show();
-            }
 
             if(slug=='single-function'){
 
