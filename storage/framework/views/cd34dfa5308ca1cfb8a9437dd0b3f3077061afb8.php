@@ -22,11 +22,7 @@
                 </div>
             <?php endif; ?>
 
-            <div class="quick-view-wrapper" data-toggle="tooltip" data-placement="top" title="<?php echo e(trans('storefront::product_card.quick_view')); ?>">
-                <button type="button" class="btn btn-quick-view" data-slug="<?php echo e($product->slug); ?>">
-                    <i class="fa fa-eye" aria-hidden="true"></i>
-                </button>
-            </div>
+
         </div>
 
         <div class="clearfix col-md-5 carddetail">

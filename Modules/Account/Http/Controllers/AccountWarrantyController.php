@@ -4,6 +4,7 @@ namespace Modules\Account\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Modules\Product\Entities\Product;
+use Modules\Product\Filters\ProductFilter;
 use Modules\Serials\Entities\Serial;
 use Modules\Serials\Http\Requests\UpdateSerialsRequest;
 
@@ -26,12 +27,13 @@ class AccountWarrantyController extends Controller
     }
 
 
-    public function addwarranty()
+    public function addwarranty(Product $model, ProductFilter $productFilter)
     {
         $my = auth()->user();
       //  $recentOrders = auth()->user()->recentOrders(5);
         $recentOrders = Serial::where('user_id',$my->id)->get();
-        $product_option = Product::orderBy('id','ASC')->get();
+        $product_option = $model->getProductOption();
+
         return view('public.account.warranty.addwarranty', compact('my', 'recentOrders','product_option'));
     }
 

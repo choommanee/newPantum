@@ -232,6 +232,16 @@ class Product extends Model
             ->withTrashed();
     }
 
+    public function getProductOption(){
+        $query = \DB::table('products')
+            ->join('product_translations', 'products.id', '=', 'product_translations.product_id')
+            ->orderBy('product_translations.name', 'asc')
+            ->select('products.*', 'product_translations.name')
+            ->get();
+
+        return $query;
+    }
+
     public function relatedProducts()
     {
         return $this->belongsToMany(static::class, 'related_products', 'product_id', 'related_product_id');
