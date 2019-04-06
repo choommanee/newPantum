@@ -330,7 +330,7 @@
 </script>
         <section class="compare" style="background: #ffffff;margin-top: 30px;min-height: 600px;margin-bottom: 30px;">
             <div>
-               
+
 
                 <div class="uk-container">
 
@@ -378,13 +378,11 @@
                                     <td class="text-center"><?php echo e($page->PurchaseDate); ?></td>
                                     <td class="text-center"><?php echo e($page->datevarunty_start); ?></td>
                                     <td class="text-center"><?php echo e($page->dataExp); ?></td>
-                                    <td class="text-center"> <?php if($page->cus_use==2): ?>
-                                            <span style="color: green;font-weight: 600;">
-                                               <?php echo e(trans('storefront::account.warranty.activate')); ?></span>
-                                        <?php else: ?>
-                                            <span style="color: red;font-weight: 400;">
-                                                <?php echo e(trans('storefront::account.warranty.nonactivate')); ?></span>
-                                        <?php endif; ?></td>
+                                    <td class="text-center"  <?php if($page->cus_use==2): ?>style="color: green;font-weight: 600;" <?php else: ?> style="color: red;font-weight: 400;" <?php endif; ?>>
+
+                                               <?php echo e(trans('storefront::account.warranty.activate')); ?>
+
+                                        </td>
                                 </tr>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 

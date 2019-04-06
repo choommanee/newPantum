@@ -380,10 +380,7 @@
                                     <td class="text-center">{{ $page->PurchaseDate }}</td>
                                     <td class="text-center">{{ $page->datevarunty_start}}</td>
                                     <td class="text-center">{{ $page->dataExp}}</td>
-                                    <td class="text-center"  @if($page->cus_use==2)style="color: green;font-weight: 600;" @else style="color: red;font-weight: 400;" @endif>
-
-                                               {{ trans('storefront::account.warranty.activate') }}
-                                        </td>
+                                    <td class="text-center"  @if($page->cus_use==2)style="color: green;font-weight: 600;" @else style="color: red;font-weight: 400;" @endif>{{ trans('storefront::account.warranty.activate') }}</td>
                                 </tr>
                             @endforeach
 

@@ -1,3 +1,14 @@
+<style>
+    @media screen and (max-width: 480px){
+        .theme-black .btn-primary {
+            margin-right: 0px;
+            width: 100px;
+            margin-top: 0px;
+            display: inline-table;
+        }
+    }
+
+</style>
 <div class="col-md-3 col-sm-12">
     <div class="product-list-sidebar clearfix">
         @include('public.products.partials.category_filter')
@@ -5,8 +16,9 @@
         <form method="GET" action="{{ route('products.index') }}" id="product-filter-form">
             <div class="filter-section clearfix">
                 <div>
-                    <a  class="btn btn-primary btn-filter pull-center" style="margin-right: 0px;width: 100px;" href="{{route('products.index')}}?sort=latest&category=product&page=1">{{ trans('storefront::products.clear') }}</a>
+
                     <button type="submit" class="btn btn-primary btn-filter pull-center" data-loading style="width: 100px;">{{ trans('storefront::products.filter') }}</button>
+                    <a  class="btn btn-primary btn-filter pull-center" style="margin-right: 0px;width: 100px;" href="{{route('products.index')}}?sort=latest&category=product&page=1">{{ trans('storefront::products.clear') }}</a>
                 </div>
             </div>
             @foreach (request()->except(['attribute', 'fromPrice', 'toPrice']) as $query => $value)
