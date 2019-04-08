@@ -236,7 +236,7 @@ class Product extends Model
         $query = \DB::table('products')
             ->join('product_translations', 'products.id', '=', 'product_translations.product_id')
             ->orderBy('product_translations.name', 'asc')
-            ->select('products.*', 'product_translations.name')
+            ->select('products.id', 'product_translations.name')
             ->get();
 
         return $query;
