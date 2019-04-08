@@ -31,7 +31,7 @@ class SettingTabs extends Tabs
             ->add($this->facebook())
             ->add($this->google());
 
-       /* $this->group('shipping_methods', trans('setting::settings.tabs.group.shipping_methods'))
+        $this->group('shipping_methods', trans('setting::settings.tabs.group.shipping_methods'))
             ->add($this->freeShipping())
             ->add($this->localPickup())
             ->add($this->flatRate());
@@ -41,7 +41,7 @@ class SettingTabs extends Tabs
             ->add($this->stripe())
             ->add($this->cod())
             ->add($this->bankTransfer())
-            ->add($this->checkPayment());*/
+            ->add($this->checkPayment());
     }
 
     private function general()
