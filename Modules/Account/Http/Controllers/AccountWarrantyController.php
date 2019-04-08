@@ -99,7 +99,7 @@ class AccountWarrantyController extends Controller
             $to_email = 'csinfo@pantum.co.th';
             $data = array('user'=>$user, "code" => $code,'serial_no'=>$serial_no);
 
-            Mail::send('public.emails.send_warranty', $data, function($message) use ($to_name, $to_email) {
+            Mail::send('emails.send_warranty', $data, function($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)
                     ->subject('Have Customer Send Serial to add warranty');
                 $message->from('sakda.choommanee@gmail.com','csinfo');
