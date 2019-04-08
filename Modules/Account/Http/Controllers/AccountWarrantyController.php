@@ -92,6 +92,8 @@ class AccountWarrantyController extends Controller
 
             $user = User::where('id', $my->id)->first();
             $code= $Serial->product->name;
+
+
             Mail::to($user)
                 ->send(new sendMailWarranty($user,  $code,$serial_no));
 
@@ -104,6 +106,10 @@ class AccountWarrantyController extends Controller
                     ->subject('Have Customer Send Serial to add warranty');
                 $message->from('sakda.choommanee@gmail.com','csinfo');
             });
+
+            return redirect()->route('account.warranty.index');
+
+
 
         }
     }
