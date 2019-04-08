@@ -42,7 +42,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        dd($e);
+       // dd($e);
         if ($e instanceof Swift_TransportException) {
             return back()->withInput()
                 ->with('error', trans('core::messages.mail_is_not_configured'));
