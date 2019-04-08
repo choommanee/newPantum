@@ -97,7 +97,7 @@ class AccountWarrantyController extends Controller
 
             $to_name = 'csinfo';
             $to_email = 'csinfo@pantum.co.th';
-            $data = array('user'=>$user, "code" => $code,'serial_no'=>$serial_no);
+            $data = array('user'=>$user, "produc_name" => $code,'serial_no'=>$serial_no);
 
             Mail::send('emails.send_warranty', $data, function($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)
