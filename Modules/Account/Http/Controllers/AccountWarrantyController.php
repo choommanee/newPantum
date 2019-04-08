@@ -3,10 +3,13 @@
 namespace Modules\Account\Http\Controllers;
 
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Mail;
 use Modules\Product\Entities\Product;
 use Modules\Product\Filters\ProductFilter;
 use Modules\Serials\Entities\Serial;
 use Modules\Serials\Http\Requests\UpdateSerialsRequest;
+use Modules\User\Entities\User;
+use Modules\Serials\Mail\sendMailWarranty;
 
 
 class AccountWarrantyController extends Controller
@@ -40,6 +43,7 @@ class AccountWarrantyController extends Controller
     public function managewarranty(Serial $model, UpdateSerialsRequest $request){
 
         $my = auth()->user();
+        $serial_no = request()->get('w_serial_no');
       //  $pages = Faq::where('pro_id', $id)->orderBy('id', 'ASC')->paginate(15);
         $pages =  $model->search(request()->get('w_serial_no'))->query()->get()->count();
         //$status =  $model->search(request()->get('w_serial_no'))->query()->first()->is_active;
@@ -52,7 +56,7 @@ class AccountWarrantyController extends Controller
             $pagesq =  $model->search(request()->get('w_serial_no'))->query()->first()->id;
             $Serial =  Serial::find($pagesq);
 
-            //var_dump($Serial->is_active);
+            dd($Serial);
             if($Serial->cus_use <> '1'){
                 return  back()->withErrors(trans('storefront::account.warranty.haveregister'));
             }
@@ -87,6 +91,10 @@ class AccountWarrantyController extends Controller
 
             $SerialUpdate->save();
 
+            $user = User::where('id', $my->id)->first();
+            $code= $Serial->product->name;
+            Mail::to($user)
+                ->send(new sendMailWarranty($user, $this->resetCompleteRoute($user, $code,$serial_no)));
             return redirect()->route('account.warranty.index');
         }
     }

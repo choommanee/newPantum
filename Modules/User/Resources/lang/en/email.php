@@ -2,6 +2,10 @@
 
 return [
     'reset_your_account_password' => 'Reset your account password',
+    'get_have_warranty_data' => 'Have warranty add to system',
+    'product_add_warranty' => 'Product is :',
+    'product_serial_number' => 'Serial number is :',
+    'customer_add_warranty' => 'From Customer :',
     'hello' => 'Hello :first_name!',
     'received_a_password_reset_request' => 'You are receiving this email because we received a password reset request for your account.',
     'reset_password' => 'Reset Password',
