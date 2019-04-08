@@ -55,7 +55,7 @@ class AccountWarrantyController extends Controller
         }else{
             $pagesq =  $model->search(request()->get('w_serial_no'))->query()->first()->id;
             $Serial =  Serial::find($pagesq);
-            
+
             if($Serial->cus_use <> '1'){
                 return  back()->withErrors(trans('storefront::account.warranty.haveregister'));
             }
@@ -97,6 +97,7 @@ class AccountWarrantyController extends Controller
             return redirect()->route('account.warranty.index');
         }
     }
+    abstract protected function resetCompleteRoute($user, $code,$serial_no);
 
     public function ConvertDateThaiToDb($date){
         // thai date format mush be dd/mm/yyyy

@@ -482,11 +482,11 @@
                     </span>
 
                     <span>
-                        {{ trans('user::email.product_add_warranty') }}
+                        {{ trans('user::email.product_add_warranty') }} {{ $produc_name }}
                     </span>
 
                     <span>
-                        {{ trans('user::email.product_serial_number') }}
+                        {{ trans('user::email.product_serial_number') }}  {{ $serial_no }}
                     </span>
 
 
