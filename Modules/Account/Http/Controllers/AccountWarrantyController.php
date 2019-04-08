@@ -56,7 +56,7 @@ class AccountWarrantyController extends Controller
             $pagesq =  $model->search(request()->get('w_serial_no'))->query()->first()->id;
             $Serial =  Serial::find($pagesq);
 
-            dd($Serial);
+            //dd($Serial);
             if($Serial->cus_use <> '1'){
                 return  back()->withErrors(trans('storefront::account.warranty.haveregister'));
             }
