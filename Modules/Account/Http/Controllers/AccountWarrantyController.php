@@ -93,11 +93,12 @@ class AccountWarrantyController extends Controller
             $user = User::where('id', $my->id)->first();
             $code= $Serial->product->name;
             Mail::to($user)
-                ->send(new sendMailWarranty($user, $this->resetCompleteRoute($user, $code,$serial_no)));
+                ->send(new sendMailWarranty($user,  $code,$serial_no));
             return redirect()->route('account.warranty.index');
         }
     }
-    abstract protected function resetCompleteRoute($user, $code,$serial_no);
+
+
 
     public function ConvertDateThaiToDb($date){
         // thai date format mush be dd/mm/yyyy
