@@ -507,7 +507,7 @@
         <footer class="footer">
             <div class="col-md-6 col-sm-7 center-block">
                 <span class="text-center">
-                    &#xa9 {{ date('Y') }} <a href="{{ route('home') }}">{{ setting('store_name') }}</a>. {{ trans('user::email.all_rights_reserved') }}
+                   {{ date('Y') }} <a href="{{ route('home') }}">{{ setting('store_name') }}</a>. {{ trans('user::email.all_rights_reserved') }}
                 </span>
             </div>
         </footer>
