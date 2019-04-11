@@ -3,7 +3,7 @@
 
     @if ($product->hasAnyDriver())
         <div class="clearfix"></div>
-        <div class="table-responsive" style="margin-bottom: 20px;">
+
 
             <?PHP
             $i=1;
@@ -16,6 +16,7 @@
 
                                 if($driver->is_driver =='1' and $i==1){
                                     ?>
+                            <div class="table-responsive" style="margin-bottom: 20px;">
                             <h1 style="text-align: center;">Driver Download</h1>
 
 
@@ -29,6 +30,8 @@
                                     ?>
                                     </ul>
                             </div>
+                            </div>
+                            <div class="table-responsive" style="margin-bottom: 20px;">
                                     <h1 style="text-align: center;margin-top: 25px;">Driver Brochure</h1>
 
 
