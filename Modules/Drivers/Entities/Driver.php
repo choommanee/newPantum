@@ -26,7 +26,7 @@ class Driver extends Model
      *
      * @var array
      */
-    protected $fillable = ['slug', 'is_active','pro_id','driver_url'];
+    protected $fillable = ['slug', 'is_active','pro_id','driver_url','is_driver'];
 
     /**
      * The attributes that should be cast to native types.
