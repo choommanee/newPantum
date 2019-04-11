@@ -28,7 +28,8 @@
                                 }elseif($driver->is_driver =='2' and $i > 1 and $tempRiver ==1 ){
                                     ?>
                                     </ul>
-                                    <h1 style="text-align: center;">Driver Brochure</h1>
+                            </div>
+                                    <h1 style="text-align: center;margin-top: 25px;">Driver Brochure</h1>
 
 
                                     <div class="col-md-3"></div>
