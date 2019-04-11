@@ -32,7 +32,7 @@
                             </div>
                             </div>
                             <div class="table-responsive" style="margin-bottom: 20px;">
-                                    <h1 style="text-align: center;margin-top: 25px;">Driver Brochure</h1>
+                                    <h1 style="text-align: center;margin-top: 25px;">Brochure Download</h1>
 
 
                                     <div class="col-md-3"></div>
