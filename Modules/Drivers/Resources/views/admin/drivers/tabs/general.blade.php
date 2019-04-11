@@ -5,7 +5,7 @@
         {{ Form::textarea('body', 'Driver Name', $errors, $driver) }}
         {{ Form::text('driver_url', 'Driver URL', $errors, $driver, ['required' => true]) }}
 
-<?php dd($driver);?>
+
         <div class="form-group ">
             <label for="driver_url" class="col-md-3 control-label text-left">Driver URL<span class="m-l-5 text-red">*</span></label>
             <div class="col-md-9">
