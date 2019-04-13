@@ -1,9 +1,9 @@
 <div id="additional-information" class="specification tab-pane fade in" style="background-color: #f6f6f6;">
-    <div class="table-responsive" style="margin-bottom: 20px;">
+    <div class="table-responsive" style="margin-bottom: 20px; text-align: center">
 
-       
+
             <h1>Specifications</h1>
-            <table class="table" style="width: 90%;">
+            <table class="table" style="width: 90%;margin: 0 auto;">
             <tbody>
             @foreach ($product->attributeSets as $attributeSet => $attributes)
                 <tr>
