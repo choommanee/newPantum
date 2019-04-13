@@ -3,11 +3,11 @@
 
 
             <h1>Specifications</h1>
-            <table class="table" style="width: 90%;margin: 0 auto;">
+            <table class="table" style="width: 90%;margin: 0 auto;text-align: left;">
             <tbody>
             @foreach ($product->attributeSets as $attributeSet => $attributes)
                 <tr>
-                    <td style="border-bottom: 2px solid #ff000d;" class="text-md-left"><h2>{{ $attributeSet }}</h2></td>
+                    <td style="border-bottom: 2px solid #ff000d;" ><h2>{{ $attributeSet }}</h2></td>
                 </tr>
                 <tr>
                     <td style="">
