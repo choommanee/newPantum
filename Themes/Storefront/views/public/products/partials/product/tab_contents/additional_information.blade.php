@@ -1,4 +1,4 @@
-<div id="additional-information" class="specification tab-pane fade in" style="background-color: #f6f6f6;">
+<div id="additional-information" class="specification tab-pane fade in" style="margin-bottom: 20px;text-align: center;padding-left: 15px;padding-right: 15px;background-color: #f6f6f6;">
     <div class="table-responsive" style="margin-bottom: 20px; text-align: center">
 
 
