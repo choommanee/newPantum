@@ -14,8 +14,8 @@
                     <td style="">
                         @foreach ($attributes as $attribute)
                             <div class="information-data clearfix">
-                                <div class="col-12 col-md-3 col-lg-3 mb-3 text-md-left" style="font-size: 15px;">{{ $attribute->name }}</div>
-                                <div class="col-12 col-md-9 col-lg-7 mb-3 text-md-left" style="font-size: 15px;">
+                                <div class="col-12 col-md-3 col-lg-3 mb-3 text-md-left" style="font-size: 15px;font-weight: 700;">{{ $attribute->name }}</div>
+                                <div class="col-12 col-md-9 col-lg-7 mb-3 text-md-left" style="font-size: 15px;margin-left:10px; ">
                                         {{ $attribute->values->implode('value', ', ') }}
                                     </div>
                             </div>
