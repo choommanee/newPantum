@@ -7,7 +7,7 @@
             <tbody>
             @foreach ($product->attributeSets as $attributeSet => $attributes)
                 <tr>
-                    <td style="border-bottom: 2px solid #ff000d;"><h4>{{ $attributeSet }}</h4></td>
+                    <td style="border-bottom: 2px solid #ff000d;" class="text-md-left"><h2>{{ $attributeSet }}</h2></td>
                 </tr>
                 <tr>
                     <td style="">
