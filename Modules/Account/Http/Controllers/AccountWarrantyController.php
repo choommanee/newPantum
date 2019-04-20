@@ -103,7 +103,7 @@ class AccountWarrantyController extends Controller
 
             Mail::send('emails.send_warranty', $data, function($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)
-                    ->subject('Have Customer Send Serial to add warranty');
+                    ->subject('Customer Send Serial to add warranty');
                 $message->from('sakda.choommanee@gmail.com','csinfo');
             });
 

@@ -2,7 +2,7 @@
 
 return [
     'reset_your_account_password' => 'Reset your account password',
-    'get_have_warranty_data' => 'Have warranty add to system',
+    'get_have_warranty_data' => 'Add warranty add to system',
     'product_add_warranty' => 'Product is :',
     'product_serial_number' => 'Serial number is :',
     'customer_add_warranty' => 'From Customer :',

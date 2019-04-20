@@ -13,6 +13,7 @@
                     <option value="">Please Select</option>
                     <option value="1">Driver</option>
                     <option value="2">Brochure</option>
+                    <option value="3">Manual & Faq</option>
                 </select>
             </div>
         </div>

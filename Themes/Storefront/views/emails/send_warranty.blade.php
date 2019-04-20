@@ -476,20 +476,15 @@
                     <h3>
                         {{ trans('user::email.hello', ['first_name' => $user->first_name]) }}
                     </h3>
-
                     <span>
                         {{ trans('user::email.get_have_warranty_data') }}
                     </span>
-
                     <span>
                         {{ trans('user::email.product_add_warranty') }} {{ $produc_name }}
                     </span>
-
                     <span>
                         {{ trans('user::email.product_serial_number') }}  {{ $serial_no }}
                     </span>
-
-
 
                     <div class="content-bottom">
                     {{--    <span>
