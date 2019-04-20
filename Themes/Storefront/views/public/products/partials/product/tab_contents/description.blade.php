@@ -25,8 +25,8 @@
                                 <ul class="list-group">
 
                                 <?PHP
-                                $tempRiver = 1;
-                                }elseif($driver->is_driver =='2' and $i > 1 and $tempRiver ==1 ){
+
+                                }elseif($driver->is_driver =='2' and $i > 1 and $driver->is_driver <> $tempRiver  ){
                                     ?>
                                     </ul>
                             </div>
@@ -40,7 +40,25 @@
                                         <ul class="list-group">
 
                                         <?php
-                                }
+
+                                          //  $tempRiver =0;
+                                }elseif($driver->is_driver =='3' and $i > 1 and $driver->is_driver <> $tempRiver  ){
+                                            ?>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <div class="table-responsive" style="margin-bottom: 20px;">
+                                <h1 style="text-align: center;margin-top: 25px;">Manual & Faq</h1>
+
+
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <ul class="list-group">
+
+                                        <?php
+
+                                        //$tempRiver =0;
+                                        }
                             ?>
 
                         <li class="list-group-item" style="margin-top: 10px;border: none;border-bottom: 1px solid rgba(0,0,0,.125);">
@@ -52,6 +70,7 @@
                         </span>
                         </li>
                         <?PHP
+                        $tempRiver = $driver->is_driver;
                         $i++;
                         ?>
                     @endforeach
