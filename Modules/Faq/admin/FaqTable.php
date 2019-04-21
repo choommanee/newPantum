@@ -18,7 +18,7 @@ class FaqTable extends AdminTable
                 return $faqs->product->name;
             })
             ->editColumn('name',function ($faqs){
-                if($faqs->translation1->name <>''){
+                if(is_object($faqs->translation1->body) and $faqs->translation1->name <>''){
                     return $faqs->translation1->name;
                 }else{
                     return 'no data';
@@ -26,7 +26,8 @@ class FaqTable extends AdminTable
             })
             ->addColumn('body',function ($faqs){
                 //dd($faqs);
-                if($faqs->translation1->body <>''){
+
+                if(is_object($faqs->translation1->body) and $faqs->translation1->body <>''){
                     return $faqs->translation1->body;
                 }else{
                     return 'no data';
