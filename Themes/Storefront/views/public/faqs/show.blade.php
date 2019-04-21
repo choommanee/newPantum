@@ -280,8 +280,6 @@
                     @endforeach
                 </div>
 
-
-
                 </div>
                 {{ $pages->links() }}
                 </div>
