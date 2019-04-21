@@ -23,6 +23,7 @@ class HomeController extends Controller
         //if (request()->has('Search')) {
             if (request()->has('Search') && request()->has('Search')!='') {
                 $pages =  $model->search(request()->get('Search'))
+                    ->whereHas()
                     ->query()
                     ->paginate(20);
           //  }
@@ -44,7 +45,11 @@ class HomeController extends Controller
 
     public function getbycat($id){
         $logo = File::findOrNew(setting('storefront_header_logo'))->path;
-        $pages = Faq::where('pro_id', $id)->orderBy('id', 'ASC')->paginate(15);
+        $pages = Faq::whereHas('translations', function ($query) {
+                            $query->where('locale', locale())
+                                ->whereNotNull('name');
+                        })
+                        ->where('pro_id', $id)->orderBy('id', 'ASC')->paginate(15);
         $productGroup = Product::orderBy('id', 'ASC')->get();
         // $productGroup = Faq::ProductGroup()->get();
         //dd($productGroup);
