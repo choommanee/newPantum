@@ -29,8 +29,7 @@ class HomeController extends Controller
         }else{
              //   $pages = Faq::disableAutoloadTranslations()
             $pages = Faq::whereHas('translations', function ($query) {
-                            $query->where('locale', 'en')
-                              ->where('name', notnull);
+                            $query->where('locale', 'en');
                     })
                     ->orderBy('pro_id','ASC','id', 'ASC')
                     ->whereNotNull('name')
