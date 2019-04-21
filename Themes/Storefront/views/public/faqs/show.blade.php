@@ -274,14 +274,17 @@
                             {!! $new->body !!}
                         </p>
                     </article>
-                        <?PHP
-                        $i++;?>
+                        @php
+                        $i++;
+                         @endphp
                         @endif
                     @endforeach
                 </div>
 
                 </div>
+                @if($i > 10)
                 {{ $pages->links() }}
+                    @endif
                 </div>
                 </div>
             <div style="clear: both;"></div>
