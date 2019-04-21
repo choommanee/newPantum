@@ -18,6 +18,7 @@ class HomeController extends Controller
     public function index(Faq $model)
     {
         //echo "test";
+
         $logo = File::findOrNew(setting('storefront_header_logo'))->path;
         //if (request()->has('Search')) {
             if (request()->has('Search') && request()->has('Search')!='') {
@@ -26,7 +27,14 @@ class HomeController extends Controller
                     ->paginate(20);
           //  }
         }else{
-            $pages = Faq::orderBy('pro_id','ASC','id', 'ASC')->whereNotNull('name')->paginate(20);
+             //   $pages = Faq::disableAutoloadTranslations()
+            $pages = Faq::whereHas('translations', function ($query) {
+                            $query->where('locale', 'en')
+                              ->where('name', notnull);
+                    })
+                    ->orderBy('pro_id','ASC','id', 'ASC')
+                    ->whereNotNull('name')
+                    ->paginate(20);
         }
 
         $productGroup = Product::orderBy('id', 'ASC')->get();
