@@ -269,7 +269,7 @@
                         <h2  class="uk-article-title uk-margin-medium-bottom">{{$new->product->name}} : {{$new->name}} ?<a href="#" data-uk-totop="" data-uk-scroll="duration: 400" class="tm-totop uk-float-right uk-margin-small-top uk-totop uk-icon"><svg width="18" height="10" viewBox="0 0 18 10" xmlns="http://www.w3.org/2000/svg" ratio="1"><polyline fill="none" stroke="#000" stroke-width="1.2" points="1 9 9 1 17 9 "></polyline></svg></a></h2>
                         <p>
 
-                            {!! $new->translation1->body !!}
+                            {!! $new->body !!}
                         </p>
                     </article>
                         <?PHP
