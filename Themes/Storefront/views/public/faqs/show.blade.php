@@ -257,7 +257,7 @@
                             $i++;
                              $Product=$new->product->name;
                             @endphp
-                       @endphp
+                       @endif
                     @endforeach
                 </ul>
                     <?PHP
