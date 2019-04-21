@@ -282,7 +282,7 @@
                 </div>
 
                 </div>
-                @if($i > 10)
+                @if($i > 9)
                 {{ $pages->links() }}
                     @endif
                 </div>
