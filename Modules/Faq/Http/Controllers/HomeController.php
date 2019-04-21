@@ -26,7 +26,7 @@ class HomeController extends Controller
                     ->paginate(20);
           //  }
         }else{
-            $pages = Faq::orderBy('pro_id','ASC','id', 'ASC')->paginate(20);
+            $pages = Faq::orderBy('pro_id','ASC','id', 'ASC')->whereNotNull('name')->paginate(20);
         }
 
         $productGroup = Product::orderBy('id', 'ASC')->get();
