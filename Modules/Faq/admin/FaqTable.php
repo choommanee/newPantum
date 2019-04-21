@@ -31,7 +31,7 @@ class FaqTable extends AdminTable
             })
             ->addColumn('body',function ($faqs){
                 //dd($faqs);
-                if(!is_object($faqs->translation1->body)){
+                if(!is_object($faqs->translation1())){
                     return 'no data';
                 }
                 if($faqs->translation1->body <>''){
