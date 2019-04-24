@@ -190,9 +190,9 @@
     }
 
     table.compare th {
-        border: 1px solid #ddd;
-        background-color: #ee7052;
-        color: white;
+        border: 1px solid #ffff;
+        background-color: #ddd;
+        color: inherit;
         vertical-align: middle;
     }
 
@@ -363,12 +363,12 @@
                             <table class="table compare">
                             <thead>
                             <tr >
-                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.serials_number')}}</th>
-                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.product_name')}}</th>
-                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.sale_date')}}</th>
-                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.date_start')}}</th>
-                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.end_warranty')}}</th>
-                                <th style="color:#FFFFFF;" class="text-center">{{trans('serials::serials.warranty_status')}}</th>
+                                <th class="text-center">{{trans('serials::serials.serials_number')}}</th>
+                                <th class="text-center">{{trans('serials::serials.product_name')}}</th>
+                                <th class="text-center">{{trans('serials::serials.sale_date')}}</th>
+                                <th class="text-center">{{trans('serials::serials.date_start')}}</th>
+                                <th class="text-center">{{trans('serials::serials.end_warranty')}}</th>
+                                <th class="text-center">{{trans('serials::serials.warranty_status')}}</th>
                             </tr>
                             </thead>
                             <tbody>
