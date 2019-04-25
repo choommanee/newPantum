@@ -326,8 +326,8 @@ $(function () {
         autoplaySpeed: 10000,
         dots: false,
         arrows: true,
-        slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         rtl: isRTL,
         responsive: [
             {
