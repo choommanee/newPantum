@@ -6,7 +6,7 @@
         </div>
 
 
-            <div class="{{--product-slider slick-arrow --}}separator clearfix">
+            <div class="product-slider slick-arrow separator clearfix">
                 @foreach ($products as $product)
                     <div class="col-md-6 bg_product">
                         @include('public.products.partials.product_card')
