@@ -8,7 +8,7 @@
 
             <div class="product-slider slick-arrow separator clearfix" style="background-color: #000000;">
                 @foreach ($products as $product)
-                    <div class="col-md-6 bg_product">
+                    <div class="col-md-6 bg_product" style="margin-right: 10px;">
                         @include('public.products.partials.product_card')
                     </div>
                 @endforeach
