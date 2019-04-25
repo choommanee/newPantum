@@ -287,6 +287,9 @@
     .namedetail{
         font-size: 32px;
     }
+    .namedetail2{
+        font-size: 28px;
+    }
     .boxtittle{height: 115px;padding: 22px;padding-left: 62px;}
     .boxtittle h3{font-size: 30px;margin-top: 26px;}
 }
@@ -295,6 +298,9 @@
     .slide .slider-content{height:720px}
     .namedetail{
         font-size: 30px;
+    }
+    .namedetail2{
+        font-size: 26px;
     }
 
     .boxtittle{height: 100px;padding: 20px;padding-left: 60px;}
@@ -305,6 +311,9 @@
     .slide .slider-content{height:660px}
     .namedetail{
         font-size: 26px;
+    }
+    .namedetail2{
+        font-size: 22px;
     }
     .boxtittle{    height: 100px;
         padding: 18px;
@@ -317,6 +326,9 @@
     .namedetail{
         font-size: 24px;
     }
+    .namedetail2{
+        font-size: 19px;
+    }
     .boxtittle{height: 100px;padding: 16px;padding-left: 45px;}
     .boxtittle h3{height: 55px;font-size: 20px;
         padding: 2px;
@@ -327,6 +339,9 @@
     .slide .slider-content{height:460px}
     .namedetail{
         font-size: 22px;
+    }
+    .namedetail2{
+        font-size: 18px;
     }
     .boxtittle{height: 85px;
         padding: 12px;
@@ -345,6 +360,9 @@
 
     .namedetail{
         font-size: 20px;
+    }
+    .namedetail2{
+        font-size: 16px;
     }
     .boxtittle{height: 80px;
         padding: 10px;
@@ -382,6 +400,9 @@
     .namedetail{
         font-size: 18px;
     }
+    .namedetail2{
+        font-size: 14px;
+    }
     .showfillter {
         display: block;
         margin-top: 11px;
@@ -411,6 +432,9 @@
    /* .bg_product{height: 415px;}*/
     .product-card .image-holder, .product-card .image-placeholder {height: 256px;}
     .namedetail {  font-size: 22px; }
+    .namedetail2{
+        font-size: 18px;
+    }
     .compare .table .image-holder{height: 165px; width: 123px;}
     /*.carddetail { height: 145px;}*/
     .hot-news ul {

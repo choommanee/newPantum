@@ -28,8 +28,8 @@
         <div class="clearfix col-md-5 carddetail">
             {{--<span class="product-price">{{ product_price($product) }}</span>--}}
             <span class="namedetail" >{{ $product->name }}</span><br/>
-            <span class="namedetail" >{{ $product->short_description }}</span>
-            <a style="margin-top: 6px;" href="{{ route('products.show', $product->slug) }}" class="btn btn-danger animate btnMore">
+            <span class="namedetail2" >{{ $product->short_description }}</span>
+            <a style="margin-top: 6px;width: 100%" href="{{ route('products.show', $product->slug) }}" class="btn btn-danger animate btnMore">
                 more
             </a>
         </div>
