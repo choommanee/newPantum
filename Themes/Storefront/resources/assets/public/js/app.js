@@ -333,8 +333,8 @@ $(function () {
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 },
             },
             {
