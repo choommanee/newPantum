@@ -92,7 +92,7 @@
         <!--โปรดักคอเซล-->
         <section class="product-slider-wrapper clearfix" >
             <div class="section-header boxtittle" style="background: url({{url('/themes/storefront/public/images/Homepage_05.png')}}) 0 0 no-repeat; " >
-                <h3><a href="{{route('news.index')}}" >News  >></a></h3>
+               <img src="{{url('/themes/storefront/public/images/news_tittle.png')}}">
             </div>
 
             <div class="{{--product-slider slick-arrow --}}separator clearfix" style="background-color: #070707;">
