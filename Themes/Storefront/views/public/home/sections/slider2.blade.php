@@ -1,4 +1,4 @@
-<div class="section-header boxtittle" >
+<div class="section-header boxtittle" style="background: url({{url('/themes/storefront/public/images/Homepage_03.png')}}) 0 0 no-repeat; " >
 
     <h3><a href="{{route('products.index')}}" >{{ $slider2->name }}</a></h3>
 </div>
