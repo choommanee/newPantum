@@ -79,7 +79,8 @@
 .top-login{color:#FFFF;cursor:pointer;float: right;margin-top: 14px;margin-right: 20px;}
 .card-new{margin: 20px auto;width: 90%;margin-bottom: 20px;}
 
-.boxtittle{height: 155px;padding: 22px;padding-left: 62px;background-color: #353537;color:#ffffff;margin-top: 2px;}
+.boxtittle{height: 155px;padding: 22px;padding-top: 15px;padding-left: 62px;background-color: #353537;color:#ffffff;margin-top: 2px;}
+.boxtittle img{height: 90%}
 .boxtittle h3{color:#ffffff;font-family: 'Lato', sans-serif;font-size: 28px;margin-top: 30px;}
 .compare-heading form{position: relative;
     float: right;
@@ -291,6 +292,7 @@
         font-size: 28px;
     }
     .boxtittle{height: 155px;padding: 22px;padding-left: 62px;}
+    .boxtittle img{height: 90%}
     .boxtittle h3{font-size: 30px;margin-top: 26px;}
 }
 
@@ -304,6 +306,7 @@
     }
 
     .boxtittle{height: 155px;padding: 20px;padding-left: 60px;}
+    .boxtittle img{height: 90%}
     .boxtittle h3{font-size: 28px;margin-top: 24px;}
 }
 
@@ -318,6 +321,7 @@
     .boxtittle{    height: 155px;
         padding: 18px;
         padding-left: 48px;}
+    .boxtittle img{height: 90%}
     .boxtittle h3{font-size: 22px;margin-top: 22px;}
 }
 
@@ -330,6 +334,7 @@
         font-size: 19px;
     }
     .boxtittle{height: 140px;padding: 16px;padding-left: 45px;}
+    .boxtittle img{height: 90%}
     .boxtittle h3{height: 55px;font-size: 20px;
         padding: 2px;
         padding-left: 0px;}
@@ -346,6 +351,7 @@
     .boxtittle{height: 130px;
         padding: 12px;
         padding-left: 42px;}
+    .boxtittle img{height: 90%}
     .boxtittle h3{       font-size: 19px;
         margin-top: 6px;
         height: 48px;
@@ -367,6 +373,7 @@
     .boxtittle{height: 120px;
         padding: 10px;
         padding-left: 30px;}
+    .boxtittle img{height: 90%}
     .boxtittle h3{    font-size: 18px;
         margin-top: 15px;
         height: 46px;
@@ -409,6 +416,7 @@
     }
 
     .boxtittle{height: 100px; padding: 8px;padding-left: 26px;}
+    .boxtittle img{height: 90%}
     .boxtittle h3{font-size: 17px; margin-top: 18px;}
     .card-new{margin: 20px auto;width: 95%;margin-bottom: 20px;}
 
@@ -460,6 +468,7 @@
     .boxtittle{    height: 80px;
         padding: 2px;
         padding-left: 0px;}
+    .boxtittle img{height: 90%}
     .boxtittle h3{font-size: 16px;
         margin-top: 0px;
     }
@@ -549,6 +558,7 @@
         padding: 8px;
         margin-top: -2px;
         padding-left: 18px;}
+    .boxtittle img{height: 80%}
     .boxtittle h3{    font-size: 13px;
         margin-top: -6px;
         height: 39px;
@@ -604,6 +614,7 @@
         margin-right: 32px;
     }
     .boxtittle{height: 70px;padding: 10px;padding-left: 20px;margin-top: -2px;}
+    .boxtittle img{height: 90%}
     .boxtittle h3 {
         font-size: 16px;
         margin-top: 8px;
@@ -645,6 +656,7 @@
     .boxtittle{    height: 60px;
         padding: 1px;
         padding-left: 13px;}
+    .boxtittle img{height: 70%}
     .boxtittle h3{font-size: 13px;
         margin-top: 9px;
         height: 35px;

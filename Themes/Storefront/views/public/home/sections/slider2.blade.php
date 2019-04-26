@@ -1,7 +1,7 @@
 <div class="section-header boxtittle" style="background: url({{url('/themes/storefront/public/images/Homepage_03.png')}}) 0 0 no-repeat; " >
 
     {{--<h3><a href="{{route('products.index')}}" >{{ $slider2->name }}</a></h3>--}}
-    <img src="{{url('/themes/storefront/public/images/hotproduct_tittle.png')}}" style="height: 100%;">
+    <img src="{{url('/themes/storefront/public/images/hotproduct_tittle.png')}}" >
 </div>
 
 <div class="home-slider"
