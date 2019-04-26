@@ -91,7 +91,7 @@
     @if ($news->isNotEmpty())
         <!--โปรดักคอเซล-->
         <section class="product-slider-wrapper clearfix" >
-            <div class="section-header boxtittle">
+            <div class="section-header boxtittle" style="background: url({{url('/themes/storefront/public/images/Homepage_05.png')}}) 0 0 no-repeat; " >
                 <h3><a href="{{route('news.index')}}" >News  >></a></h3>
             </div>
 
