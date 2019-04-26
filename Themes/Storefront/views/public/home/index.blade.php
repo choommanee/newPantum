@@ -92,7 +92,7 @@
         <!--โปรดักคอเซล-->
         <section class="product-slider-wrapper clearfix" >
             <div class="section-header boxtittle" style="background-color: #030303;" >
-               <img src="{{url('/themes/storefront/public/images/news_tittle.png')}}">
+               <img src="{{url('/themes/storefront/public/images/news_tittle.png')}}" style="height: 100%;">
             </div>
 
             <div class="{{--product-slider slick-arrow --}}separator clearfix" style="background-color: #070707;">
