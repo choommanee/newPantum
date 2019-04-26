@@ -613,7 +613,7 @@
         margin-left: 32px;
         margin-right: 32px;
     }
-    .boxtittle{height: 70px;padding: 10px;padding-left: 20px;margin-top: -2px;}
+    .boxtittle{height: 70px;padding-top: 10px;padding-left: 20px;margin-top: -2px;}
     .boxtittle img{height: 90%}
     .boxtittle h3 {
         font-size: 16px;
@@ -653,10 +653,8 @@
         margin-left: 24px;
         margin-right: 25px;
     }
-    .boxtittle{    height: 60px;
-        padding: 1px;
-        padding-left: 13px;}
-    .boxtittle img{height: 70%}
+    .boxtittle{ height: 60px;padding-top: 8px;}
+    .boxtittle img{height: 90%}
     .boxtittle h3{font-size: 13px;
         margin-top: 9px;
         height: 35px;
