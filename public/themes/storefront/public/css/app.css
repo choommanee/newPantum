@@ -596,7 +596,7 @@
     .product-card .image-holder1 {height: 200px;}
     .theme-black .btn-primary{
         font-size: 10px;
-        padding: 8px 0px;
+        padding: 8px 20px;
     }
     .specification .information-data>span{display:block;margin:0;word-wrap: break-word;width: 460px;}
 }
