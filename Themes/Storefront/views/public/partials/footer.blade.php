@@ -91,17 +91,17 @@
                     <div class="contact">
                         <ul class="list-inline">
                             <li>
-                                <i class="fa fa-phone-square" aria-hidden="true"></i><a href="tel:02-101-3144">02-101-3144</a>
+                                <i class="fa fa-phone-square" aria-hidden="true"></i><a href="tel:02-101-3144"  style="color: #555;font-size: 12px;">02-101-3144</a>
 
                             </li>
                             <li >
-                                <i class="fas fa-fax"  aria-hidden="true" style="font-size: 13px;"></i><a href="tel:02-101-3143">02-101-3143</a>
+                                <i class="fas fa-fax"  aria-hidden="true" style="font-size: 13px;"></i><a href="tel:02-101-3143"  style="color: #555;font-size: 12px;">02-101-3143</a>
                             </li>
                             <li >
-                                <i class="fas fa-envelope-square"  aria-hidden="true"></i><a href="mailto:info@pantum.co.th">info@pantum.co.th</a>
+                                <i class="fas fa-envelope-square"  aria-hidden="true"></i><a href="mailto:info@pantum.co.th"  style="color: #555;font-size: 12px;">info@pantum.co.th</a>
                             </li>
                             <li >
-                                <i class="fas fa-globe" aria-hidden="true"></i><a href="https://www.pantum.co.th">www.pantum.co.th</a>
+                                <i class="fas fa-globe" aria-hidden="true"></i><a href="https://www.pantum.co.th"  style="color: #555;font-size: 12px;">www.pantum.co.th</a>
                             </li>
                         </ul>
                     </div>
