@@ -287,6 +287,17 @@
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
 }
+.footer_head{
+    border-bottom: 1px solid;
+    font-size: 15px;
+    font-weight: 800;
+    color: #555;
+}
+
+.footer_text{
+    color: #555;
+    font-size: 12px;
+}
 
 @media screen and (max-width:2560px){
     .slide .slider-content{height:746px}

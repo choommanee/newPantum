@@ -14,10 +14,7 @@
 
                     <div class="clearfix"></div>
 
-                    <p class="footer-brief" style="border-bottom: 1px solid;
-    font-size: 15px;
-    font-weight: 800;
-    color: #555;">{{-- setting('store_tagline') --}}SERVICE HOTLINE</p>
+                    <p class="footer-brief" class="footer_head">{{-- setting('store_tagline') --}}SERVICE HOTLINE</p>
 
                     @if (setting('store_phone') || setting('store_email') || setting('storefront_footer_address'))
                         <div class="contact">
@@ -25,17 +22,17 @@
                                 @if (setting('store_phone'))
                                     <li>
                                         <i class="fa fa-phone-square" aria-hidden="true"></i>
-                                        <a href="tel:{{ setting('store_phone') }}" style="color: #555;font-size: 12px;">{{ setting('store_phone') }}</a></li>
+                                        <a href="tel:{{ setting('store_phone') }}" class="footer_text" >{{ setting('store_phone') }}</a></li>
                                 @endif
                                 @if($socialLinks['facebook-official']!='')
                                     <li><i class="fab fa-facebook" aria-hidden="true" ></i>
-                                        <a href="{{ $socialLinks['facebook-official'] }}" style="color: #555;font-size: 12px;">PantumThailand</a></li>
+                                        <a href="{{ $socialLinks['facebook-official'] }}" class="footer_text" >PantumThailand</a></li>
                                 @endif
 
                                 <li><i class="fab fa-line" aria-hidden="true" ></i>
-                                    <a href="https://line.me/R/ti/p/%40pantumthailand" style="color: #555;font-size: 12px;">Line : @pantumthailand</a></li>
+                                    <a href="https://line.me/R/ti/p/%40pantumthailand" class="footer_text" >Line : @pantumthailand</a></li>
                                 @if (setting('store_email'))
-                                        <li><i class="fas fa-envelope-square"  aria-hidden="true"></i> <a href="mailto:{{ setting('store_email') }}" style="color: #555;font-size: 12px;"> {{ setting('store_email') }}</a></li>
+                                        <li><i class="fas fa-envelope-square"  aria-hidden="true"></i> <a href="mailto:{{ setting('store_email') }}" class="footer_text" > {{ setting('store_email') }}</a></li>
                                 @endif
 
                                {{--@if (setting('storefront_footer_address'))
@@ -49,10 +46,7 @@
                 <div class="col-md-3">
                     <div class="clearfix"></div>
 
-                    <p class="footer-brief" style="border-bottom: 1px solid;
-                            font-size: 15px;
-                            font-weight: 800;
-                            color: #555;">{{-- setting('store_tagline') --}}MAP</p>
+                    <p class="footer-brief" class="footer_head">{{-- setting('store_tagline') --}}MAP</p>
 
 
                     <div class="contact">
@@ -68,12 +62,12 @@
                             color: #555;">{{-- setting('store_tagline') --}}ADDRESS</p>
                     <div class="contact">
                         <ul class="list-inline">
-                            <li style="font-size: 14px;color: #555"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                            <li class="footer_text"  style="font-size: 14px;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
                                 PANTUM (THAILAND) CO.,LTD<br>
 
                             </li>
                         </ul>
-                        <div class="footaddress" style="padding-left:0px;color: #555;font-size: 12px;">104/3 M.9 Bangkruai - Sainoi Rd, Tambon Bangkruai Amphur Bangkruai Nonthaburi 11130</div>
+                        <div class="footaddress" class="footer_text"  >104/3 M.9 Bangkruai - Sainoi Rd, Tambon Bangkruai Amphur Bangkruai Nonthaburi 11130</div>
                     </div>
 
                 </div>
@@ -82,26 +76,23 @@
 
                     <div class="clearfix"></div>
 
-                    <p class="footer-brief" style="border-bottom: 1px solid;
-                            font-size: 15px;
-                            font-weight: 800;
-                            color: #555;">{{-- setting('store_tagline') --}}CONTACT</p>
+                    <p class="footer-brief" class="footer_head">{{-- setting('store_tagline') --}}CONTACT</p>
 
 
                     <div class="contact">
                         <ul class="list-inline">
                             <li>
-                                <i class="fa fa-phone-square" aria-hidden="true"></i><a href="tel:02-101-3144"  style="color: #555;font-size: 12px;">02-101-3144</a>
+                                <i class="fa fa-phone-square" aria-hidden="true"></i><a href="tel:02-101-3144"  class="footer_text" >02-101-3144</a>
 
                             </li>
                             <li >
-                                <i class="fas fa-fax"  aria-hidden="true" style="font-size: 13px;"></i><a href="tel:02-101-3143"  style="color: #555;font-size: 12px;">02-101-3143</a>
+                                <i class="fas fa-fax"  aria-hidden="true" style="font-size: 13px;"></i><a href="tel:02-101-3143" class="footer_text" >02-101-3143</a>
                             </li>
                             <li >
-                                <i class="fas fa-envelope-square"  aria-hidden="true"></i><a href="mailto:info@pantum.co.th"  style="color: #555;font-size: 12px;">info@pantum.co.th</a>
+                                <i class="fas fa-envelope-square"  aria-hidden="true"></i><a href="mailto:info@pantum.co.th" class="footer_text" >info@pantum.co.th</a>
                             </li>
                             <li >
-                                <i class="fas fa-globe" aria-hidden="true"></i><a href="https://www.pantum.co.th"  style="color: #555;font-size: 12px;">www.pantum.co.th</a>
+                                <i class="fas fa-globe" aria-hidden="true"></i><a href="https://www.pantum.co.th"  class="footer_text" >www.pantum.co.th</a>
                             </li>
                         </ul>
                     </div>
