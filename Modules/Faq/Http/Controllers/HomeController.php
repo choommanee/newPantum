@@ -23,7 +23,6 @@ class HomeController extends Controller
         //if (request()->has('Search')) {
             if (request()->has('Search') && request()->has('Search')!='') {
                 $pages =  $model->search(request()->get('Search'))
-                    ->whereHas()
                     ->query()
                     ->paginate(20);
           //  }
