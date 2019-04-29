@@ -52,6 +52,7 @@ class HomeController extends Controller
         $productGroup = Product::orderBy('id', 'ASC')->get();
         // $productGroup = Faq::ProductGroup()->get();
         //dd($productGroup);
-        return view('public.faqs.show',compact('pages','logo','productGroup'));
+        $locale = locale();
+        return view('public.faqs.show',compact('pages','logo','productGroup','locale'));
     }
 }

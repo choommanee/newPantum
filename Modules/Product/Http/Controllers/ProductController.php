@@ -45,7 +45,7 @@ class ProductController extends Controller
         }
 
 
-        $products = $query->paginate(request('perPage', 15))
+        $products = $query->paginate(request('perPage', 100))
             ->appends(request()->query());
 
 
