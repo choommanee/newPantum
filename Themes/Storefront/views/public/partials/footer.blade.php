@@ -56,10 +56,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="clearfix"></div>
-                    <p class="footer-brief" style="border-bottom: 1px solid;
-                            font-size: 15px;
-                            font-weight: 800;
-                            color: #555;">{{-- setting('store_tagline') --}}ADDRESS</p>
+                    <p class="footer-brief" class="footer_head">{{-- setting('store_tagline') --}}ADDRESS</p>
                     <div class="contact">
                         <ul class="list-inline">
                             <li class="footer_text"  style="font-size: 14px;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
