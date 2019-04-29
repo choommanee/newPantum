@@ -14,7 +14,7 @@
 
                     <div class="clearfix"></div>
 
-                    <p class="footer-brief" class="footer_head">{{-- setting('store_tagline') --}}SERVICE HOTLINE</p>
+                    <p  class="footer_head">{{-- setting('store_tagline') --}}SERVICE HOTLINE</p>
 
                     @if (setting('store_phone') || setting('store_email') || setting('storefront_footer_address'))
                         <div class="contact">
@@ -46,7 +46,7 @@
                 <div class="col-md-3">
                     <div class="clearfix"></div>
 
-                    <p class="footer-brief" class="footer_head">{{-- setting('store_tagline') --}}MAP</p>
+                    <p class="footer_head">{{-- setting('store_tagline') --}}MAP</p>
 
 
                     <div class="contact">
@@ -56,7 +56,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="clearfix"></div>
-                    <p class="footer-brief" class="footer_head">{{-- setting('store_tagline') --}}ADDRESS</p>
+                    <p class="footer_head">{{-- setting('store_tagline') --}}ADDRESS</p>
                     <div class="contact">
                         <ul class="list-inline">
                             <li class="footer_text"  style="font-size: 14px;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
@@ -73,7 +73,7 @@
 
                     <div class="clearfix"></div>
 
-                    <p class="footer-brief" class="footer_head">{{-- setting('store_tagline') --}}CONTACT</p>
+                    <p  class="footer_head">{{-- setting('store_tagline') --}}CONTACT</p>
 
 
                     <div class="contact">
