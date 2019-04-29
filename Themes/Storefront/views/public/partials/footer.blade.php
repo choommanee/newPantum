@@ -15,9 +15,9 @@
                     <div class="clearfix"></div>
 
                     <p class="footer-brief" style="border-bottom: 1px solid;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 800;
-    color: #FFFFFF;">{{-- setting('store_tagline') --}}SERVICE HOTLINE</p>
+    color: #555;">{{-- setting('store_tagline') --}}SERVICE HOTLINE</p>
 
                     @if (setting('store_phone') || setting('store_email') || setting('storefront_footer_address'))
                         <div class="contact">
@@ -25,15 +25,15 @@
                                 @if (setting('store_phone'))
                                     <li>
                                         <i class="fa fa-phone-square" aria-hidden="true"></i>
-                                        <a href="tel:{{ setting('store_phone') }}">{{ setting('store_phone') }}</a></li>
+                                        <a href="tel:{{ setting('store_phone') }}" style="color: #555;font-size: 12px;">{{ setting('store_phone') }}</a></li>
                                 @endif
                                 @if($socialLinks['facebook-official']!='')
                                     <li><i class="fab fa-facebook" aria-hidden="true" ></i>
-                                        <a href="{{ $socialLinks['facebook-official'] }}">PantumThailand</a></li>
+                                        <a href="{{ $socialLinks['facebook-official'] }}" style="color: #555;font-size: 12px;">PantumThailand</a></li>
                                 @endif
 
                                 <li><i class="fab fa-line" aria-hidden="true" ></i>
-                                    <a href="https://line.me/R/ti/p/%40pantumthailand">Line : @pantumthailand</a></li>
+                                    <a href="https://line.me/R/ti/p/%40pantumthailand" style="color: #555;font-size: 12px;">Line : @pantumthailand</a></li>
                                 @if (setting('store_email'))
                                     <li><i class="fas fa-envelope-square"  aria-hidden="true"></i> {{ setting('store_email') }}</li>
                                 @endif
@@ -50,9 +50,9 @@
                     <div class="clearfix"></div>
 
                     <p class="footer-brief" style="border-bottom: 1px solid;
-                            font-size: 18px;
+                            font-size: 15px;
                             font-weight: 800;
-                            color: #FFFFFF;">{{-- setting('store_tagline') --}}MAP</p>
+                            color: #555;">{{-- setting('store_tagline') --}}MAP</p>
 
 
                     <div class="contact">
@@ -63,17 +63,17 @@
                 <div class="col-md-3">
                     <div class="clearfix"></div>
                     <p class="footer-brief" style="border-bottom: 1px solid;
-                            font-size: 18px;
+                            font-size: 15px;
                             font-weight: 800;
-                            color: #FFFFFF;">{{-- setting('store_tagline') --}}ADDRESS</p>
+                            color: #555;">{{-- setting('store_tagline') --}}ADDRESS</p>
                     <div class="contact">
                         <ul class="list-inline">
-                            <li style="font-size: 20px;margin-left: 1px;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                            <li style="font-size: 14px;color: #555"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
                                 PANTUM (THAILAND) CO.,LTD<br>
 
                             </li>
                         </ul>
-                        <div class="footaddress" style="padding-left:0px;">104/3 M.9 Bangkruai - Sainoi Rd, Tambon Bangkruai Amphur Bangkruai Nonthaburi 11130</div>
+                        <div class="footaddress" style="padding-left:0px;color: #555;font-size: 12px;">104/3 M.9 Bangkruai - Sainoi Rd, Tambon Bangkruai Amphur Bangkruai Nonthaburi 11130</div>
                     </div>
 
                 </div>
@@ -83,9 +83,9 @@
                     <div class="clearfix"></div>
 
                     <p class="footer-brief" style="border-bottom: 1px solid;
-                            font-size: 18px;
+                            font-size: 15px;
                             font-weight: 800;
-                            color: #FFFFFF;">{{-- setting('store_tagline') --}}CONTACT</p>
+                            color: #555;">{{-- setting('store_tagline') --}}CONTACT</p>
 
 
                     <div class="contact">
