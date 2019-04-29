@@ -35,7 +35,7 @@
                                 <li><i class="fab fa-line" aria-hidden="true" ></i>
                                     <a href="https://line.me/R/ti/p/%40pantumthailand" style="color: #555;font-size: 12px;">Line : @pantumthailand</a></li>
                                 @if (setting('store_email'))
-                                    <li><i class="fas fa-envelope-square"  aria-hidden="true"></i> {{ setting('store_email') }}</li>
+                                        <li><i class="fas fa-envelope-square"  aria-hidden="true"></i> <a href="mailto:{{ setting('store_email') }}" style="color: #555;font-size: 12px;"> {{ setting('store_email') }}</a></li>
                                 @endif
 
                                {{--@if (setting('storefront_footer_address'))
