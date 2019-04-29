@@ -241,6 +241,7 @@
                         $Product="";
                     ?>
                     @foreach($pages as $new)
+                            @if($locale <>'en')
                        @if($new->name!='')
                             @if($Product!=$new->product->name)
                             <h1 style="margin-top: 35px;">{{$new->product->name}}</h1>
@@ -258,12 +259,30 @@
                              $Product=$new->product->name;
                             @endphp
                        @endif
+                       @else
+                                @if($new->name!='')
+
+
+                                    <li>
+                                        <a href="#article-<?=$i?>" >
+                                <span data-uk-icon="icon: arrow-right" class="uk-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ratio="1">
+                                        <polyline fill="none" stroke="#000" points="10 5 15 9.5 10 14"></polyline> <line fill="none" stroke="#000" x1="4" y1="9.5" x2="15" y2="9.5"></line></svg></span>
+                                            {{$new->product->name}} : {{$new->name}}</a>   {!! $new->body !!}</li>
+                                    @php
+                                        $i++;
+                                         $Product=$new->product->name;
+                                    @endphp
+                                @endif
+                       @endif
                     @endforeach
                 </ul>
                     <?PHP
                     $i=1;
                     $Product="";
+
                     ?>
+                    @if($locale <>'en')
                     @foreach($pages as $new)
                         @if($new->name!='')
                         <div id="article-<?=$i?>"></div>
@@ -279,6 +298,7 @@
                          @endphp
                         @endif
                     @endforeach
+                    @endif
                 </div>
 
                 </div>

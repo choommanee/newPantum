@@ -35,11 +35,11 @@ class HomeController extends Controller
                     ->orderBy('pro_id','ASC','id', 'ASC')
                     ->paginate(20);
         }
-
+        $locale = locale();
         $productGroup = Product::orderBy('id', 'ASC')->get();
        // $productGroup = Faq::ProductGroup()->get();
         //dd($productGroup);
-        return view('public.faqs.show',compact('pages','logo','productGroup'));
+        return view('public.faqs.show',compact('pages','logo','productGroup','locals'));
     }
 
     public function getbycat($id){
