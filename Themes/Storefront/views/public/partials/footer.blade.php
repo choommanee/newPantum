@@ -60,11 +60,11 @@
                     <div class="contact">
                         <ul class="list-inline">
                             <li class="footer_text"  style="font-size: 14px;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
-                                PANTUM (THAILAND) CO.,LTD<br>
+                                <span class="footer_text" > PANTUM (THAILAND) CO.,LTD</span><br>
 
                             </li>
                         </ul>
-                        <div class="footaddress" class="footer_text"  >104/3 M.9 Bangkruai - Sainoi Rd, Tambon Bangkruai Amphur Bangkruai Nonthaburi 11130</div>
+                        <div  class="footer_text"  >104/3 M.9 Bangkruai - Sainoi Rd, Tambon Bangkruai Amphur Bangkruai Nonthaburi 11130</div>
                     </div>
 
                 </div>
