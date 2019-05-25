@@ -29,7 +29,7 @@
                             {!! $errors->first('email','<span class="error-message">:message</span>') !!}
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-center btn-reset" data-loading>
+                        <button type="submit" class="btn btn-primary btn-center btn-reset" data-loading style="margin-top: 10px;">
                             {{ trans('user::auth.reset_password') }}
                         </button>
                     </form>

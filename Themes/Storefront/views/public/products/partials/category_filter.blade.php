@@ -4,6 +4,7 @@
 
         <ul class="filter-category list-inline">
             @foreach ($categories as $category)
+                @if($category->id <>'15')
                 <li class="{{ request('category') === $category->slug ? 'active' : '' }}">
                     <a href="{{ request()->fullUrlWithQuery(['category' => $category->slug]) }}">
                         {{ $category->name }}
@@ -13,6 +14,7 @@
                         @include('public.products.partials.sub_category_filter', ['subCategories' => $category->items])
                     @endif
                 </li>
+                @endif
             @endforeach
         </ul>
     </div>

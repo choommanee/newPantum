@@ -47,6 +47,6 @@ class Compare extends DarryldecodeCart
 
     public function attributes()
     {
-        return $this->products()->flatMap->attributes->unique('name');
+        return $this->products()->flatMap->attributes;
     }
 }

@@ -24,6 +24,7 @@ class SaveUserRequest extends Request
         return [
             'first_name' => 'required',
             'last_name' => 'required',
+            'telephone' => 'required',
             'email' => ['required', 'email', $this->emailUniqueRule()],
             'password' => 'nullable|confirmed|min:6',
             'roles' => ['required', Rule::exists('roles', 'id')],

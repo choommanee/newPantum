@@ -14,6 +14,290 @@
     background: #FFFFFF;
     padding: 25px;
 ">
+        @push('scripts')
+            <script>
+                function getTotalInfilter(filter,filtervalue) {
+                    var output = 0;
+                    $('.product-image1').each(function() {
+                        var result = "";
+
+                        if (this.hasAttributes()) {
+                            var attrs = this.attributes;
+
+                            for(var i = attrs.length - 1; i >= 0; i--) {
+                                if(attrs[i].name ===filter && attrs[i].value===filtervalue && $(this).css('display')!='none' ){
+                        //           console.log('นับจำนวน');
+                                    output +=1;
+                         //          alert($(this).attr('id'));
+                                    break;
+
+                                }
+                            }
+
+                        }
+                        //console.log(result);
+                    });
+                    return output;
+                }
+
+
+                var idselect = '';
+                var res =[];
+                function getProductInfilter(filter,filtervalue) {
+
+                    $('.product-image1').each(function(e) {
+                        var result = "";
+                        if (this.hasAttributes()) {
+                            var attrs = this.attributes;
+
+                            for(var i = attrs.length - 1; i >= 0; i--) {
+
+                                if(attrs[i].name ===filter && attrs[i].value===filtervalue  ){
+                                 //  console.log($(this).attr('id')+':'+attrs[i].name+"="+filter+","+attrs[i].value+" = "+filtervalue);
+                                 //   console.log($(this).id);
+                                    if(res.length > 0){
+                                        //console.log(jQuery.inArray( $(this).attr('id'), res ));
+                                        if(jQuery.inArray( $(this).attr('id'), res ) > -1){
+                                           // console.log($(this).attr('id'));
+                                            $(this).show();
+                                            idselect =idselect+','+$(this).attr('id');
+                                            break;
+                                        }else{
+                                          //  console.log('ลบ===>'+$(this).attr('id'));
+                                            $(this).hide();
+                                            break;
+                                        }
+
+                                    }else{
+                                        //console.log($(this).attr('id')+':'+attrs[i].name+"="+filter+","+attrs[i].value+" = "+filtervalue);
+                                        idselect =idselect+','+$(this).attr('id');
+                                        $(this).show();
+                                        break;
+                                    }
+
+
+                                }else{
+                                    //console.log('hide:'+$(this).attr('id')+':'+attrs[i].name+"="+filter+","+attrs[i].value+" = "+filtervalue);
+                                    $(this).hide();
+                                }
+                            }
+
+                            //console.log(idselect);
+                         //   result = output;
+                        }
+                    });
+                    res = idselect.substring(1).split(",");
+                 //   console.log(res);
+                    //return output;
+                }
+
+
+                function getUnProductInfilter(filter,filtervalue) {
+
+                    $('.product-image1').each(function(e) {
+                        var result = "";
+                        if (this.hasAttributes()) {
+                            var attrs = this.attributes;
+
+                            for(var i = attrs.length - 1; i >= 0; i--) {
+
+                                if(attrs[i].name ===filter && attrs[i].value===filtervalue  ){
+                                    // console.log($(this).attr('id')+':'+attrs[i].name+"="+filter+","+attrs[i].value+" = "+filtervalue);
+                                    //   console.log($(this).id);
+                                    if(res.length > 0){
+                                        //console.log(jQuery.inArray( $(this).attr('id'), res ));
+                                        if(jQuery.inArray( $(this).attr('id'), res ) > -1){
+                                           //  console.log('in array hide :'+$(this).attr('id'));
+                                            $(this).show();
+                                           // idselect =idselect+','+$(this).attr('id');
+                                            break;
+                                        }else{
+                                          //  console.log('No in array hide : '+$(this).attr('id')+':'+attrs[i].name+"="+filter+","+attrs[i].value+" = "+filtervalue);
+                                         //   idselect =idselect+','+$(this).attr('id');
+                                            $(this).hide();
+                                            break;
+                                        }
+
+                                    }else{
+                                       // console.log('No in array hide 2 : '+$(this).attr('id')+':'+attrs[i].name+"="+filter+","+attrs[i].value+" = "+filtervalue);
+                                        //idselect =idselect+','+$(this).attr('id');
+                                        $(this).hide();
+                                        break;
+                                    }
+
+
+                                }
+                            }
+
+                            //console.log(idselect);
+                            //   result = output;
+                        }
+                    });
+                    res = idselect.substring(1).split(",");
+                   // console.log(res);
+                    //return output;
+                }
+
+                $('input[type=checkbox]').click(function () {
+                  //  $('input[type=checkbox]').each(function () {
+                        if ($(this).is(':checked')) {
+                            at_set = $(this).attr('at_set');
+                            at_value = $(this).attr('at_value');
+                            at_id = $(this).attr('at_id');
+
+                            lblCheck = $('#txtatt-'+at_id).html();
+                            suggetBt = '<span id="sug_'+at_id+'" class="btSuggestionSelect" > ' +
+                                            '<span >'+lblCheck+' </span>' +
+                                            '<span style="cursor: pointer;padding-left: 10px;" onclick="unCheckdata('+at_id+')">x</span>' +
+                                        '</span>';
+                            $('#dataselect').append(suggetBt);
+                            $('#lblCleatAll').show();
+                            getProductInfilter(at_set,at_value);
+
+
+
+                        }else {
+                            at_set = $(this).attr('at_set');
+                            at_value = $(this).attr('at_value');
+                            total = getTotalInfilter(at_set,at_value);
+                            at_id = $(this).attr('at_id');
+                            $('#sug_'+at_id).remove();
+
+                            $('input[type=checkbox]').each(function () {
+
+                                if ($(this).is(':checked')) {
+                                    res =[];
+                                    idselect = '';
+                                 //   console.log('step after uncheck');
+                                    at_set1 = $(this).attr('at_set');
+                                    at_value2 = $(this).attr('at_value');
+                                    getProductInfilter(at_set1, at_value2);
+                                }
+                            });
+                            //console.log(total);
+                        }
+                   // });
+                    resetTotal();
+                });
+
+                function unCheckdata(at_id){
+                    $('#sug_'+at_id).remove();
+                    $('#attribute-'+at_id).prop('checked', false);
+                    $('input[type=checkbox]').each(function () {
+
+                        if ($(this).is(':checked')) {
+                            res =[];
+                            idselect = '';
+                            //console.log('step after uncheck');
+                            at_set1 = $(this).attr('at_set');
+                            at_value2 = $(this).attr('at_value');
+                            getProductInfilter(at_set1, at_value2);
+                        }
+                    });
+
+                    resetTotal();
+                }
+
+                function uncheckAll(){
+                    $('#dataselect').html('');
+                    $('#lblCleatAll').show('');
+                    $('input[type=checkbox]').each(function () {
+                        if ($(this).is(':checked')) {
+                           // $(this).remove();
+                            $(this).prop('checked', false);
+                        }
+                    });
+                    resetTotal();
+                }
+                function resetTotal() {
+                    var output = 0;
+                    havecheack =0;
+                    $('input[type=checkbox]').each(function () {
+                        if ($(this).is(':checked')) {
+                            at_set2 = $(this).attr('at_set');
+                            at_value2 = $(this).attr('at_value');
+                            at_id = $(this).attr('at_id');
+                             console.log('checkbox:'+at_id);
+                            havecheack =1;
+                            //getProductInfilter(at_set2,at_value2);
+                            total = getTotalInfilter(at_set2,at_value2);
+
+
+
+                           if(total==0){
+                                $('#attribute-'+at_id).prop( "disabled", true );
+                                $('#attribute-'+at_id).css("background", "#b1adad");
+                                $("#txtatt-"+at_id).css("color", "#b1adad");
+                            }else{
+                                $('#attribute-'+at_id).prop( "disabled", false );
+                                $('#attribute-'+at_id).css("background", "#ffffff");
+                                $("#txtatt-"+at_id).css("color", "#626060");
+                            }
+                            txtShowTotal = '#total_'+at_id;
+                           $(txtShowTotal).html('( '+total+' )');
+                        }else{
+                            at_set2 = $(this).attr('at_set');
+                            at_value2 = $(this).attr('at_value');
+                            at_id = $(this).attr('at_id');
+                            console.log(res);
+                            console.log('UnCheck:'+at_id);
+                           // getUnProductInfilter(at_set2,at_value2);
+                            total = getTotalInfilter(at_set2,at_value2);
+                            if(total==0){
+                                $('#attribute-'+at_id).prop( "disabled", true );
+                                $('#attribute-'+at_id).css("background", "#b1adad");
+                                $("#txtatt-"+at_id).css("color", "#b1adad");
+                            }else{
+                                $('#attribute-'+at_id).prop( "disabled", false );
+                                $('#attribute-'+at_id).css("background", "#ffffff");
+                                $("#txtatt-"+at_id).css("color", "#626060");
+
+
+                            }
+                            txtShowTotal = '#total_'+at_id;
+                            $(txtShowTotal).html('( '+total+' )');
+                        }
+                       /* if(output==0){
+                            $(this).prop( "disabled", true );
+                        }else{
+                            $(this).prop( "disabled", false );
+                        }*/
+                       //console.log(output);
+
+                    });
+
+                    if(havecheack==0){
+                        $('.product-image1').show();
+                        idselect ='';
+                        res =[];
+                        $('input[type=checkbox]').each(function () {
+                            at_set2 = $(this).attr('at_set');
+                            at_value2 = $(this).attr('at_value');
+                            at_id = $(this).attr('at_id');
+                         //   console.log(res);
+                         //   console.log('UnCheck:'+at_id);
+                            // getUnProductInfilter(at_set2,at_value2);
+                            total = getTotalInfilter(at_set2,at_value2);
+                            if(total==0){
+                                $('#attribute-'+at_id).prop( "disabled", true );
+                                $('#attribute-'+at_id).css("background", "#b1adad");
+                                $("#txtatt-"+at_id).css("color", "#b1adad");
+                            }else{
+                                $('#attribute-'+at_id).prop( "disabled", false );
+                                $('#attribute-'+at_id).css("background", "#ffffff");
+                                $("#txtatt-"+at_id).css("color", "#626060");
+
+
+                            }
+                            txtShowTotal = '#total_'+at_id;
+                            $(txtShowTotal).html('( '+total+' )');
+                        });
+                       // console.log(res);
+
+                    }
+                }
+            </script>
+            @endpush
     <section class="product-list">
         <div class="row">
             @include('public.products.partials.filter')
@@ -159,13 +443,13 @@
             $(obj).find();
             event.preventDefault(); // cancel default behavior
             var data =$(obj).parent('form');
-            console.log(data);
+            //console.log(data);
 
             pro_id  = data.find('input[name=product_id]');
             pro_img  = data.find('input[name=product_img]');
             _token  = data.find('input[name=_token]');
             product_name  = data.find('input[name=product_name]');
-            console.log(pro_img.val());
+           // console.log(pro_img.val());
             const person = {
                 pro_id: pro_id.val(),
                 pro_img: pro_img.val(),
@@ -274,6 +558,10 @@
         function loadDataCompare(){
 
         }
+
+        resetTotal();
+
+
     </script>
 @endpush
 @push('styles')
@@ -430,8 +718,7 @@
         #comparison .comparison-ul .item .product-image {
             height: auto;
             margin: 0 auto;
-            height: 85px;
-            width: 85px;
+            width: 100px;
         }
 
         #comparison .go-to-compare {

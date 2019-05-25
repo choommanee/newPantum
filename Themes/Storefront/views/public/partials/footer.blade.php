@@ -59,7 +59,7 @@
                     <p class="footer_head">{{-- setting('store_tagline') --}}ADDRESS</p>
                     <div class="contact">
                         <ul class="list-inline">
-                            <li class="footer_text"  style="font-size: 14px;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                            <li class="footer_text"  style="font-size: 13px;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i>
                                 <span class="footer_text" > PANTUM (THAILAND) CO.,LTD</span><br>
 
                             </li>

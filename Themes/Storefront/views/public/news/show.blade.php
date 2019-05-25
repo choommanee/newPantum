@@ -28,7 +28,7 @@
                                 <img class="card-img-top" src="{{ $new->news_image->path }}" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $new->name }}</h5>
-                                    <a href="{{ route('news.show', $new->slug) }}" class="btn btn-primary card-btn">Read More</a>
+                                    <a href="{{ route('news.show', $new->slug) }}" class="btn btn-primary card-btn btn-news">Read More</a>
                                 </div>
                             </div>
                         </div>

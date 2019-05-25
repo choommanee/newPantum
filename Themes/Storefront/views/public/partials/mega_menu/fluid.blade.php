@@ -23,14 +23,14 @@
                                     <?php
                                    // print_r($item);
                                     ?>
-                                    <li style="margin-left: 10px;" onmouseover="showMenudetail('{{$item->slug()}}',{{$menu->menu_id()}});">
+                                    <li style="margin-left: 10px;" onmouseover="showMenudetail('{{$item->slug()}}',{{$menu->menu_id()}});" onmouseout="hidemenudetail({{$menu->menu_id()}});">
                                         <a href="{{ $item->url() }}" title="{{ $subMenu->target() }}">
                                             {{ $item->name() }}
                                         </a>
                                     </li>
                                         @foreach ($item->items() as $Subitem)
 
-                                            <li style="margin-left: 20px;width: 100%;height: 30px;" onmouseover="showMenudetail('{{$Subitem->slug()}}',{{$menu->menu_id()}});">
+                                            <li style="margin-left: 20px;width: 100%;height: 30px;" onmouseover="showMenudetail('{{$Subitem->slug()}}',{{$menu->menu_id()}});" onmouseout="hidemenudetail({{$menu->menu_id()}});">
                                                 <a href="{{ $Subitem->url() }}" title="{{ $Subitem->target() }}">
 {{--{{ $Subitem->joename() }}{{$Subitem->getProduct()}}--}} {{ $Subitem->name() }}
                                                 </a>

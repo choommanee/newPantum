@@ -91,7 +91,7 @@
     @if ($news->isNotEmpty())
         <!--โปรดักคอเซล-->
         <section class="product-slider-wrapper clearfix" >
-            <div class="section-header boxtittle" style="background-color: #030303;" >
+            <div class="section-header boxtittle2" style="background-color: #353537;" >
                <img src="{{url('/themes/storefront/public/images/news_tittle.png')}}">
             </div>
 

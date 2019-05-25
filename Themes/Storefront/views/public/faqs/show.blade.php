@@ -88,6 +88,9 @@
     }
 
     @media (max-width: 560px){
+        .uk-list-large{
+            font-size: 16px;
+        }
 
         .form-faq{
             width: 100%;float: right;
@@ -175,6 +178,19 @@
     @media (max-width: 767px) {
         article img{width: 95% !important;}
     }
+    @media (max-width: 480px) {
+        .uk-list-large {
+            font-size: 16px;
+        }
+        .downloadspan {
+            font-size: 14px;
+            margin-top: 12px;
+            display: block;
+            float: none;
+            /* width: 100%; */
+            text-align: center;
+        }
+    }
 </style>
 
 <script type="text/javascript">
@@ -261,14 +277,14 @@
                        @endif
                        @else
                                 @if($new->name!='')
-
-
                                     <li>
                                         <a href="#article-<?=$i?>" >
                                 <span data-uk-icon="icon: arrow-right" class="uk-icon">
                                     <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ratio="1">
                                         <polyline fill="none" stroke="#000" points="10 5 15 9.5 10 14"></polyline> <line fill="none" stroke="#000" x1="4" y1="9.5" x2="15" y2="9.5"></line></svg></span>
-                                            {{$new->product->name}} : {{$new->name}}</a>   {!! $new->body !!}</li>
+                                            {{$new->name}}</a> <span class="downloadspan" >
+                                                <a href="{{$new->driver_url}}"  style="color: #FFFFFF;">Download</a>
+                                            </span></li>
                                     @php
                                         $i++;
                                          $Product=$new->product->name;
@@ -289,7 +305,6 @@
                     <article class="uk-article uk-margin-xlarge-top">
                         <h2  class="uk-article-title uk-margin-medium-bottom">{{$new->product->name}} : {{$new->name}} ?<a href="#" data-uk-totop="" data-uk-scroll="duration: 400" class="tm-totop uk-float-right uk-margin-small-top uk-totop uk-icon"><svg width="18" height="10" viewBox="0 0 18 10" xmlns="http://www.w3.org/2000/svg" ratio="1"><polyline fill="none" stroke="#000" stroke-width="1.2" points="1 9 9 1 17 9 "></polyline></svg></a></h2>
                         <p>
-
                             {!! $new->body !!}
                         </p>
                     </article>

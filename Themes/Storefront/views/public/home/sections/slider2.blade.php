@@ -17,7 +17,14 @@
             ?>
             @foreach ($slider2->slides as $slide)
             <div class="carousel-item <?if($i==1){?> active<?}?>">
+                <a href="{{ $slide->call_to_action_url }}"
+                   class="animate"
+                   target="{{ $slide->options['call_to_action']['target'] ?? '_self' }}"
+                   data-delay="{{ $slide->options['call_to_action']['delay'] }}ms"
+                   data-effect="{{ $slide->options['call_to_action']['effect'] }}"
+                >
                 <img class="d-block w-100" src="{{ $slide->file->path }}" alt="First slide" style="width: 100%;">
+                </a>
             </div>
             @endforeach
 

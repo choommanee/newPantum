@@ -1,7 +1,7 @@
 @if ($products->isNotEmpty())
     <!--โปรดักคอเซล-->
     <section class="product-slider-wrapper clearfix">
-        <div class="section-header boxtittle" style="">
+        <div class="section-header boxtittle2" style="">
             <img src="{{url('/themes/storefront/public/images/product_tittle.png')}}" >
         </div>
 

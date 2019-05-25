@@ -18,6 +18,7 @@
 
                         <div class="form-inner clearfix">
                             <div class="col-md-12">
+
                                 <div class="form-group {{ $errors->has('first_name') ? 'has-error': '' }}">
                                     <label for="first-name">{{ trans('user::auth.first_name') }}<span>*</span></label>
 
@@ -41,11 +42,11 @@
 
                                     {!! $errors->first('email','<span class="error-message">:message</span>') !!}
                                 </div>
-                                <div class="form-group {{ $errors->has('tel') ? 'has-error': '' }}">
-                                    <label for="email">{{ trans('user::auth.tel') }}<span>*</span></label>
+                                <div class="form-group {{ $errors->has('telephone') ? 'has-error': '' }}">
+                                    <label for="tel">{{ trans('user::auth.telephone') }}<span>*</span></label>
 
-                                    <input type="text" name="tel" value="{{ old('tel') }}" class="form-control" id="tel">
-                                    {!! $errors->first('email','<span class="error-message">:message</span>') !!}
+                                    <input type="text" name="telephone" value="{{ old('telephone') }}" class="form-control" id="telephone">
+                                    {!! $errors->first('telephone','<span class="error-message">:message</span>') !!}
                                 </div>
 
                                 <div class="form-group {{ $errors->has('password') ? 'has-error': '' }}">

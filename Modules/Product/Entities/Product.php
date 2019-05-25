@@ -235,7 +235,12 @@ class Product extends Model
     public function getProductOption(){
         $query = \DB::table('products')
             ->join('product_translations', 'products.id', '=', 'product_translations.product_id')
+            ->join('product_categories', 'products.id', '=', 'product_categories.product_id')
+            ->where('product_translations.locale', locale())
+            ->where('products.deleted_at', '=',null)
+            ->where('product_categories.category_id', '<>',17)
             ->orderBy('product_translations.name', 'asc')
+            ->groupBy('products.id', 'product_translations.name')
             ->select('products.id', 'product_translations.name')
             ->get();
 

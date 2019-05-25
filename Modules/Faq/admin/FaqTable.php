@@ -17,28 +17,17 @@ class FaqTable extends AdminTable
             ->addColumn('product_name', function ($faqs) {
                 return $faqs->product->name;
             })
-            ->editColumn('name',function ($faqs){
 
-                if(!is_object($faqs->translation1->name)){
-                    return 'no data';
-                }
-
-                if($faqs->translation1->name <>''){
-                    return $faqs->translation1->name;
-                }else{
-                    return 'no data';
-                }
-            })
             ->addColumn('body',function ($faqs){
-                //dd($faqs);
+                //dd($faqs->translation1());
                 if(!is_object($faqs->translation1())){
                     return 'no data';
                 }
-                if($faqs->translation1->body <>''){
+               /* if($faqs->translation1->body <>''){
                     return $faqs->translation1->body;
                 }else{
                     return 'no data';
-                }
+                }*/
                 //return $faqs->translation1->body;
             });
     }

@@ -5,15 +5,24 @@
     <script>
         $('#menu_normal').width(400);
 
-        function showMenudetail(slug,menuid){
-            $('#menu_normal').width(700);
-
-            $( '#menuMain'+menuid ).removeClass( "col-sm-12" );
-            $( '#menuMain'+menuid ).addClass( "col-sm-6" );
-
+        function hidemenudetail(menuid){
+            $('#menu_normal').width(500);
+            $( '#menuMain'+menuid ).removeClass( "col-sm-6" );
+            $( '#menuMain'+menuid ).addClass( "col-sm-12" );
             $('.menushowdetail').html('');
+            $('.menushowdetail').hide();
+        }
+
+        function showMenudetail(slug,menuid){
+
 
             if(slug=='single-function-xXtLnviB'){
+              /*  $('#menu_normal').width(700);
+
+                $( '#menuMain'+menuid ).removeClass( "col-sm-12" );
+                $( '#menuMain'+menuid ).addClass( "col-sm-6" );
+
+                $('.menushowdetail').html('');*/
 
                 html ='<div class="product-image1 clearfix col-md-12" style="text-align: center;border-left: 1px solid #ded8d8;">\n' +
                     '<a href="https://save2home.com/public/en/products/m6600nw" class="product-card">\n' +
@@ -47,6 +56,12 @@
             }
 
             if(slug=='high-speed-zy6CsfbI'){
+                $('#menu_normal').width(700);
+
+                $( '#menuMain'+menuid ).removeClass( "col-sm-12" );
+                $( '#menuMain'+menuid ).addClass( "col-sm-6" );
+
+                $('.menushowdetail').html('');
                 html ='<div class="product-image1  clearfix col-md-12" style="text-align: center;border-left: 1px solid #ded8d8;">\n' +
                     '<a href="https://save2home.com/en/products/cp2500dn" class="product-card">\n' +
                     '    </a><div class="product-card-inner"><a href="https://save2home.com/en/products/cp2500dn" class="product-card">\n' +
@@ -78,6 +93,12 @@
             }
 
             if(slug=='single-function'){
+                $('#menu_normal').width(700);
+
+                $( '#menuMain'+menuid ).removeClass( "col-sm-12" );
+                $( '#menuMain'+menuid ).addClass( "col-sm-6" );
+
+                $('.menushowdetail').html('');
 
                 html ='<div class="product-image1 clearfix col-md-12" style="text-align: center;border-left: 1px solid #ded8d8;">\n' +
                     '<a href="https://save2home.com/public/en/products/p2500w" class="product-card">\n' +
@@ -112,6 +133,12 @@
             }
 
             if(slug=='multifunction'){
+                $('#menu_normal').width(700);
+
+                $( '#menuMain'+menuid ).removeClass( "col-sm-12" );
+                $( '#menuMain'+menuid ).addClass( "col-sm-6" );
+
+                $('.menushowdetail').html('');
                 html ="<div class=\"product-image1 clearfix col-md-12\" style=\"text-align: center;border-left: 1px solid #ded8d8; \">\n" +
                     "<a href=\"https://save2home.com/public/en/products/m6600nw\" class=\"product-card\">\n" +
                     "    </a><div class=\"product-card-inner\"><a href=\"https://save2home.com/public/en/products/m6600nw\" class=\"product-card\">\n" +
@@ -144,6 +171,12 @@
             }
 
             if(slug=='high-speed'){
+                $('#menu_normal').width(700);
+
+                $( '#menuMain'+menuid ).removeClass( "col-sm-12" );
+                $( '#menuMain'+menuid ).addClass( "col-sm-6" );
+
+                $('.menushowdetail').html('');
                 html ='<div class="product-image1 clearfix col-md-12" style="text-align: center;border-left: 1px solid #ded8d8;">\n' +
                     '<a href="https://save2home.com/public/en/products/p3500dn" class="product-card">\n' +
                     '    </a><div class="product-card-inner"><a href="https://save2home.com/public/en/products/p3500dn" class="product-card">\n' +
@@ -177,6 +210,13 @@
             }
 
             if(slug=='toner'){
+
+                $('#menu_normal').width(700);
+
+                $( '#menuMain'+menuid ).removeClass( "col-sm-12" );
+                $( '#menuMain'+menuid ).addClass( "col-sm-6" );
+
+                $('.menushowdetail').html('');
                 html ='<div class="product-image1 clearfix col-md-12" style="text-align: center;border-left: 1px solid #ded8d8;">\n' +
                     '<a href="https://save2home.com/en/products/pc-211rb" class="product-card">\n' +
                     '    </a><div class="product-card-inner"><a href="https://save2home.com/en/products/pc-211rb" class="product-card">\n' +
@@ -186,17 +226,17 @@
                     '                            </ul>\n' +
                     '\n' +
                     '            \n' +
-                    '                <div class="image-holder" style="height: 150px">\n' +
-                    '                    <img src="https://save2home.com/storage/media/eVr47yggaj5v5Tyf60n6X2W6fnnWqmncA0HomAsY.png">\n' +
+                    '                <div class="image-holder" style="height: 180px">\n' +
+                    '                    <img src="https://save2home.com/storage/media/UoVn9jYYELw9FaUHuCHEYmOQkN7SK37RVY3wCtoJ.png">\n' +
                     '                </div>\n' +
-
+                    '            \n' +
                     '        </div>\n' +
                     '\n' +
                     '        </a><div class="clearfix col-md-12" style="text-align: center"><a href="https://save2home.com/en/products/pc-211rb" class="product-card">\n' +
-
+                    '            \n' +
                     '            <span class="product-name" style="color: #0e0e0e;font-size: 28px;text-align: center;text-shadow: 1px 1px #ffedf0;">PC-211RB</span><br>\n' +
                     '            <span class="product-name" style="color: #060606;font-size: 16px;text-align: center;/* text-shadow: 1px 1px #2b2829; */">High quality assurance, reliable prints</span>\n' +
-                    '            </a><br/><a  href="https://save2home.com/en/products/pc-211rb" style=\'color:#555\' >\n' +
+                    '            </a><br/><a  href="https://save2home.com/en/products/pc-211rb" style=\'color:#555\'>\n' +
                     '                more\n' +
                     '            </a>\n' +
                     '        </div>\n' +
@@ -210,6 +250,13 @@
             }
 
             if(slug=='drum'){
+                $('#menu_normal').width(700);
+
+                $( '#menuMain'+menuid ).removeClass( "col-sm-12" );
+                $( '#menuMain'+menuid ).addClass( "col-sm-6" );
+
+                $('.menushowdetail').html('');
+
                 html ='<div class="product-image1 clearfix col-md-12" style="text-align: center;border-left: 1px solid #ded8d8;">\n' +
                     '<a href="https://save2home.com/en/products/dl-500" class="product-card">\n' +
                     '    </a><div class="product-card-inner"><a href="https://save2home.com/en/products/dl-500" class="product-card">\n' +
@@ -219,8 +266,8 @@
                     '                            </ul>\n' +
                     '\n' +
                     '            \n' +
-                    '                <div class="image-holder" style="height: 150px">\n' +
-                    '                    <img src="https://save2home.com/storage/media/HxBEyrjr74CJNHzTpuZO6sJzoKfgXsFPaDMQNhfq.png" title="DL-500H">\n' +
+                    '                <div class="image-holder" style="height: 180px">\n' +
+                    '                    <img src="https://save2home.com/storage/media/HxBEyrjr74CJNHzTpuZO6sJzoKfgXsFPaDMQNhfq.png">\n' +
                     '                </div>\n' +
                     '            \n' +
                     '        </div>\n' +
@@ -240,6 +287,7 @@
 
                 $('.menushowdetail').html(html);
                 $('.menushowdetail').show();
+
             }
         }
     </script>

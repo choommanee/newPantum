@@ -62,10 +62,10 @@
                             ?>
 
                         <li class="list-group-item" style="margin-top: 10px;border: none;border-bottom: 1px solid rgba(0,0,0,.125);">
-                         <span style="color: rgb(18,19,20);font-size: 22px;">
+                         <span style="color: rgb(18,19,20);">
                              {{$driver->translation1->name}}
                              </span>
-                            <span class="downloadspan" style="text-align: right;float: right;background-color: #a50202;">
+                            <span class="downloadspan" >
                             <a href="https://save2home.com/public/storage/media/Driver/{{$driver->driver_url}}"  >Download</a>
                         </span>
                         </li>

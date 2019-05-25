@@ -82,7 +82,7 @@ class Category extends Model
     public static function treeList()
     {
         return Cache::tags(['categories'])->rememberForever('categories.tree_list:' . locale(), function () {
-            return static::orderByRaw('-position DESC')
+            return static::orderByRaw('-position ASC')
                 ->get()
                 ->nest()
                 ->setIndent('¦–– ')

@@ -8,6 +8,17 @@
         }
     }
 
+    .btSuggestionSelect{
+        border: 1px solid #7d7d7d;
+        letter-spacing: .2px;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out;
+        outline: 0!important;
+        margin: 5px;
+        line-height: 20px;
+        font-size: 12px;padding: 4px;
+    }
+
 </style>
 <div class="col-md-3 col-sm-12">
     <div class="product-list-sidebar clearfix">
@@ -15,10 +26,10 @@
 
         <form method="GET" action="{{ route('products.index') }}" id="product-filter-form">
             <div class="filter-section clearfix">
-                <div>
+                <div><h2>Suggest Printer</h2>
+                    <div id="dataselect" style="margin-top: 10px;width: 82%;"></div>
+                    <div id="lblCleatAll" style="margin-top: 10px;width: 82%;font-size: 12px;text-align: center;color: #031b08;display: none;cursor: pointer;" onclick="uncheckAll();">x clear all fillter</div>
 
-                    <button type="submit" class="btn btn-primary btn-filter pull-center" data-loading style="width: 100px;">{{ trans('storefront::products.filter') }}</button>
-                    <a  class="btn btn-primary btn-filter pull-center" style="margin-right: 0px;width: 100px;" href="{{route('products.index')}}?sort=latest&category=product&page=1">{{ trans('storefront::products.clear') }}</a>
                 </div>
             </div>
             @foreach (request()->except(['attribute', 'fromPrice', 'toPrice']) as $query => $value)
@@ -36,17 +47,34 @@
                             <div class="filter-options">
                                 <div class="form-group">
                                     <div class="checkbox">
-                                        <input type="checkbox"
+                                        <input  type="checkbox" at_set="att_{{ mb_strtolower(str_replace(' ','_',$attribute->name)) }}" at_id="{{ $value->id }}" at_value="{{ $value->value }}"
                                             name="attribute[{{ mb_strtolower($attribute->name) }}][]"
                                             value="{{ mb_strtolower($value->value) }}"
                                             id="attribute-{{ $value->id }}"
                                             {{ is_filtering($value->value) ? 'checked' : '' }}
                                         >
 
-                                        <label for="attribute-{{ $value->id }}">{{ $value->value }}</label>
+                                        <label id="txtatt-{{ $value->id }}" for="attribute-{{ $value->id }}">{{ $value->value }} <ss id="total_{{ $value->id }}"> ( 0 ) </ss></label>
                                     </div>
                                 </div>
                             </div>
+                            @push('scripts')
+                              {{--  <script>
+                                    totalByfilter = getTotalInfilter('att_{{ mb_strtolower(str_replace(' ','_',$attribute->name)) }}','{{ $value->value }}');
+                                    $('#total_{{ $value->id }}').html('( '+totalByfilter+' )');
+                                    //console.log(totalByfilter);
+
+                                    if(totalByfilter==0){
+                                        $('#attribute-{{ $value->id }}').prop( "disabled", true );
+                                        $("#attribute-{{ $value->id }}").css("background", "#f5f5f5");
+                                        $("#txtatt-{{ $value->id }}").css("color", "#f5f5f5");
+                                    }else{
+                                        $('#attribute-{{ $value->id }}').prop( "disabled", false );
+                                        $("#attribute-{{ $value->id }}").css("background", "#ffffff");
+                                        $("#txtatt-{{ $value->id }}").css("color", "#626060");
+                                    }
+                                </script>--}}
+                            @endpush
                         @endforeach
                     </div>
                 </div>

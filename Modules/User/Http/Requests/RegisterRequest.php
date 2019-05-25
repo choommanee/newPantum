@@ -23,6 +23,7 @@ class RegisterRequest extends Request
         return [
             'first_name' => 'required',
             'last_name' => 'required',
+            'telephone' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|confirmed|min:6',
             'privacy_policy' => 'accepted',

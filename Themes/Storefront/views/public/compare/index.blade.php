@@ -190,6 +190,11 @@
                 }
             }
 
+            .theme-black .btn-primary {
+
+                margin-top: 0px !important;
+            }
+
         </style>
     <section class="compare" style="background: #fffcfc;margin-top: 30px;min-height: 600px;margin-bottom: 30px;padding-top: 35px;">
         @if ($compare->hasAnyProduct())
@@ -238,13 +243,21 @@
                 @foreach ($compare->attributes() as $attribute)
                     <tr>
                         <td></td>
-                        <td colspan="{{ $totalCom }}">{{ $attribute->name }}</td>
+
+                        <td colspan="{{ $totalCom }}">
+                            @if( $attribute->name <>'<empty>')
+                                {{ $attribute->name }}
+                                @elseif($attribute->name <>'__Memory__')
+                                Memory
+                            @else
+                                What’s in the box
+                            @endif</td>
                     </tr>
                     <tr class="compare-row">
-                        <td ><b>{{ $attribute->name }}</b></td>
+                        <td ><b>@if( $attribute->name <>'<empty>') {{ $attribute->name }}@else What’s in the box @endif</b></td>
                         @foreach ($compare->products() as $product)
                             @if ($product->hasAttribute($attribute))
-                                <td>{{ $product->attributeValues($attribute) }}</td>
+                                <td>{!! $product->attributeValues($attribute) !!}</td>
                             @else
                                 <td>&ndash;</td>
                             @endif

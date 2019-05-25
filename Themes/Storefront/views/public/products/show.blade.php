@@ -12,7 +12,7 @@
 @endpush
 
 @section('breadcrumb')
-    <li><a href="{{ route('products.index') }}">{{ trans('storefront::products.shop') }}</a></li>
+    <li><a href="{{ url('products?category=product') }}">{{ trans('storefront::products.shop') }}</a></li>
     <li class="active">{{ $product->name }}</li>
 @endsection
 

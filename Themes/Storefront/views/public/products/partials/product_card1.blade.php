@@ -1,5 +1,14 @@
 <!--โปรดักการ์ด-->
-<div class="product-image1 clearfix col-md-3">
+
+<div id ="{{ $product->id }}" class="product-image1 clearfix col-md-3"
+     @foreach($product->attributeSets as $attributeSet => $attributes)
+        @foreach ($attributes as $attribute)
+            @if($attribute->attribute->is_filterable===true)
+            att_{{ mb_strtolower(str_replace(' ','_',$attribute->name)) }}="{{ $attribute->values->implode('value', ', ') }}"
+            @endif
+        @endforeach
+    @endforeach
+>
 <a href="{{ route('products.show', $product->slug) }}" class="product-card">
     <div class="product-card-inner">
         <div class="product-image clearfix col-md-12">
@@ -90,3 +99,4 @@
     </div>
 </a>
 </div>
+
